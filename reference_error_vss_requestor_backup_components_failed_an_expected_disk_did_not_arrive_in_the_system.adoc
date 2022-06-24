@@ -1,0 +1,58 @@
+---
+permalink: reference_error_vss_requestor_backup_components_failed_an_expected_disk_did_not_arrive_in_the_system.html 
+sidebar: sidebar 
+keywords: vss, requestor, backup, component, fail, disk, system 
+summary: VSS 요청자 - 백업 구성 요소 실패. 예상 디스크가 시스템에 도착하지 않았습니다 
+---
+= VSS 요청자 - 백업 구성 요소 실패. 예상 디스크가 시스템에 도착하지 않았습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 원인 *
++
+이 메시지는 Hyper-V용 SnapManager를 사용하여 데이터 세트를 백업할 때 발생하며 Hyper-V 호스트의 Windows 응용 프로그램 이벤트 로그에 다음과 같은 오류가 나타납니다.
+
++
+[listing]
+----
+A Shadow Copy LUN was not detected in the system and did not
+arrive.
+
+     LUN ID     guid
+
+     Version      0x0000000000000001
+     Device Type    0x0000000000000000
+     Device TypeModifier  0x0000000000000000
+     Command Queueing 0x0000000000000001
+     Bus Type   0x0000000000000006
+     Vendor Id    vendor
+     Product Id   LUN
+     Product Revision   number
+     Serial Number    serial_number
+
+     Storage Identifiers
+     Version    0
+     Identifier Count 0
+
+
+
+    Operation:
+       Exposing Disks
+       Locating shadow-copy LUNs
+       PostSnapshot Event
+       Executing Asynchronous Operation
+
+    Context:
+       Execution Context: Provider
+       Provider Name: Data ONTAP VSS Hardware Provider
+       Provider Version: 6. 1. 0. 4289
+       Provider ID: {ddd3d232-a96f-4ac5-8f7b-250fd91fd102}
+   Current State: DoSnapshotSet
+----
+* * 시정 조치 *
++
+데이터 세트 백업을 다시 시도하십시오.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: reference_restore_failure_after_storage_system_volume_renaming.html 
+sidebar: sidebar 
+keywords: restore, failure, storage, system, volume, renaming, rename 
+summary: 스토리지 시스템 볼륨 이름 변경 후 복구 실패. 
+---
+= 스토리지 시스템 볼륨 이름 변경 후 복구 실패
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 메시지 *
++
+VM 복원에 필요한 스토리지 시스템 스냅샷 중 일부가 누락되었거나 일치하지 않습니다.
+
+* * 설명 *
++
+스토리지 시스템 볼륨의 이름을 바꾼 경우에는 볼륨 이름을 바꾸기 전에 생성된 백업에서 가상 머신(VM)을 복원할 수 없습니다.
+
+* * 시정 조치 *
++
+스토리지 시스템 볼륨의 이름을 바꾸고 볼륨 이름을 바꾸기 전에 생성된 백업에서 VM을 복원해야 하는 경우 다음을 완료합니다.
+
++
+** MMC에서 VM을 복원하는 동안 복원 마법사의** 복원 옵션** 페이지에서 "스냅샷 확인 활성화" 옵션이 선택 취소되어 있는지 확인합니다.
+** PowerShell을 사용하여 VM을 복원하는 동안 -DisableVerifySnapshot 매개 변수가 지정되었는지 확인합니다.
+
+
+

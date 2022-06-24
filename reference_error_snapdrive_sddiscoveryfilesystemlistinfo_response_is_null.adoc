@@ -1,0 +1,29 @@
+---
+permalink: reference_error_snapdrive_sddiscoveryfilesystemlistinfo_response_is_null.html 
+sidebar: sidebar 
+keywords: snapdrive, sddiscoveryfilesystemlistinfo, response, null, back, up 
+summary: 백업하는 동안 SnapDrive SDDiscoveryFileSystemListInfo 응답이 null입니다 
+---
+= 백업하는 동안 SnapDrive SDDiscoveryFileSystemListInfo 응답이 null입니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+백업하는 동안 SnapDrive SDDiscoveryFileSystemListInfo 응답이 Null인 오류가 발생합니다.
+
+* * 원인 *
++
+이 메시지는 백업 중인 SnapInfo 위치를 사용할 수 없을 때 나타납니다.
+
+* * 시정 조치 *
++
+SnapInfo 위치가 있으며 사용 가능한지 확인합니다. 변경된 경우 구성 관리자를 다시 실행하여 새 위치를 지정합니다. 백업을 다시 시도하십시오.
+
+
+
+* 관련 정보 *
+
+xref:task_setting_up_a_snapinfo_lun.adoc[SnapInfo LUN 설정]

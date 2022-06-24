@@ -1,0 +1,25 @@
+---
+permalink: task_removing_a_hyper_v_parent_host.html 
+sidebar: sidebar 
+keywords: remove, hyper-v, parent, host, cluster, snapmanager, removing 
+summary: Hyper-V용 SnapManager를 사용하여 더 이상 Hyper-V를 관리하지 않으려는 경우 Hyper-V 상위 호스트 또는 상위 호스트 클러스터를 제거할 수 있습니다 
+---
+= Hyper-V 상위 호스트 또는 상위 호스트 클러스터 제거
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hyper-V용 SnapManager를 사용하여 더 이상 Hyper-V를 관리하지 않으려는 경우 Hyper-V 상위 호스트 또는 상위 호스트 클러스터를 제거할 수 있습니다
+
+. 탐색 창에서 * 보호 * > * 호스트 * 를 클릭합니다.
+. 제거할 호스트 또는 호스트 클러스터를 선택합니다.
+. 작업 창에서 * 제거 * 를 클릭합니다.
++
+모든 VM 백업 삭제 * 를 선택하여 호스트와 연결된 모든 가상 머신 백업을 삭제할 수 있습니다.
+
++
+Hyper-V 상위 호스트 또는 호스트 클러스터는 Hyper-V 관리를 위해 SnapManager에서 제거되지만 영구적으로 삭제되지는 않습니다. 해당 호스트 또는 호스트 클러스터에 속한 가상 머신도 해당 호스트 또는 호스트 클러스터가 속한 모든 데이터 세트에서 제거됩니다.
+
+

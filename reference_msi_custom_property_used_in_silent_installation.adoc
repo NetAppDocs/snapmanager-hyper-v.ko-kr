@@ -1,0 +1,25 @@
+---
+permalink: reference_msi_custom_property_used_in_silent_installation.html 
+sidebar: sidebar 
+keywords: msi, custom, property, silent, installation 
+summary: MSI 사용자 정의 속성은 자동 설치에 사용됩니다. 
+---
+= MSI 사용자 정의 속성은 자동 설치에 사용됩니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+Windows Server 2008 또는 Windows Installer 버전 4.5가 설치된 Vista를 실행하는 시스템에서는 SnapManager for Hyper-V 설치의 기본 제공 속성을 인식하지 못합니다.
+
+* * 시정 조치 *
++
+설치 시 MSIRESTARTMANAGERCONTROL=Disable command switch 매개 변수를 사용합니다.
+
+
+
+* 관련 정보 *
+
+http://msdn.microsoft.com/library/["MSDN(Microsoft Developer Network) 라이브러리"]

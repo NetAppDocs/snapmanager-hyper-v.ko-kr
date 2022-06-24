@@ -1,0 +1,31 @@
+---
+permalink: concept_cluster_shared_volume_2_0_architecture.html 
+sidebar: sidebar 
+keywords: windows, server, cluster, shared, volume, csv, backup 
+summary: 'Windows Server 2012 이상에서는 새 파일 시스템, CSV 작성기의 변경 사항, CSV 섀도 복사본 변경 사항, CSV 백업 기능 향상을 포함하는 CSV(Cluster Shared Volume) 2.0의 새로운 기능을 제공합니다.' 
+---
+= Windows Server 2012 이상에서 CSV 2.0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Windows Server 2012 이상에서는 새 파일 시스템, CSV 작성기의 변경 사항, CSV 섀도 복사본 변경 사항, CSV 백업 기능 향상을 포함하는 CSV(Cluster Shared Volume) 2.0의 새로운 기능을 제공합니다.
+
+Windows Server 2012 이상에서는 CSV 2.0에 대한 다음과 같은 변경 사항이 포함됩니다.
+
+* CSV 파일 시스템(CSVFS)은 클러스터의 모든 노드에서 새 분산 파일 시스템으로 사용할 수 있습니다.
+* CSV writer는 CSV 볼륨에 대해 요청하지 않은 노드의 볼륨 및 구성 요소 수준 메타데이터를 제공하며 백업 세션에 대해 원격 노드의 Hyper-V writer를 포함하여 프록시 역할을 합니다.
+* CSV 섀도우 복제본 공급자는 CSV 볼륨의 기본 소프트웨어 공급자 역할을 하며 모든 클러스터 노드에서 VSS 고정 및 VSS 고정 해제를 조정하여 애플리케이션 및 충돌 일관성을 제공합니다.
++
+CSV 섀도 복사본 공급자는 CSV 스냅샷 볼륨을 요청 노드에서 쓸 수 있도록 합니다.
+
+* CSV는 이제 여러 가상 머신에 대해 모든 CSV에서 하나의 애플리케이션 정합성 보장 스냅샷 볼륨을 지원합니다.
++
+스냅샷 볼륨의 CSV 볼륨은 자동 복구를 수행하기 위해 모든 가상 머신 소유자 노드에 노출됩니다.
+
++
+CSV는 스냅샷 생성 중이지 백업 중이지 않고 리디렉션된 I/O 모드로 전환됩니다.
+
+

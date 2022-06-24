@@ -1,0 +1,38 @@
+---
+permalink: reference_license_requirements.html 
+sidebar: sidebar 
+keywords: run, snapmanager, hyper-v, select, host-based, storage, system, license, installation, license 
+summary: SnapManager for Hyper-V를 실행하려면 라이센스 설치 중에 호스트 기반 라이센스 또는 스토리지 시스템 라이센스를 선택해야 합니다. 
+---
+= 라이센스 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V를 실행하려면 라이센스 설치 중에 호스트 기반 라이센스 또는 스토리지 시스템 라이센스를 선택해야 합니다.
+
+
+
+== SnapManager 제품군 라이센스
+
+Windows 호스트 시스템에는 SnapManager 제품군 라이센스가 필요합니다. 호스트 기반 라이센스 또는 스토리지 시스템 라이센스 중 하나를 선택할 수 있습니다.
+
+
+
+== 서버 라이센스당
+
+이를 호스트 기반 라이센싱이라고도 합니다. 호스트 기반 라이센스를 선택하는 경우 설치 중에 SnapManager Suite 라이센스 키를 제공해야 하며, 필요한 경우 나중에 변경할 수 있습니다. 설치 후 SnapManager for Hyper-VWelcome 창에서 * 사용권 설정 * 을 클릭하여 사용권 키를 변경할 수 있습니다. 각 상위 호스트에는 SnapManager Suite 라이센스가 필요합니다.
+
+
+
+== 스토리지 시스템 라이센스당
+
+이를 스토리지 시스템 라이센싱이라고도 합니다. 스토리지 시스템 라이센스를 선택한 경우 Hyper-V 작업에 대해 SnapManager를 실행하려면 모든 스토리지 시스템에 SnapManager 제품군 라이센스를 추가해야 합니다.
+
+
+
+== 클라이언트 시스템 라이센스당
+
+관리 콘솔을 설치할 때 이 라이센스 옵션을 사용해야 합니다.

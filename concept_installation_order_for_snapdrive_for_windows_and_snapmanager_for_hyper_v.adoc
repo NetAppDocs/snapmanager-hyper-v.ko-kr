@@ -1,0 +1,18 @@
+---
+permalink: concept_installation_order_for_snapdrive_for_windows_and_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: install, snapdrive, windows, hyper-v, cluster, snapdrive 
+summary: SnapManager for Hyper-V를 설치하기 전에 모든 호스트에 Windows용 SnapDrive를 설치해야 합니다 호스트가 클러스터의 구성원인 경우 클러스터의 모든 노드에는 Windows용 SnapDrive가 설치되어 있어야 합니다. 
+---
+= Windows용 SnapDrive 및 Hyper-V용 SnapManager 설치 순서
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V를 설치하기 전에 모든 호스트에 Windows용 SnapDrive를 설치해야 합니다 호스트가 클러스터의 구성원인 경우 클러스터의 모든 노드에는 Windows용 SnapDrive가 설치되어 있어야 합니다.
+
+SnapManager for Hyper-V가 시작되면 SnapDrive for Windows와 통신하여 호스트에서 실행 중인 모든 가상 머신 목록을 가져옵니다. 호스트에 SnapDrive for Windows가 설치되어 있지 않으면 이 API가 실패하고 SnapManager for Hyper-V 내부 캐시가 가상 머신 정보로 업데이트되지 않습니다.
+
+다음과 같은 메시지가 표시될 수 있습니다. 오류: Hyper-V용 SnapManager 라이센스가 호스트 또는 스토리지 시스템에서 허가되지 않았습니다. 백업이 중단되었습니다.

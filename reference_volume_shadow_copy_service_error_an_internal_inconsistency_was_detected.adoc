@@ -1,0 +1,29 @@
+---
+permalink: reference_volume_shadow_copy_service_error_an_internal_inconsistency_was_detected.html 
+sidebar: sidebar 
+keywords: volume, shadow, copy, service, error, internal, inconsistency, detect 
+summary: '볼륨 섀도 복사본 서비스 오류: 내부 불일치가 감지되었습니다.' 
+---
+= 볼륨 섀도 복사본 서비스 오류: 내부 불일치가 감지되었습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 메시지 *
++
+볼륨 섀도 복사본 서비스 오류: 섀도 복사본 서비스 작성기에 연결하려고 할 때 내부 불일치가 감지되었습니다. 이벤트 서비스 및 볼륨 섀도 복사본 서비스가 제대로 작동하고 있는지 확인하십시오.
+
+* * 설명 *
++
+Windows Server 2003을 사용하는 가상 머신의 백업을 수행할 때 재시도 오류로 인해 가상 컴퓨터가 반복적으로 실패합니다.
+
+* * 시정 조치 *
++
+가상 머신 내의 Windows 애플리케이션 이벤트 로그에서 VSS 오류를 확인합니다.
+
+
+
+* 관련 정보 *
+
+http://support.microsoft.com/kb/940184["Microsoft 지원 문서 940184: Windows Server 2003 기반 컴퓨터에서 "vssadmin list writers" 명령을 실행할 때 나타나는 오류 메시지: "오류: 0x8000FFFF""]

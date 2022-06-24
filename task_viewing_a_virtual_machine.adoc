@@ -1,0 +1,23 @@
+---
+permalink: task_viewing_a_virtual_machine.html 
+sidebar: sidebar 
+keywords: virtual, machine, tab, vhd, detail, pane, vm, information, monitor, status, view 
+summary: 가상 시스템의 세부 정보 창에 있는 가상 시스템 탭과 VHD 탭에서 해당 시스템의 상태에 대한 정보를 보고 모니터링할 수 있습니다. 
+---
+= 가상 머신 보기
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+가상 시스템의 세부 정보 창에 있는 가상 시스템 탭과 VHD 탭에서 해당 시스템의 상태에 대한 정보를 보고 모니터링할 수 있습니다.
+
+. 탐색 창에서 * Protection * > * Hosts * 또는 * Protection * > * Datasets * 를 클릭합니다.
+. 가상 머신이 속한 데이터 세트 또는 호스트를 선택합니다.
+. 적절한 가상 머신을 선택합니다.
+
+
+가상 머신 탭에는 선택한 가상 머신의 이름, GUID 및 상태가 표시됩니다.
+
+VHD 탭에는 시스템 디스크, 마운트 지점, VHD 전체 경로, LUN 경로, 스토리지 시스템 이름, 선택한 가상 머신과 연결된 일련 번호 및 볼륨 이름입니다.

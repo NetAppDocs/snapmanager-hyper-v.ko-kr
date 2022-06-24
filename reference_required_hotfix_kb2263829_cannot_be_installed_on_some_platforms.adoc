@@ -1,0 +1,25 @@
+---
+permalink: reference_required_hotfix_kb2263829_cannot_be_installed_on_some_platforms.html 
+sidebar: sidebar 
+keywords: require, hotfix, kb2263829, install, platform 
+summary: 필요한 핫픽스 KB2263829를 일부 플랫폼에 설치할 수 없습니다. 
+---
+= 필요한 핫픽스 KB2263829를 일부 플랫폼에 설치할 수 없습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+SnapManager for Hyper-V를 설치하는 동안 핫픽스 KB2263829를 설치하려고 하면 Windows Server 2008 R2 SP1에 실패할 수 있습니다. 설치 프로그램에 이 서버에 핫픽스를 적용할 수 없다는 메시지가 표시됩니다.
+
+* * 원인 *
++
+해당 플랫폼에서 핫픽스가 지원되지 않습니다.
+
+* * 시정 조치 *
++
+Microsoft에서 지원 케이스를 열고 Microsoft 관련 문제를 해결합니다.
+
+

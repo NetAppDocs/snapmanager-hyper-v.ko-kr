@@ -1,0 +1,77 @@
+---
+permalink: concept_data_management_concepts.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dataset, policies, policy, enable, group, virtual, machine, apply, rule, retention, data, management, concept 
+summary: SnapManager for Hyper-V는 데이터 세트 및 정책을 사용하므로 가상 머신을 그룹화한 다음 해당 그룹에 규칙을 적용하여 동작을 제어할 수 있습니다. 
+---
+= 데이터 관리 개념
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V는 데이터 세트 및 정책을 사용하므로 가상 머신을 그룹화한 다음 해당 그룹에 규칙을 적용하여 동작을 제어할 수 있습니다. 이 정보는 SnapManager for Hyper-V를 사용하여 백업을 예약하고 백업에 대한 보존 정책을 지정하는 경우에 유용합니다.
+
+* * 데이터 세트 *
++
+데이터 세트는 VM(가상 머신)의 그룹으로, 보존, 예약 및 복제 정책을 사용하여 데이터를 보호할 수 있도록 합니다. 데이터 세트를 사용하여 보호 요구 사항이 동일한 가상 머신을 그룹화할 수 있습니다. VM은 여러 데이터 세트의 일부가 될 수 있습니다.
+
+* * Hyper-V 상위 호스트 *
++
+Hyper-V 상위 호스트는 Hyper-V 역할이 설정된 물리적 서버입니다. 가상 시스템이 포함된 호스트는 보호 및 복구를 위해 SnapManager for Hyper-V에 추가됩니다. 각 Hyper-V 상위 호스트에 SnapManager for Hyper-V가 설치되어 실행 중이어야 합니다.
+
+* * 보호되지 않는 리소스 *
++
+보호되지 않는 리소스는 데이터 세트의 일부가 아닌 가상 머신입니다. 이러한 리소스를 데이터 세트에 추가하여 보호할 수 있습니다.
+
+* 가상 머신 *
++
+Hyper-V 상위 호스트에서 실행되는 가상 시스템은 고유한 운영 체제, 애플리케이션 및 하드웨어가 있는 물리적 시스템을 나타냅니다.
+
++
+SnapManager for Hyper-V는 가상 머신 이름이 아니라 가상 머신의 GUID(Globally Unique Identifier)를 추적합니다. SnapManager for Hyper-V로 보호되는 가상 머신을 삭제한 다음 같은 이름의 다른 가상 머신을 생성하면 GUID가 다르기 때문에 새 가상 머신이 보호되지 않습니다.
+
+* * 관리 콘솔 *
++
+관리 콘솔은 SnapManager for Hyper-V가 설치되어 클라이언트로 실행되는 컴퓨터입니다. 관리 콘솔을 사용하여 원격 Hyper-V 상위 호스트에서 Hyper-V용 SnapManager 작업을 원격으로 관리할 수 있습니다.
+
+* * 스케줄링 정책 *
++
+일정 관리 정책은 특정 시간에 백업 작업을 할당하므로 일정 관리 프로세스를 자동화할 수 있습니다. 데이터 세트 구성원인 모든 가상 머신에 적용되는 여러 예약 정책을 추가할 수 있습니다. SnapManager for Hyper-V는 Windows 스케줄러를 사용하여 예약된 작업을 생성합니다.
+
+* * 보존 정책 *
++
+보존 정책은 SnapManager for Hyper-V에서 데이터 세트 백업 보존을 관리하는 방법입니다 보존 정책은 백업 복사본의 시간이나 수에 따라 데이터 세트 백업을 유지하는 기간을 결정합니다.
+
++
+보존 정책에서 설정한 제한을 통해 데이터 백업이 향후 스토리지 용량을 손상시키지 않도록 할 수 있습니다.
+
++
+SnapManager for Hyper-V에서 다음 보존 기간을 설정할 수 있습니다.
+
++
+** 1시간
+** 1일
+** 일주일
+** 한 달
+** 무제한 * 참고: * 데이터 세트당 보존 기간을 한 번 지정할 수 있습니다.
+
+
++
+데이터 세트 백업 삭제 빈도를 선택한 후 지정된 기간보다 오래된 백업이나 최대 합계를 초과하는 백업을 삭제할 수 있습니다.
+
++
++ 시스템이 이전 백업을 유지하는 것으로 나타나면 보존 정책을 확인합니다. 스냅샷 복사본을 공유하는 모든 개체가 백업 삭제 기준을 충족해야 보존 정책이 스냅샷 복사본 제거를 트리거할 수 있습니다.
+
+* * 복제 정책 *
++
+복제 정책은 성공적인 백업 작업 후에 SnapMirror 대상이 업데이트되는지 여부를 결정합니다. SnapManager for Hyper-V는 볼륨 기반 SnapMirror만 지원합니다. SnapMirror 업데이트를 시도하기 전에 두 스토리지 시스템에서 SnapMirror 관계를 구성해야 합니다. 이는 소스와 대상 모두에 필요합니다.
+
+
+
+* 관련 정보 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["7-Mode용 Data ONTAP 8.2 데이터 보호 온라인 백업 및 복구 가이드"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp 설명서:SnapDrive for Windows(최신 릴리스)"]

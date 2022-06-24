@@ -1,0 +1,31 @@
+---
+permalink: reference_vss_returns_errors_against_microsoft_iscsi_target_vss_hardware_provider_during_nas_backup.html 
+sidebar: sidebar 
+keywords: vss, return, error, micorsoft, iscsi, target, hardware, provider, nas, backup 
+summary: VSS는 NAS 백업 중에 Microsoft iSCSI Target VSS Hardware Provider에 대한 오류를 반환합니다. 
+---
+= VSS는 NAS 백업 중에 Microsoft iSCSI Target VSS Hardware Provider에 대한 오류를 반환합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+NAS 백업을 수행하는 동안 다음과 같은 오류가 발생할 수 있습니다.
+
++
+VSS 요청자 - 백업 구성 요소 실패. 스냅샷 세트에 볼륨 [예]를 추가하지 못했습니다. 지정된 작업을 처리하는 동안 섀도우 복제본 공급자에 예기치 않은 오류가 발생했습니다.
+
++
+볼륨 섀도 복사본 서비스 오류: CLSID가 [example]인 섀도 복사본 공급자 COM 클래스를 만드는 동안 오류가 발생했습니다. 액세스가 거부되었습니다.
+
+* * 원인 *
++
+이러한 오류는 NAS 애플리케이션 정합성 보장 백업 중에 발생합니다. NAS 백업은 실패하지 않지만 VSS는 Microsoft iSCSI Target VSS Hardware Provider와 관련된 일부 오류를 기록합니다.
+
+* * 시정 조치 *
++
+백업이 실패하지 않았습니다. 이러한 오류를 무시해도 됩니다.
+
+

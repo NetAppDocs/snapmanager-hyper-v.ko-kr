@@ -1,0 +1,175 @@
+---
+permalink: task_recovering_and_restoring_from_a_disaster_recovery_failover.html 
+sidebar: sidebar 
+keywords: recover, disaster, snapmanager, hyper-v, fail, secondary, system, storage, powershell, restore, restoring, failover, recovery 
+summary: 재해를 복구하려면 Hyper-V용 SnapManager를 먼저 2차 스토리지 시스템으로 페일오버해야 합니다. 페일오버에는 PowerShell의 일련의 수동 단계가 포함됩니다. 
+---
+= 재해 복구 페일오버에서 복구 및 복원
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+재해를 복구하려면 Hyper-V용 SnapManager를 먼저 2차 스토리지 시스템으로 페일오버해야 합니다. 페일오버에는 PowerShell의 일련의 수동 단계가 포함됩니다.
+
+대부분의 백업은 NAS와 SAN 모두에 대해 대체 호스트로 복원할 수 있지만 Windows Server 2008 R2 장애 발생 시 정합성이 보장되는 백업은 대체 호스트로 복원할 수 없습니다.
+
+. Data ONTAP 8.1.x를 실행 중인 경우 2차 사이트에서 SVM(Storage Virtual Machine) 정보를 SnapDrive for Windows MMC의 TPS(Transport Protocol Setting)에 입력합니다.
+. 2차 스토리지 시스템에서 모든 LUN에 접속합니다.
++
+2차 스토리지 시스템이 클러스터링되어 있는 경우, 대상 클러스터에서 사용 가능한 스토리지 그룹 소유자 노드인 클러스터 그룹이 온라인 상태인 노드로 이동하여 클러스터의 해당 노드에 있는 모든 LUN에 연결합니다. LUN 매핑에 대한 자세한 내용은 Windows용 SnapDrive 설명서를 참조하십시오.
+
+. 구성에 따라 다음 작업 중 하나를 수행합니다.
++
+|===
+| 운영 스토리지 시스템이 다음과 같은 경우 | 그러면... 
+
+
+ a| 
+독립 실행형 호스트(SAN)
+ a| 
+운영 스토리지 시스템에서 동일한 유형의 모든 마운트 지점 및 LUN에 접속합니다.
+
+
+
+ a| 
+클러스터 호스트(SAN)
+ a| 
+클러스터 그룹이 온라인 상태인 노드에서 클러스터의 모든 마운트 지점 및 LUN에 연결합니다.
+
+
+
+ a| 
+소스 FlexVol 볼륨(SAN)에서 VM을 호스팅하는 단일 LUN으로 구성된 Data ONTAP 8.1.x
+ a| 
+SnapMirror 업데이트가 성공하려면 백업을 시작하기 전에 소스 FlexVol 볼륨에 두 번째 더 작은 LUN(10MB - 100MB)을 생성해야 합니다. 클러스터 그룹이 온라인 상태인 노드에서 클러스터의 모든 마운트 지점 및 LUN에 연결합니다.
+
+
+
+ a| 
+독립 실행형 또는 클러스터 호스트(NAS)
+ a| 
+데이터 보호(DP) 볼륨을 마운트 해제하고, DP 볼륨을 다시 쓰기 가능으로 마운트하고, 볼륨에 rwx 권한이 있는지 확인한 다음, 다른 볼륨에 대한 CIFS 공유를 생성합니다.
+
+|===
+. 사용자 환경에 따라 SnapInfo를 재구성합니다.
++
+|===
+| 구성이 다음과 같은 경우 | 그러면... 
+
+
+ a| 
+산
+ a| 
+마지막 스냅샷 복사본에서 SnapInfo LUN을 복원합니다.
+
+
+
+ a| 
+NAS
+ a| 
+SnapInfo 디렉토리를 마운트합니다.
+
+|===
++
+NAS의 경우 액세스가 거부된 오류가 발생하거나 노출된 SMB 공유 위치를 찾을 수 없는 경우 공유의 액세스 제어 목록을 재설정해야 할 수 있습니다.
+
++
+
+NOTE: 이는 일반적으로 SCVMM(System Center Virtual Machine Manager) 콘솔 및 Data ONTAP SMI-S 에이전트를 사용할 때 발생합니다.
+
+. SnapManager for Hyper-V MMC에서 보조 스토리지 시스템 또는 클러스터를 추가한 다음 SnapInfo 경로를 사용하여 구성합니다.
+. 다음 cmdlet을 입력합니다.
++
+.. Get-VMsFromBackup을 입력하여 백업 메타데이터에 있는 VM 목록을 검색합니다.
+.. Get-Backup을 입력하여 각 VM에 대한 백업 복사본을 가져옵니다.
+
+
+. 복구하려면 VM GUID와 함께 복구 백업 을 사용하고 다음 매개 변수를 사용하여 백업 복사본을 사용하십시오.
++
+|===
+| 복원 대상... | 이 명령을 입력하십시오... 
+
+
+ a| 
+대체 호스트입니다
+ a| 
+restore-Backup-Server Secondary_host_system_or_cluster_name - DisableVerifySnapshot-RestoreToAlternateHost입니다
+
+
+
+ a| 
+나열된 백업입니다
+ a| 
+복구 - 백업 - 서버 - VirtualMachinePath - SnapShotFilePath @ VHD
+
+|===
++
+@ VHD의 경우 VM에 여러 VHD가 있을 수 있으므로 각 VHD에 대해 지정된 소스 및 대상 경로 쌍을 모두 입력해야 합니다.
+
+. 보조 호스트 시스템이 클러스터인 경우 다음 단계를 수행하십시오.
++
+.. VM이 상주하는 LUN이 클러스터 그룹을 소유하는 클러스터 노드에서 온라인 상태인지 확인합니다.
+.. 페일오버 PowerShell cmdlet을 사용하여 VM의 가용성을 높게 설정합니다.
+
+
+
+
+
+
+== 페일오버 예
+
+다음 예에서는 smbv-cluster-01이 기본 사이트이고 HV-19-클러스터가 보조 사이트입니다.
+
+[listing]
+----
+PS C:\> Get-VMsFromBackup -Server hv-19-cluster
+
+winxp-x64c-135                593ABA72-B323-4AF7-9AC6-9514F64C0178
+csv1-xp-3                     59B85C68-BAFA-4A49-8E85-A201045843F7
+vm-w2k8r2sp1                  5A248757-872B-4FE7-8282-91C8E9D45CF9
+um10_11_dr                    5AC1B2A8-6603-4F90-98F5-4F2F435AB0C2
+winxp-x64c-30                 5B47D3CF-5D96-495D-9BAB-FB394392CF31
+winxp-x64c-126                5B57EED1-B4F1-45A3-A649-24C6947CB79C
+winxp-x64c-118                5B5D417B-70DC-427C-94BB-97FF81C5B92B
+winxp-x64c-122                5BEE26B8-BE57-4879-A28E-9250A6A5EEFC
+csv4-w2k3-19                  5D0613E5-B193-4293-8AAD-F8B94A5D851F
+
+PS C:\> Get-Backup -Server hv-19-cluster -ResourceName um10_11_dr
+
+BackupName    : smhv-ccb-ds_04-10-2012_10.37.58
+RetentionType : hourly
+DatasetName   : smhv-ccb-ds
+BackupId      : smhv-ccb-ds_04-10-2012_10.37.58
+BackupTime    : 4/10/2012 10:37:58 AM
+BackupType    : Application consistent
+BackedupVMs   : {um10_11_dr}
+
+PS C:\> Restore-Backup -Server hv-19-cluster -ResourceName
+um10_11_dr -BackupName smhv-ccb-ds_04-10-2012_10.37.58
+-DisableVerifySnapshot -RestoreToAlternateHost
+----
+다음 예는 N:\이 대상이고 I:\가 소스 LUN 경로인 대체 경로에 대한 SAN 복구 작업을 보여 줍니다.
+
+[listing]
+----
+PS C:\> Restore-Backup -Resourcename dr-san-ded1
+-RestoreToAlternateHost -DisableVerifySnapshot -BackupName san_dr_09-11-2013_10.57.31 -Verbose
+-VirtualMachinePath "N:\dr-san-ded1" -SnapshotFilePath "N:\dr-san-ded1" -VHDs @(@{"SourceFilePath" = "I:\dr-san-ded1\Virtual Hard Disks\dr-san-ded1.vhdx"; "DestinationFilePath" = "N:\dr-san-ded1\Virtual Hard Disks\dr-san-ded1"})
+----
+다음 예에서는 소스 SMB 공유 경로이고 \\172.175.82\가 대상 SMB 공유 경로인 대체 경로로 NAS 복원 작업을 보여 줍니다.
+
+[listing]
+----
+PS C:\> Restore-Backup -Resourcename vm_claba87_cifs1
+-RestoreToAlternateHost -DisableVerifySnapshot -BackupName ag-DR_09-09-2013_16.59.16 -Verbose
+-VirtualMachinePath "\\172.17.175.82\vol_new_dest_share\ag-vm1" -SnapshotFilePath "\\172.17.175.82\vol_new_dest_share\ag-vm1" -VHDs @(@{"SourceFilePath" = "\\172.17.162.174\vol_test_src_share\ag-vm1\Virtual Hard Disks\ag-vm1.vhdx"; "DestinationFilePath" = "\\172.17.175.82\vol_new_dest_share\ag-vm1\Virtual Hard Disks\ag-vm1.vhdx"})
+----
+* 관련 정보 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["7-Mode용 Data ONTAP 8.2 데이터 보호 온라인 백업 및 복구 가이드"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp 설명서:SnapDrive for Windows(최신 릴리스)"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-cifs/home.html["SMB/CIFS 참조"]

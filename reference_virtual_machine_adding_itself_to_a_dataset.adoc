@@ -1,0 +1,32 @@
+---
+permalink: reference_virtual_machine_adding_itself_to_a_dataset.html 
+sidebar: sidebar 
+keywords: virtual, machine, managing, manage, itself 
+summary: '가상 머신(VM)이 SnapManager for Hyper-V가 설치된 호스트에 속하고 관리 콘솔로 사용할 Hyper-V용 SnapManager를 해당 VM에 설치하는 경우, SnapManager for Hyper-V를 사용하여 VM이 속한 호스트를 관리할 수 없습니다.' 
+---
+= 가상 시스템 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+가상 머신(VM)이 SnapManager for Hyper-V가 설치된 호스트에 속하고 관리 콘솔로 사용할 Hyper-V용 SnapManager를 해당 VM에 설치하는 경우, SnapManager for Hyper-V를 사용하여 VM이 속한 호스트를 관리할 수 없습니다.
+
+* * 원인 *
++
+가상 머신의 Hyper-V용 SnapManager는 자체적으로 관리할 수 없습니다.
+
+* * 시정 조치 *
++
+수정 조치가 필요하지 않습니다.
+
+* * 예 *
++
+VM1이 호스트1에 속하고(SnapManager for Hyper-V가 설치된 상태) VM1에 SnapManager for Hyper-V를 설치하는 경우, VM1에서 호스트1을 관리하기 위해 SnapManager for Hyper-V를 사용해서는 안 됩니다.
+
++
+이렇게 하고 VM 자체를 복구하려고 하면 Hyper-V Manager에서 VM이 삭제되거나 다시 시작됩니다.
+
+

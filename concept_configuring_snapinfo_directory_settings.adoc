@@ -1,0 +1,22 @@
+---
+permalink: concept_configuring_snapinfo_directory_settings.html 
+sidebar: sidebar 
+keywords: configure, configuring, snapinfo, setting, host, virtual, machine, resource, dataset, action, directory 
+summary: 해당 호스트 내의 가상 머신 리소스를 데이터 세트에 추가하려면 먼저 호스트에 대한 SnapInfo 설정을 구성해야 합니다. 
+---
+= SnapInfo 디렉토리 설정을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+해당 호스트 내의 가상 머신 리소스를 데이터 세트에 추가하려면 먼저 호스트에 대한 SnapInfo 설정을 구성해야 합니다. Hyper-V 호스트를 SnapManager for Hyper-V에 추가할 때 SnapInfo 설정이 구성되지 않은 경우 나중에 구성 마법사 또는 * SnapInfo settings * 작업을 사용하여 해당 설정을 구성할 수 있습니다.
+
+Hyper-V용 SnapManager에 호스트를 추가한 후 SnapInfo 설정을 변경할 수도 있습니다 그러나 SnapInfo 설정을 변경하는 경우 모든 파일을 수동으로 새 위치로 이동해야 합니다. Hyper-V용 SnapManager는 자동으로 업데이트하지 않습니다. 파일을 이동하지 않으면 백업 복사본을 복원하거나 관리할 수 없으며, SnapManager for Hyper-V에는 백업 복사본이 표시되지 않습니다.
+
+SnapManager for Hyper-V부터 SnapInfo 경로는 CSV(클러스터 공유 볼륨)에 상주할 수 있으며 Windows Server 2012의 SMB 공유에도 상주할 수 있습니다.
+
+* 관련 정보 *
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet: 페일오버 클러스터에서 클러스터 공유 볼륨 사용"]

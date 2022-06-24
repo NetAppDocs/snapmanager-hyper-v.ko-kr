@@ -1,0 +1,30 @@
+---
+permalink: reference_backup_fail_with_the_error_shadow_copy_creation_is_already_in_progress.html 
+sidebar: sidebar 
+keywords: backup, failure, error, shadow, copy, creation 
+summary: 섀도우 복제본 생성이 이미 진행 중인 백업 실패 오류입니다 
+---
+= "섀도우 복제본 생성이 이미 진행 중입니다." 오류와 함께 백업 실패
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 메시지 *
++
+[listing]
+----
+SnapManager for Hyper-V backup failed to complete
+Backup of the Dataset Name: example
+Backup id: c1bb4b28-c76c-4001-85fd-ffdfdb5737c9 failed to execute
+Error: Vss Requestor - Backup Components failed. Failed to add volume \\CIFS_USER_SER\USER_SHARE2\ to snapshot set. Another shadow copy creation is already in progress. Wait a few moments and try again.
+----
+* * 설명 *
++
+이 문제는 이전 백업이 중단되지 않고 여전히 활성화되어 있기 때문에 발생합니다. 다음 명령을 사용하여 나열된 항목을 확인합니다. 'cifs share show -shadowcopy
+
+* * 시정 조치 *
++
+이전 백업 작업을 중단하고 작업을 재시도하십시오.
+
+

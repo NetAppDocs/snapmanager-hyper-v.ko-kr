@@ -1,0 +1,22 @@
+---
+permalink: concept_report_path_settings.html 
+sidebar: sidebar 
+keywords: configure, report, path, setting, store, snapmanager, hyper-v, operation, configure, virtual, machine, dataset 
+summary: SnapManager for Hyper-V 작업에 대한 보고서를 저장할 수 있도록 보고서 경로 설정을 구성할 수 있습니다. 데이터 세트에 가상 머신 리소스를 추가하려면 먼저 보고서 경로 설정을 구성해야 합니다. 
+---
+= 보고서 경로 설정
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V 작업에 대한 보고서를 저장할 수 있도록 보고서 경로 설정을 구성할 수 있습니다. 데이터 세트에 가상 머신 리소스를 추가하려면 먼저 보고서 경로 설정을 구성해야 합니다.
+
+Hyper-V 상위 호스트를 SnapManager for Hyper-V에 추가할 때 보고서 설정이 구성되지 않은 경우 나중에 구성 마법사를 사용하여 해당 설정을 구성(또는 변경)할 수 있습니다.
+
+상위 호스트 클러스터에 대한 보고서 경로 설정을 구성하는 경우 각 클러스터 노드에 보고서 디렉토리를 수동으로 생성해야 합니다. 보고서 경로는 클러스터 공유 볼륨(CSV) 또는 공유 LUN에 상주하면 안 됩니다.
+
+* 관련 정보 *
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet: 페일오버 클러스터에서 클러스터 공유 볼륨 사용"]

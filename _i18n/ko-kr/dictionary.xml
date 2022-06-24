@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="9bfd8a32b889847e7544ae67a481cb0d" category="summary">SnapManager for Hyper-V를 설치하기 전에 사용자 환경이 모든 하드웨어, 소프트웨어, ONTAP 및 라이센스 요구 사항을 충족해야 합니다</block>
+  <block id="6d8dab0fd3c9ea56cfe745d20a01bd40" category="doc">Hyper-V용 SnapManager 설치 요구 사항 목록</block>
+  <block id="c943b0e1512420f89b9edf55a097a695" category="paragraph">SnapManager for Hyper-V를 설치하기 전에 사용자 환경이 모든 하드웨어, 소프트웨어, ONTAP 및 라이센스 요구 사항을 충족해야 합니다 최소 Windows 운영 체제 및 .Net 4.5에 대한 요구 사항이 충족되지 않으면 설치 프로그램이 중지됩니다.</block>
+  <block id="5d722e584e1a97a5679db4ed5cb92204" category="section-title">Hyper-V 상위 호스트 요구 사항</block>
+  <block id="897063780c01dc20396e5da6c0282f4e" category="paragraph">Windows Server 2008 R2 이상을 실행하는 Hyper-V 상위 호스트가 있어야 합니다. 상위 호스트에서 Hyper-V 역할을 사용하도록 설정해야 합니다. Hyper-V 상위 호스트에 Windows용 SnapDrive 7.1 이상이 설치되어 있어야 합니다.</block>
+  <block id="7ec05202285461e981b02b5dcbc7656b" category="section-title">SnapManager for Hyper-V 다운로드</block>
+  <block id="ce6b9a3666fd94fd87405be77506f061" category="paragraph">NetApp Support 사이트에서 SnapManager for Hyper-V 소프트웨어를 다운로드해야 합니다.</block>
+  <block id="d03162b43387c334a9a83cf598f2fd61" category="section-title">수행할 수 있습니다</block>
+  <block id="be754fa0b9d0c138c623a151e60a595b" category="paragraph">스토리지 시스템에서 적절한 버전의 ONTAP 소프트웨어를 실행해야 합니다. 호스트 기반 또는 스토리지 시스템 라이센스를 사용하여 SnapManager for Hyper-V를 설치할 수 있습니다</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="section-title">추가 수익 실적을</block>
+  <block id="70d0f7752ac42f36426dd9ceb4dc2f0f" category="paragraph">SnapManager for Hyper-V를 실행하려면 적절한 라이센스가 있어야 합니다</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="section-title">자격 증명</block>
+  <block id="8063a20349c31818a0c04557e1d87cfa" category="paragraph">Hyper-V용 SnapManager를 설치하고 실행하려면 적절한 자격 증명이 있어야 합니다</block>
+  <block id="0c5b330a73e771f120210c435e04f071" category="section-title">서비스 계정 및 인증 요구 사항</block>
+  <block id="80e68172a10ff6564b15dbb37db24374" category="paragraph">서비스 계정이 있어야 하며 인증 요구 사항을 충족해야 합니다. 서비스 계정을 사용하여 호스트에 로그인할 수 있어야 하며 해당 계정에 관리 권한이 있어야 합니다.</block>
+  <block id="f39b6a9b25a6ed27972f8db96faa7a41" category="section-title">웹 서비스 포트 번호입니다</block>
+  <block id="fbceb177a4f4c3677a56c6edd3f42b34" category="paragraph">웹 서비스 Net.tcp 포트 번호를 사용할 수 있어야 합니다. 기본 포트 번호는 808입니다. 클러스터에 SnapManager for Hyper-V를 설치할 때 모든 노드에서 동일한 포트 번호를 사용해야 합니다.</block>
+  <block id="181a610b4d20942c5b822b18af229089" category="summary">Hyper-V용 SnapManager를 사용하면 한 번에 단일 가상 머신(VM)을 복원하여 백업 복사본에서 손실되거나 손상된 데이터를 복구할 수 있습니다.</block>
+  <block id="b9ec9735f2fc80af25ba5efeb7b78413" category="doc">백업 복제본에서 가상 머신 복구</block>
+  <block id="adb73ebea301b91a34c36f4c1e602e23" category="paragraph">다음 정보를 사용할 수 있어야 합니다.</block>
+  <block id="ec8515af1b6337cfd04c9d14a72d8212" category="list-text">백업 이름입니다</block>
+  <block id="8b9a96e40ebcda35ce12190b41789b64" category="list-text">구성 정보</block>
+  <block id="16a41b40c49bce3832efe8ede921db79" category="list-text">스크립트 정보</block>
+  <block id="fa110b4d619aaf7973eb98288cf66f1d" category="paragraph">대체 호스트로 복원할 때 원래 VM이 있는 물리적 컴퓨터의 CPU 유형은 VM을 복원하려는 물리적 컴퓨터와 호환되어야 합니다. 또는 Hyper-V Manager를 사용하여 다른 CPU 유형의 시스템으로 시스템을 복원할 수 있도록 지정할 수 있습니다.</block>
+  <block id="50596a99edaf07b5771150334053aca5" category="paragraph">스토리지 실시간 마이그레이션 후에는 최신 백업에서 복원할 수 없습니다.</block>
+  <block id="0d4ce72f93bf0413766597f883589015" category="paragraph">Hyper-V 가상 머신의 복구 작업을 시작하고 동일한 가상 머신의 또 다른 백업 또는 복구가 진행 중인 경우 작업이 실패합니다.</block>
+  <block id="71d6438b419ce103a51afbfd672aae2b" category="list-text">탐색 창에서 * 복구 * 를 클릭합니다.</block>
+  <block id="12f2961bc27e7d9e3b1b7271af5b45bd" category="list-text">복구할 가상 머신을 선택합니다.</block>
+  <block id="a6d2207079011f9756823f288b80e01a" category="list-text">백업 창에서 복원할 백업 복사본의 이름을 선택하고 * 복원 * 을 클릭합니다.</block>
+  <block id="d515b8e04bcfab548d8f1baab6a431e6" category="paragraph">복원 마법사가 나타납니다.</block>
+  <block id="3159cd4bb0ddd7ee38e52445549eba6a" category="list-text">마법사의 단계를 완료하여 가상 머신 백업 복사본을 복구합니다.</block>
+  <block id="1966aa15da483387ba53e6ba8e5499ff" category="paragraph">마법사를 닫아도 복원 작업은 취소되지 않습니다. Hyper-V용 SnapManager는 복구 작업을 시작하기 전에 가상 머신 구성을 검증합니다. 가상 머신 구성에 변경 사항이 있으면 작업을 계속할지 또는 취소할지 선택할 수 있는 경고가 나타납니다.</block>
+  <block id="c7b1e280ade6237e8b59f4aef36828b1" category="paragraph">작업 관리 창에서 복구 작업의 상태를 보거나 보고서 관리 창에서 보고서를 확인하여 작업 결과를 확인할 수 있습니다.</block>
+  <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">* 관련 정보 *</block>
+  <block id="ec9387de061fdcb3776eaeb56e48bb80" category="inline-xref-macro">페일백 후 백업에서 복원</block>
+  <block id="6013efc1683d971230a863e5214ba856" category="paragraph"><block ref="6013efc1683d971230a863e5214ba856" category="inline-xref-macro-rx"></block></block>
+  <block id="3c5e1b6c5f4f2fdcbd144bc97871db3b" category="summary">VSS는 NAS 백업 중에 Microsoft iSCSI Target VSS Hardware Provider에 대한 오류를 반환합니다.</block>
+  <block id="670234aa29b1d4558a6a023d6141e755" category="doc">VSS는 NAS 백업 중에 Microsoft iSCSI Target VSS Hardware Provider에 대한 오류를 반환합니다</block>
+  <block id="9ff702207c5c34d0a659bd2093b21d08" category="list-text">* 문제 *</block>
+  <block id="abf74e69edb6ec9f21da76741d4507fa" category="paragraph">NAS 백업을 수행하는 동안 다음과 같은 오류가 발생할 수 있습니다.</block>
+  <block id="3ce6a4932c3fbaf7cad27f10f4987aef" category="paragraph">VSS 요청자 - 백업 구성 요소 실패. 스냅샷 세트에 볼륨 [예]를 추가하지 못했습니다. 지정된 작업을 처리하는 동안 섀도우 복제본 공급자에 예기치 않은 오류가 발생했습니다.</block>
+  <block id="54058ce4d3710059aa6cd67e7ed09b9a" category="paragraph">볼륨 섀도 복사본 서비스 오류: CLSID가 [example]인 섀도 복사본 공급자 COM 클래스를 만드는 동안 오류가 발생했습니다. 액세스가 거부되었습니다.</block>
+  <block id="3bef6104c92bf17bdfdf66c9a257bbfc" category="list-text">* 원인 *</block>
+  <block id="cc38ee1b14932166dacc83761bc5b8ba" category="paragraph">이러한 오류는 NAS 애플리케이션 정합성 보장 백업 중에 발생합니다. NAS 백업은 실패하지 않지만 VSS는 Microsoft iSCSI Target VSS Hardware Provider와 관련된 일부 오류를 기록합니다.</block>
+  <block id="9bcbf7a68cf7f81d5bf448a2e12ab26a" category="list-text">* 시정 조치 *</block>
+  <block id="6a377d56f9974cf1af73e482fa03ad6d" category="paragraph">백업이 실패하지 않았습니다. 이러한 오류를 무시해도 됩니다.</block>
+  <block id="ff4b2bdd0c2f262230f1c5f3b038c78a" category="summary">ONTAP 호스트로 가져오려면 먼저 비 ONTAP 호스트에서 가상 머신 \(VM\)을 내보내야 합니다.</block>
+  <block id="cc8203bf76d5372bf616cb5bdf8365ae" category="doc">비 ONTAP 호스트에서 VM 내보내기</block>
+  <block id="d83ef93fc96f4740e2fd1b5d36584bda" category="paragraph">ONTAP 호스트로 가져오기 전에 먼저 비 ONTAP 호스트에서 가상 머신(VM)을 내보내야 합니다.</block>
+  <block id="b121d022fb2f3bb7e8451fbadc298777" category="paragraph">마이그레이션할 VM의 전원을 꺼야 합니다.</block>
+  <block id="93ce70605948b9f69c980a0ac9a50946" category="list-text">애플리케이션 서버 관리자를 엽니다.</block>
+  <block id="8d1e6d98e3839f6b2671eaf41c3ee5a2" category="list-text">왼쪽 창에서 * 역할 * &gt; * Hyper-V * &gt; * Hyper-V Manager * 를 클릭합니다.</block>
+  <block id="fe504689150e839fac7a749fb9f09892" category="list-text">마이그레이션할 VM이 현재 상주하고 있는 비 ONTAP 호스트의 이름을 선택합니다.</block>
+  <block id="0b5ce316b9f199a9e5cb4bc986f76309" category="list-text">가상 시스템 창에서 마이그레이션할 VM의 이름을 마우스 오른쪽 버튼으로 클릭합니다.</block>
+  <block id="fd69693d0742412c103070062d719603" category="list-text">내보내기 * 를 클릭합니다.</block>
+  <block id="ba084e34315e08b7fbff1f32df7d07cc" category="image-alt">ServerManager에서 smhv 내보내기 VM</block>
+  <block id="6efb225c6a467f12571966e97fa50dc1" category="paragraph">Export Virtual Machine 창이 열립니다.</block>
+  <block id="f1faf4507c984826f3e72000d81e1ede" category="list-text">찾아보기 * 를 클릭합니다.</block>
+  <block id="a903e3fe8a39ede0a3b25c9dba687732" category="paragraph">사용 가능한 하드 디스크 드라이브가 표시된 창이 열립니다.</block>
+  <block id="62b7ce616a5ff56a56d0e7c02e700925" category="list-text">VM의 ONTAP 호스트 대상을 클릭합니다.</block>
+  <block id="9991f8a2ce0aacbd556d6c0a273e288e" category="list-text">폴더 선택 * 을 클릭합니다.</block>
+  <block id="298642c906879fec1830d1f7a785b17e" category="paragraph">VM은 7단계에서 선택한 Data ONTAP 대상으로 내보내집니다.</block>
+  <block id="f4e1484ecefdd106574b107ed3fa0434" category="paragraph">그런 다음 선택한 Data ONTAP 호스트로 VM을 가져옵니다.</block>
+  <block id="80811f0cfad7be4f8a8fe255a44dfe05" category="summary">SnapManager for Hyper-V에서 필요 시 백업 또는 관리되는 예약 백업을 생성하고 모니터링할 수 있습니다</block>
+  <block id="5425189468cabcf97238f146f46a82e4" category="doc">SnapManager for Hyper-V에서 백업 작업 생성 및 관리</block>
+  <block id="5f7f6c59275d2508b722bb7d7c47440f" category="paragraph">SnapManager for Hyper-V에서 필요 시 백업 또는 관리되는 예약 백업을 생성하고 모니터링할 수 있습니다 또한 SnapManager for Hyper-V를 사용하여 두 가지 유형의 백업 작업을 수행할 수 있습니다. 즉, 애플리케이션 정합성 보장 및 충돌 정합성이 보장됩니다.</block>
+  <block id="2f6395b7be292a20329791d34774e7ec" category="section-title">SnapManager for Hyper-V 백업 정보</block>
+  <block id="b5953a27b96d0c1bcf15c4ee0428dc16" category="paragraph">필요 시 백업 작업을 생성하여 원하는 시간에 실행하거나 데이터 세트에 연결된 정책을 사용하여 예약된 백업 작업을 생성할 수 있습니다. 필요 시 백업 작업에는 보존 및 복제 정책과 백업 전/후에 실행할 스크립트가 포함될 수 있습니다. 예약된 백업 작업을 구성하는 정책을 생성, 수정, 보기 및 삭제할 수 있습니다.</block>
+  <block id="743f46f5672759d8ff0f2a51a71f8bf1" category="section-title">SnapManager for Hyper-V가 수행할 수 있는 백업 작업 유형</block>
+  <block id="77b111d8e22579078bd3a1b224232739" category="paragraph">SnapManager for Hyper-V에서는 애플리케이션 정합성 보장 및 충돌 정합성 보장이라는 두 가지 유형의 백업 작업을 수행할 수 있습니다.</block>
+  <block id="b1e1d702d45b2fe56a635c1d9a086595" category="section-title">애플리케이션 정합성이 보장되는 백업 작업</block>
+  <block id="86a576351a2514a29670b00507fcb5ae" category="paragraph">애플리케이션 정합성이 보장되는 백업 작업은 철저하고 안정적이며 리소스가 많이 필요합니다. 이 작업은 Microsoft VSS(Volume Shadow Copy Service)와 함께 수행하여 스냅샷 복사본을 생성하기 전에 VM에서 실행 중인 각 애플리케이션을 중지하도록 합니다. 이 백업 방법은 애플리케이션 데이터의 일관성을 보장합니다. VM 및 VM에서 실행 중인 애플리케이션을 복원하는 데 사용할 수 있습니다. 하지만 애플리케이션 정합성이 보장되는 백업 작업은 시간이 오래 걸리고 복잡할 수 있습니다.</block>
+  <block id="aa61bce02174045e5bdaef86871fa67c" category="section-title">충돌 시에도 정합성 보장 백업 작업</block>
+  <block id="8116b9761ac61a18ef89d32ee3338130" category="paragraph">충돌 시에도 정합성 보장 백업 작업은 데이터 세트에 포함된 VM에서 사용하는 모든 LUN의 신속한 스냅샷 복사본입니다. 그 결과 생성된 백업 복제본은 충돌하거나 갑자기 전원이 꺼진 VM의 데이터 캡처와 유사합니다. 충돌 시에도 정합성이 보장되는 백업 작업을 통해 데이터를 빠르게 캡처할 수 있지만 충돌 시에도 정합성이 보장되는 백업에서 VM을 복구해야 합니다. 충돌 시에도 정합성이 보장되는 백업 작업은 애플리케이션 정합성이 보장되는 백업 작업을 대체하기 위한 것이 아닙니다.</block>
+  <block id="1de394836ecef8224e4b8254952e84bb" category="section-title">SnapManager for Hyper-V 백업 요구 사항 및 제한 사항</block>
+  <block id="067eba14c9f4607fcf90781d9a4c1665" category="paragraph">Hyper-V 백업을 위한 SnapManager의 요구 사항 및 제한 사항을 숙지해야 합니다.</block>
+  <block id="fc9931312928df647cf75c365b5cedea" category="list-text">MetroCluster 구성에서 스위치오버 또는 스위치백 작업을 수행하는 경우에는 백업 및 복원 작업이 지원되지 않습니다. 백업 및 복원 작업과 스위치오버 또는 스위치백 작업이 동시에 실행되는 경우 Windows Server 2012 R2 시스템에서 VM의 .vhdx 파일 형식이 .avhdx로 변경될 수 있습니다. VM은 이 변경의 영향을 받지 않습니다.</block>
+  <block id="ed0d328b7fb80959810b4fc480776152" category="list-text">분산된 애플리케이션 정합성이 보장되는 백업 옵션을 사용하면 파트너 클러스터 노드에서 실행되는 여러 VM이 백업 노드에서 생성된 단일 하드웨어 Snapshot 복제본에서 일관성을 유지할 수 있습니다. 이 옵션은 Windows 페일오버 클러스터의 여러 노드에서 CSV 2.0 Windows 볼륨에서 실행되는 모든 VM에 대해 지원됩니다.</block>
+  <block id="686eb5e51905e84129f4a85c8d8608c5" category="list-text">7-Mode에서 운영 중인 경우 애플리케이션 정합성이 보장되는 백업 작업에서는 VSS Hardware Provider를 사용하여 2개의 스냅샷 복사본을 생성합니다. 스냅샷 복사본을 snapshot_name 및 snapshot_name_backup이라고 합니다. 두 개의 Snapshot 복사본이 VSS 백업 중에 쉽게 자동 복구되도록 만들어집니다.</block>
+  <block id="a0b47801edb2ca75ad47a72c52e11d7b" category="list-text">클러스터 환경에서는 애플리케이션 정합성이 보장되는 백업에는 자동 복구 프로세스에 대해 하나의 스냅샷 복사본만 필요합니다. SIS 클론은 자동 복구를 수행하는 데 이용되며, 자동 복구가 완료되면 첫 번째 Snapshot 복사본(snapshot_name)이 삭제됩니다.</block>
+  <block id="1e151112af779c428fe9c9cac2417357" category="list-text">VM의 각 Windows 볼륨에는 최소 300MB의 사용 가능한 디스크 공간이 있어야 합니다. 여기에는 VHD, iSCSI LUN 및 VM에 연결된 Pass-through 디스크에 해당하는 Windows 볼륨이 포함됩니다.</block>
+  <block id="392415fca3acb1157d91685eaf8290a1" category="list-text">충돌 시에도 정합성 보장 백업 작업에서는 항상 하나의 스냅샷 복사본만 생성됩니다. VSS 통합은 제공하지 않습니다.</block>
+  <block id="807b110a0e042fe8c27556d3d3ac10c2" category="list-text">충돌 시에도 정합성이 보장되는 여러 백업 작업을 동시에 실행할 수 있습니다. 충돌 시에도 정합성 보장 백업 작업은 애플리케이션 정합성 보장 백업 작업과 동시에 실행할 수 있습니다.</block>
+  <block id="929d94772a38d01d0346ef8be9fc617c" category="list-text">AllowSavedStateBackup은 충돌 시에도 정합성이 보장되는 백업 작업에는 적용되지 않습니다.</block>
+  <block id="9a31c7a9558ce86e67c18872ab08b215" category="summary">SnapManager for Hyper-V를 사용하여 Hyper-V 상위 호스트 또는 클러스터를 추가, 확인 및 제거할 수 있습니다</block>
+  <block id="de98141b0ad67e6316b7ab5e9dd2c37f" category="doc">호스트 구성</block>
+  <block id="1f06fec52f443cb0114558d4a03ac4f4" category="summary">SnapManager for Hyper-V에서 백업, 복원 및 구성 보고서를 보고 삭제할 수 있습니다 이러한 보고서에는 데이터 세트, 가상 머신 및 호스트에 대한 중요한 정보가 포함되어 있습니다. 보고서를 여러 가지 형식으로 내보낼 수도 있습니다.</block>
+  <block id="bfc713844931617994d610549182f8c4" category="doc">보고서 관리</block>
+  <block id="3843efe20892823d0077617cd08721f1" category="list-text">* 보고서 백업 *</block>
+  <block id="b02be203c89094674d38b9a3987ecc0d" category="paragraph">백업 보고서는 특정 데이터 세트에 속한 모든 호스트의 모든 백업 정보를 표시합니다. 데이터 세트 또는 가상 머신에 대한 백업 보고서를 볼 수 있습니다. 가상 머신에 대해 표시되는 보고서는 GUID 대신 가상 머신 이름을 사용합니다.</block>
+  <block id="bd9b838529db2595b0e1547f1c815a73" category="paragraph">백업 보고서가 표시되면 여러 가지 형식으로 내보낼 수 있습니다.</block>
+  <block id="9bb984b5c024d988b7e3e8ec3b7ccd37" category="list-text">* 보고서 복원 *</block>
+  <block id="ed18f9107c301780412fa2703cf175c4" category="paragraph">복원 보고서는 VM 단위로 복원 작업에 대한 모든 정보를 표시합니다.</block>
+  <block id="9b2c6523a445bb2f1588789fece50627" category="paragraph">복원 보고서가 표시되면 여러 가지 다른 형식으로 내보낼 수 있습니다.</block>
+  <block id="612ef4d91419f2ffde9ba70ba314e4ec" category="list-text">* 구성 보고서 *</block>
+  <block id="d8a0e0306aec7605dc1e445c36068a9d" category="paragraph">구성 보고서에는 선택한 호스트에 대한 알림 설정, 보고서 경로 및 SnapInfo 경로가 표시됩니다.</block>
+  <block id="414009e6625ececab68d6d137e0ee333" category="paragraph">구성 보고서가 표시되면 여러 가지 다른 형식으로 내보낼 수 있습니다.</block>
+  <block id="3d1e3ba4492b6cf4530a7b58ed4e3033" category="summary">가상 머신(VM)을 성공적으로 가져온 후 비 ONTAP 호스트에서 VM을 삭제할 수 있습니다.</block>
+  <block id="de6d3cade9f2e76948843a171ace99d8" category="doc">비 ONTAP 호스트에서 이전에 내보낸 VM 삭제</block>
+  <block id="af1dbf1b444caeefdf74dc523a82f849" category="paragraph">VM을 성공적으로 가져와야 합니다.</block>
+  <block id="32985b828adb5af0b314616c8d2cf3bc" category="list-text">VM이 원래 호스팅되었던 비 ONTAP 호스트를 선택합니다.</block>
+  <block id="486f2710a6e73fc6621e917d0d55037e" category="list-text">Virtual Machines 창에서 이전에 내보낸 VM의 이름을 마우스 오른쪽 버튼으로 클릭합니다.</block>
+  <block id="874db297b2254479eeb702a2d7fa8dab" category="list-text">삭제 * 를 클릭합니다.</block>
+  <block id="5a9cb16bfaab21a3d02cda41e32a3842" category="paragraph">VM을 삭제할 것인지 확인하는 창이 열립니다.</block>
+  <block id="9d94ad975dd5a96bdbe907efd93940a5" category="paragraph">VM이 원래 호스트에서 제거됩니다.</block>
+  <block id="b6a443741a988a90f257684109af60d4" category="summary">Microsoft Windows Server 운영 체제 환경에 핫픽스를 수동으로 설치해야 합니다.</block>
+  <block id="fc798bdb49d3c2d605a7d8c0e960849f" category="doc">Windows Server 환경에 대한 핫픽스 요구 사항</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="7f5fa70f7f0de20b1035c6057b6b7faf" category="admonition">Windows Server 2016 및 Windows Server 2019 요구 사항은 을 참조하십시오<block ref="9ac0821921acbcb7ffc8a04e39ee2613" category="inline-link-rx"></block></block>
+  <block id="b5751ec538393c23a1c85e5ec3501f50" category="paragraph">Windows Server 2012의 경우 다음 핫픽스가 필요합니다.</block>
+  <block id="d28a0d13680c18c0dcb27b242726e800" category="inline-link">KB2770917</block>
+  <block id="18e5626edd40ef3fe1538cbeef23603d" category="list-text"><block ref="18e5626edd40ef3fe1538cbeef23603d" category="inline-link-rx"></block></block>
+  <block id="985c8622762c01cb2f7e269eeaf60576" category="inline-link">KB2779768</block>
+  <block id="dbbae3f0fbe198bc8431215f4b56b8c2" category="list-text"><block ref="dbbae3f0fbe198bc8431215f4b56b8c2" category="inline-link-rx"></block></block>
+  <block id="5326e05dfd3d1e0574d27a8c06918940" category="paragraph">Windows Server 2008 R2의 경우 다음 핫픽스가 필요합니다.</block>
+  <block id="822cede87b8018748d5147db6ff9320a" category="inline-link">KB974909</block>
+  <block id="c50877258eedb8b82c375daf1d407fe6" category="list-text"><block ref="c50877258eedb8b82c375daf1d407fe6" category="inline-link-rx"></block></block>
+  <block id="90b7cafa5e177790b498421563f2b9c8" category="inline-link">KB975354</block>
+  <block id="05851b952c69a06740862d73fa159681" category="list-text"><block ref="05851b952c69a06740862d73fa159681" category="inline-link-rx"></block></block>
+  <block id="bcdfc22b39056fcbba39e3e75098e3c7" category="inline-link">KB2637197</block>
+  <block id="7e0092151e83f3a9eae69921b72f534d" category="list-text"><block ref="7e0092151e83f3a9eae69921b72f534d" category="inline-link-rx"></block></block>
+  <block id="99fa3d9c10817df24809b9c564d97b43" category="paragraph">Windows Server 2008 R2 SP1의 경우 다음 핫픽스가 필요합니다.</block>
+  <block id="7cc18a2a00146ce0cd8282666ef707cf" category="inline-link">KB2263829</block>
+  <block id="014c976ce6a6b61ef9825f767517099e" category="list-text"><block ref="014c976ce6a6b61ef9825f767517099e" category="inline-link-rx"></block></block>
+  <block id="9d9c405131f63960e2964c6c3180074e" category="paragraph">최소 패치 수준입니다.</block>
+  <block id="5fbcbeac1c9323edbfaa4d42e8498112" category="summary">SnapManager for Hyper-V를 설치한 후 데이터 보호 및 복원을 위한 정책을 추가하여 호스트 및 가상 시스템을 구성 및 관리할 수 있습니다.</block>
+  <block id="3c982a72c20a469b8dccc548d71219d4" category="doc">Hyper-V용 SnapManager 구성</block>
+  <block id="195506677cdc504f967b8ebba196fef1" category="summary">SnapManager for Hyper-V는 호스트 또는 스토리지 시스템에서 라이센스가 부여되지 않습니다.</block>
+  <block id="33876ac921b2bc632aaef6a42256b23d" category="doc">SnapManager for Hyper-V는 호스트 또는 스토리지 시스템에서 라이센스가 부여되지 않습니다</block>
+  <block id="2dd9a9fa1ac0d7911deb623eb2417bf4" category="list-text">* 메시지 *</block>
+  <block id="2d20eb8c65308e47a2b08e27aba5c8e3" category="paragraph">SnapManager for Hyper-V는 호스트 또는 스토리지 시스템에서 라이센스가 부여되지 않으므로 백업이 중단됩니다</block>
+  <block id="f14c276c07197ebef1394a5a219087a1" category="list-text">* 설명 *</block>
+  <block id="59e79108618fff704166fe7ce5803dd7" category="paragraph">이 메시지는 시스템에 라이센스가 없거나 열거, 가상 머신 캐싱 또는 MBR(마스터 부트 레코드) 디스크 사용에 문제가 있는 경우에 발생합니다.</block>
+  <block id="40383a03fe003a75842d350885aab9aa" category="list-text">시스템에 라이센스가 있는지 확인합니다.</block>
+  <block id="a49dbab3319247004e60533531fcbd19" category="list-text">SnapManager for Hyper-V가 지원하지 않는 모든 MBR 디스크를 GPT(GUID 파티션 테이블) 디스크로 마이그레이션합니다.</block>
+  <block id="e4e2c69c7412318a9a9284557e14419f" category="list-text">SnapManager for Hyper-V를 다시 시작합니다 이렇게 해도 문제가 해결되지 않으면 열거 문제가 있을 가능성이 높으며 기술 지원 부서에 문의해야 합니다.</block>
+  <block id="38a569a8b695810bedfc219326f7c957" category="summary">클러스터 OS 롤링 업그레이드를 수행한 후에는 모든 노드에서 데이터 세트와 SnapInfo를 업데이트해야 합니다.</block>
+  <block id="749f93cdad32206d42f7b7eb9e6d064b" category="doc">모든 노드에서 데이터 세트 및 SnapInfo 업데이트</block>
+  <block id="8422363b530efa373f87e696b2f3bef3" category="admonition">클러스터 롤링 업그레이드는 Windows Server 2016에서 Windows Server 2019로 지원됩니다. 혼합 모드 운영 체제에서는 공유 디스크 백업이 지원되지 않습니다.</block>
+  <block id="ce544eb22035e6c0d3d0ec2c7e390f58" category="list-text">Windows 2012 R2 노드의 모든 데이터 세트를 편집합니다.</block>
+  <block id="5bc780c2a398c9061cab5e0436fbeb95" category="list-text">사용 가능한 모든 데이터 세트가 Windows 2016 노드에 표시되는지 확인합니다.</block>
+  <block id="a511914199a96e0d1ed1fbc3859f85fd" category="list-text">Windows 2012 R2 노드에서 SnapInfo 경로를 설정합니다.</block>
+  <block id="bd57c56b4b1557c4bb21f8806d726880" category="list-text">Windows 2016 노드에 올바른 SnapInfo 경로가 표시되는지 확인합니다.</block>
+  <block id="aaad8541861f53cba82fd2c8926d87f4" category="summary">SnapManager for Hyper-V를 설치하기 전에 NetApp Support 사이트에서 소프트웨어 패키지를 다운로드해야 합니다.</block>
+  <block id="f5c6fbf2b0b52b4277040990046cd128" category="doc">Hyper-V용 SnapManager 다운로드 중</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp Support 사이트</block>
+  <block id="15065f0cec37f47f6fb478d2c9e38d16" category="paragraph">SnapManager for Hyper-V를 설치하기 전에 에서 소프트웨어 패키지를 다운로드해야 합니다 <block ref="ddde3f632635f1214fcf71477f4c4e6e" category="inline-link-macro-rx"></block>.</block>
+  <block id="99e5e607db77c21714ad56713649336a" category="paragraph">NetApp Support 사이트에 대한 로그인 자격 증명이 있어야 합니다.</block>
+  <block id="ef2f0d900bc744477aadbce9b212dc20" category="list-text">NetApp Support 사이트에 로그인합니다.</block>
+  <block id="e558d54c61af5c40188d0d8d288bebd4" category="list-text">소프트웨어 다운로드 페이지로 이동합니다.</block>
+  <block id="96409ef47356e6f1ca404e4dbbd0d460" category="list-text">드롭다운 목록에서 SnapManager for Hyper-V를 설치할 운영 체제를 선택하고 * Go! * 를 클릭합니다.</block>
+  <block id="1f7538967ef0ad283767576991eadfeb" category="list-text">설치할 소프트웨어 버전에 대해 * 보기 및 다운로드 * 를 클릭합니다.</block>
+  <block id="6af81455b6e2cdd1ac9ad149922600be" category="list-text">설명 페이지에서 * 계속 * 을 클릭합니다.</block>
+  <block id="1cec04b1fe6e3bfdcaddfffedd400a12" category="list-text">라이센스 계약을 검토하고 동의합니다.</block>
+  <block id="075090d125619d0f714d37cba8f9b2c1" category="list-text">다운로드 페이지에서 설치 파일의 링크를 클릭합니다.</block>
+  <block id="7639edcd0f857dee5c37824943c0a04b" category="list-text">SnapManager for Hyper-V 파일을 로컬 또는 네트워크 디렉토리에 저장합니다.</block>
+  <block id="27992f0f5ff15a395474dac5a64524e2" category="list-text">파일 저장 * 을 클릭합니다.</block>
+  <block id="1590b7a8b0b7acb35abe40ef018e8451" category="list-text">체크섬을 확인하여 소프트웨어가 올바르게 다운로드되었는지 확인합니다.</block>
+  <block id="116057e59777a6912b053f16846276cb" category="summary">다음 VM을 온라인으로 백업할 수 없거나 백업할 VM을 찾을 수 없으므로 백업이 실패했습니다.</block>
+  <block id="1b9a0ddcc331d08d4f33c6463540d181" category="doc">다음 VM을 온라인으로 백업할 수 없거나 백업할 VM을 찾을 수 없으므로 백업이 실패했습니다</block>
+  <block id="3499864f6d7f2acfc5b060995b6720a4" category="paragraph">다음 VM을 온라인으로 백업할 수 없거나 백업할 VM을 찾을 수 없어 백업이 실패했습니다</block>
+  <block id="f94e13e741fbfd2853be90b741817480" category="paragraph">이 메시지는 Windows 2008 R2 SP1 Hyper-V 부모에서 저장된 상태 VM 백업 허용 옵션을 사용하지 않고 Windows 2012 VM을 백업하지 못한 경우에 발생합니다.</block>
+  <block id="5c7f36b1862101e85b1a1b08bf86801a" category="paragraph">Windows 2012 백업의 경우 Allow Saved State VM backup 옵션이 설정된 상태로 백업을 실행합니다.</block>
+  <block id="78b156c09fb275854cd9790780867e65" category="summary">오류 1935</block>
+  <block id="d4c99b76e5537b45dc567045ef457d62" category="doc">오류 1935. 어셈블리 부품을 설치하는 동안 오류가 발생했습니다</block>
+  <block id="ba6fe311c47aed667d14e39981d8bb8a" category="paragraph">오류 1935. 어셈블리 구성 요소 \{2A030FEB-29B5-314B-97B5-ED38673CC885}을(를) 설치하는 동안 오류가 발생했습니다. HRESULT: 0x80070BC9.</block>
+  <block id="2f143f115d15603e6a80bcb544ababa5" category="paragraph">이 메시지는 Microsoft 핫픽스를 설치 또는 제거한 후 Hyper-V 시스템을 다시 시작하지 않아 Hyper-V용 SnapManager 설치 프로그램이 실패할 때 나타납니다.</block>
+  <block id="72f3c5d3524a276f01951f5ccce1b021" category="paragraph">컴퓨터를 다시 시작하고 Hyper-V용 SnapManager 설치 프로그램을 다시 실행합니다.</block>
+  <block id="e04e5493bbdf3730d702cbaec9351bf3" category="summary">SnapManager for Hyper-V를 설치하기 전에 모든 호스트에 Windows용 SnapDrive를 설치해야 합니다 호스트가 클러스터의 구성원인 경우 클러스터의 모든 노드에는 Windows용 SnapDrive가 설치되어 있어야 합니다.</block>
+  <block id="e9e04761b2e3fa887c771ddefa5c5e27" category="doc">Windows용 SnapDrive 및 Hyper-V용 SnapManager 설치 순서</block>
+  <block id="db047a0b521ee4cf896d8ec09df2654a" category="paragraph">SnapManager for Hyper-V가 시작되면 SnapDrive for Windows와 통신하여 호스트에서 실행 중인 모든 가상 머신 목록을 가져옵니다. 호스트에 SnapDrive for Windows가 설치되어 있지 않으면 이 API가 실패하고 SnapManager for Hyper-V 내부 캐시가 가상 머신 정보로 업데이트되지 않습니다.</block>
+  <block id="bdd6036ee8da78481c757800c761826d" category="paragraph">다음과 같은 메시지가 표시될 수 있습니다. 오류: Hyper-V용 SnapManager 라이센스가 호스트 또는 스토리지 시스템에서 허가되지 않았습니다. 백업이 중단되었습니다.</block>
+  <block id="ef15a4ad935b2f543c56737f52c1c4a7" category="summary">필요한 핫픽스 KB2263829를 일부 플랫폼에 설치할 수 없습니다.</block>
+  <block id="d8289df174ac8376e457700b7ea3669c" category="doc">필요한 핫픽스 KB2263829를 일부 플랫폼에 설치할 수 없습니다</block>
+  <block id="54a025a9ba847dcaa62c40b9b4fa5734" category="paragraph">SnapManager for Hyper-V를 설치하는 동안 핫픽스 KB2263829를 설치하려고 하면 Windows Server 2008 R2 SP1에 실패할 수 있습니다. 설치 프로그램에 이 서버에 핫픽스를 적용할 수 없다는 메시지가 표시됩니다.</block>
+  <block id="427697515b04257202a3b4b5ced27901" category="paragraph">해당 플랫폼에서 핫픽스가 지원되지 않습니다.</block>
+  <block id="0cd04650c65665d252b5bab48c43e335" category="paragraph">Microsoft에서 지원 케이스를 열고 Microsoft 관련 문제를 해결합니다.</block>
+  <block id="f36427a62208ca85bd66f68cbde021ba" category="summary">백업하는 동안 SnapDrive SDDiscoveryFileSystemListInfo 응답이 null입니다</block>
+  <block id="00d8b617d19c6e8fe50aa280d0dd3c2b" category="paragraph">백업하는 동안 SnapDrive SDDiscoveryFileSystemListInfo 응답이 Null인 오류가 발생합니다.</block>
+  <block id="6f5d8bff5f9a9b51ec9f28ae04e4cd4c" category="paragraph">이 메시지는 백업 중인 SnapInfo 위치를 사용할 수 없을 때 나타납니다.</block>
+  <block id="b47b81a663a4385889567ca313b5ee4c" category="paragraph">SnapInfo 위치가 있으며 사용 가능한지 확인합니다. 변경된 경우 구성 관리자를 다시 실행하여 새 위치를 지정합니다. 백업을 다시 시도하십시오.</block>
+  <block id="37b6c1d7a1911698f121cf35fc05635f" category="inline-xref-macro">SnapInfo LUN 설정</block>
+  <block id="345616fad0a5efb9525cd15ead6ffe9e" category="paragraph"><block ref="345616fad0a5efb9525cd15ead6ffe9e" category="inline-xref-macro-rx"></block></block>
+  <block id="62433c1b4908b09a13b12e252aea86da" category="summary">SnapManager for Hyper-V 작업에 대한 보고서를 저장할 수 있도록 보고서 경로 설정을 구성할 수 있습니다. 데이터 세트에 가상 머신 리소스를 추가하려면 먼저 보고서 경로 설정을 구성해야 합니다.</block>
+  <block id="2a408ba97edbb024d7f44a8d395af0d8" category="doc">보고서 경로 설정</block>
+  <block id="1434cb8a3957b70ee9c78bd57a6604df" category="paragraph">Hyper-V 상위 호스트를 SnapManager for Hyper-V에 추가할 때 보고서 설정이 구성되지 않은 경우 나중에 구성 마법사를 사용하여 해당 설정을 구성(또는 변경)할 수 있습니다.</block>
+  <block id="fd01b6e9cb06a08b5efd79c6ddbc99de" category="paragraph">상위 호스트 클러스터에 대한 보고서 경로 설정을 구성하는 경우 각 클러스터 노드에 보고서 디렉토리를 수동으로 생성해야 합니다. 보고서 경로는 클러스터 공유 볼륨(CSV) 또는 공유 LUN에 상주하면 안 됩니다.</block>
+  <block id="89d96bd3d0dc88897d9d64bb8d7f3a1b" category="inline-link">Microsoft TechNet: 페일오버 클러스터에서 클러스터 공유 볼륨 사용</block>
+  <block id="23d97dc1e44781b784267d24c6612cf6" category="paragraph"><block ref="23d97dc1e44781b784267d24c6612cf6" category="inline-link-rx"></block></block>
+  <block id="4047d1480c3bf3bce47e92233f31eb75" category="summary">데이터 세트 백업 메타데이터를 저장하려면 SnapManager for Hyper-V에 SnapInfo LUN을 추가해야 합니다. SnapManager for Hyper-V는 일반 백업이 발생한 후 SnapInfo 복제본을 백업하기 때문에 SnapInfo 경로는 ONTAP LUN에 상주해야 합니다.</block>
+  <block id="ca0df1c246099b20635f5248e47d5158" category="paragraph">SnapInfo 경로는 Windows Server 2012 클러스터를 실행 중인 경우 CSV(Cluster Shared Volume)에 상주할 수 있습니다. 전용 가상 머신을 관리하는 경우 SnapInfo 위치는 전용 ONTAP LUN이어야 합니다. 공유 가상 머신을 관리하는 경우 SnapInfo 위치는 공유 ONTAP LUN이어야 합니다.</block>
+  <block id="5dee2f155ee1c019097cbb50fd895737" category="list-text">Windows용 SnapDrive를 사용하여 새 공유 디스크를 만듭니다.</block>
+  <block id="47c523e4160395991828dd7708819c66" category="list-text">Microsoft 클러스터 서비스 그룹을 선택하는 옵션이 주어지면 * 새 클러스터 그룹 생성 * 옵션을 선택합니다</block>
+  <block id="e8696b5f1d764b584ec3b71702cc4812" category="list-text">그룹 이름을 mhv_snapinfo 로 지정하고 프로세스를 완료합니다.</block>
+  <block id="d0243888dfd577361004f24bc3d5aa25" category="list-text">WFC(Windows Failover Clustering)를 열고 새 그룹이 온라인 상태인지 확인합니다.</block>
+  <block id="c7ddc96fc71ae15138dae6f005172621" category="list-text">클러스터의 각 노드에 SnapManager for Hyper-V를 설치합니다.</block>
+  <block id="8b15ab699a64964dc8016e4e9be49c2c" category="list-text">구성 마법사를 실행하고 클러스터의 모든 노드에 SnapInfo 구성 설정을 적용합니다.</block>
+  <block id="44479736f11e9fce68ee0cda1b9c2554" category="list-text">호스트 중 하나를 선택합니다.</block>
+  <block id="66e15320eaa4b8d0027de27e817f001b" category="list-text">탐색 창에서 * 보호 * &gt; * 호스트 * 를 클릭합니다.</block>
+  <block id="101fb1f032906579fae5b6b3ae4ec822" category="list-text">작업 창에서 구성 마법사를 실행합니다.</block>
+  <block id="cbe4dad7c2b6e8efec7c982b5d8ddff3" category="list-text">새로 생성한 LUN에 SnapInfo 설정을 적용합니다.</block>
+  <block id="99f60cd8e244cd40d9c2dc24aff6528d" category="paragraph">구성 마법사를 실행하면 SnapInfo 구성 설정이 클러스터의 모든 노드에 복제됩니다.</block>
+  <block id="1dfacf3a4a2dc4b1a044f60476b25d08" category="inline-xref-macro">오류: SnapDrive SDDiscoveryFileSystemListInfo 응답이 null입니다</block>
+  <block id="2fec41eed06733ee453ea97dc28c5409" category="paragraph"><block ref="2fec41eed06733ee453ea97dc28c5409" category="inline-xref-macro-rx"></block></block>
+  <block id="e6c9d03a83d3c42bfefb7f9540a1aa80" category="summary">SnapManager for Hyper-V는 ONTAP를 실행하는 스토리지 시스템에 상주하는 Microsoft Hyper-V 가상 머신(VM)에 대한 데이터 보호 및 복구 솔루션을 제공합니다.</block>
+  <block id="095c71dfe395f1dd95b26c1e823cfccd" category="doc">SnapManager for Hyper-V가 무엇인지</block>
+  <block id="c72c944bad626d5a390b1257b6c64fae" category="paragraph">백업 관리자가 설정한 데이터 세트 보호 정책에 따라 애플리케이션 정합성이 보장되고 장애 발생 시 정합성이 보장되는 데이터 세트 백업을 수행할 수 있습니다. 이러한 백업에서 VM을 복원할 수도 있습니다. 보고 기능을 사용하면 백업 상태를 모니터링하고 백업 및 복원 작업에 대한 자세한 정보를 얻을 수 있습니다.</block>
+  <block id="7820862667bfa910e751c06790cd735a" category="summary">작업 관리 창 예약 탭을 사용하여 특정 데이터세트에 대해 예약된 백업 작업을 볼 수 있습니다. 실행 중인 작업 관리 창을 사용하여 현재 실행 중인 백업 및 복원 작업을 볼 수도 있습니다.</block>
+  <block id="4ed8431411d5fef3b64d119526c3ffe2" category="doc">백업 작업 모니터링</block>
+  <block id="799cb6b22bc4ea869d10d055fc411c20" category="paragraph">작업 관리 창 일정 탭을 사용하여 특정 데이터세트에 대해 예약된 백업 작업을 볼 수 있습니다. 작업 관리 창 실행 탭을 사용하여 현재 실행 중인 백업 및 복원 작업을 볼 수도 있습니다.</block>
+  <block id="be89dad1c86129724507ac60f1ad2654" category="list-text">탐색 창에서 * 작업 * 을 클릭합니다.</block>
+  <block id="c6d6ab0819681f4ca89d08a08a36c6a2" category="list-text">Scheduled(예약) 탭 또는 Running(실행) 탭을 클릭합니다.</block>
+  <block id="be7b6b8818a371284fe07445983923da" category="list-text">모니터링하려는 예약 또는 실행 중인 백업 작업 또는 복원 작업을 선택합니다.</block>
+  <block id="e02a3b064cf13fc8319be37f8e87c48c" category="paragraph">작업에 대한 정보가 자세히 창에 나타납니다.</block>
+  <block id="546135fcea6d9fbd992cd82adaa3ace0" category="list-text">실행 중인 작업의 실시간 보고서를 보려면 * 보고서 보기 * 에서 실행 중인 작업 보고서를 사용하십시오.</block>
+  <block id="31d804fb6bd7923bde1fe3ccf923b2c5" category="admonition">Microsoft의 SCOM 콘솔을 사용하여 백업 작업을 모니터링할 수도 있습니다. 자세한 내용은 Microsoft 웹 사이트를 참조하십시오.</block>
+  <block id="bdf6ede069059d1339abd9feceab855d" category="summary">운영 스토리지 시스템에 VM을 백업한 후 운영 스토리지 시스템에서 보조 스토리지 시스템으로 SnapMirror 관계를 사용하여 원래 구성으로 돌아갈 수 있습니다.</block>
+  <block id="b36d71bc4a614643ff8848ccdeed0f00" category="doc">독립 실행형 호스트에 대한 원래 구성 복원</block>
+  <block id="6905363f2ff637dfe1824c0c135cf4ea" category="list-text">보조 스토리지 시스템에서 실행 중인 VM을 종료합니다.</block>
+  <block id="22a8deae65a653eb66d09c8bd5c93646" category="list-text">보조 스토리지 시스템에서 실행 중인 VM을 삭제합니다.</block>
+  <block id="ed79b11793c8f11f09c0f2d15546dfdc" category="list-text">SnapDrive를 사용하여 SnapInfo 디스크와 VM이 포함된 디스크의 연결을 끊습니다.</block>
+  <block id="3e444e6d7a9c632d1317e7e4a62e4388" category="list-text">운영 스토리지 시스템에서 보조 스토리지 시스템으로 SnapMirror 관계를 재동기화합니다.</block>
+  <block id="1d9947062d6e98a2105dd6ea828d692a" category="summary">Hyper-V Manager에서 가상 컴퓨터를 제거한 후 백업이 실패합니다.</block>
+  <block id="5ec728668c45e8f81f752d3a99f5fc70" category="doc">Hyper-V Manager에서 가상 컴퓨터를 제거한 후 백업이 실패합니다</block>
+  <block id="351c4bb4de2a7fa3d4d5aee0bcbfb656" category="paragraph">Hyper-V Manager에서 Hyper-V 가상 머신(VM)을 제거한 후 VM과 연결된 데이터 세트를 업데이트하지 않으면 백업 작업이 실패합니다.</block>
+  <block id="94b5d7ad6b008a73cb35522d042dbd04" category="paragraph">이 문제는 Hyper-V Manager에서 Hyper-V VM을 제거하고 데이터 세트를 수정하지 않고 백업을 시도할 때 발생합니다. 또한 VM을 다시 생성한 경우 데이터 세트를 수정해야 합니다. SnapManager for Hyper-V는 VM ID(GUID)를 기반으로 데이터 세트를 생성합니다. VM이 삭제, 제거 또는 다시 생성될 때 백업이 실패하고 새 GUID가 생성됩니다. 이렇게 해도 전체 백업 프로세스의 실패가 트리거되지는 않지만 VM을 삭제한 다음 같은 이름으로 다시 생성할 경우 SnapManager for Hyper-V가 자동으로 보호되지 않습니다</block>
+  <block id="982da8f4f7a8b617dfd506f15e3ea531" category="paragraph">VM의 데이터 세트 목록에서 VM을 제거하고 다시 생성된 VM을 데이터 세트에 추가합니다.</block>
+  <block id="1c4e774476d6e9e35f8181fb870d437b" category="inline-xref-macro">데이터 세트 구성</block>
+  <block id="19225b7ee14c0729e84adc67933fa763" category="paragraph"><block ref="19225b7ee14c0729e84adc67933fa763" category="inline-xref-macro-rx"></block></block>
+  <block id="2b8bb77363e2ba918a8d55ad17103d3c" category="inline-xref-macro">데이터 세트 수정</block>
+  <block id="d5ee393555404ba1169add677cccdea7" category="paragraph"><block ref="d5ee393555404ba1169add677cccdea7" category="inline-xref-macro-rx"></block></block>
+  <block id="96e906863598881be256d4f66fe5c641" category="summary">지정된 VM이 없거나 온라인으로 백업할 수 없습니다</block>
+  <block id="d6dc8dbe67888f96e6c4ef8c9b23f2b4" category="paragraph">이 메시지가 나타나는 이유 중 하나는 VM의 통과 디스크 크기가 300MB 미만인 경우 애플리케이션 정합성 보장 백업이 실패하는 경우입니다. 오류 로그는 다음 예와 비슷합니다.</block>
+  <block id="573c1a9a1891d01ab86fe011704619b0" category="paragraph">오류를 나타내는 다른 응용 프로그램 또는 시스템 오류 메시지가 없습니다.</block>
+  <block id="bb7c1bc48907ca3e4f78ca51d6cb1b2a" category="paragraph">통과 디스크의 크기를 300MB보다 크게 조정하거나 Allow Saved State VM backup(저장된 상태 VM 백업 허용) 옵션을 활성화하여 백업을 실행할 수 있습니다.</block>
+  <block id="ce9d4a08dd94289de7bf285d9ec36538" category="admonition">이 수정 조치는 SAN 및 NAS 환경 모두에 적용됩니다.</block>
+  <block id="33db5ea89996dba4c6cf5df66fa05f7f" category="paragraph">두 번째 이유는 Hyper-V VM의 범위 스냅샷 옵션이 활성화되었기 때문에 Windows에서 이 시스템의 온라인 백업을 수행할 수 없기 때문입니다. 범위가 지정된 스냅샷은 주로 Windows 중요 업데이트에서 사용됩니다.</block>
+  <block id="261b099cdac97297efd2b2e108ec8695" category="paragraph">다음에서 값이 0인 DWORD ScopeSnapshots 매개 변수를 만들어 범위 스냅샷 옵션을 비활성화해야 합니다.</block>
+  <block id="a0b1a7b293c6d3225d181ea291319ebf" category="paragraph">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SystemRestore\</block>
+  <block id="6e33f9576af76aa1d9895211dfc03c84" category="summary">SnapManager for Hyper-V는 Microsoft Hyper-V VSS(Volume Shadow Copy Service) writer와의 통합을 통해 가상 머신(VM)을 중지한 다음, 애플리케이션 정합성이 보장되는 VM의 스냅샷 복사본을 생성합니다.</block>
+  <block id="3fc4ca26d6624903b7c1896f0151b7bc" category="doc">SnapManager for Hyper-V에서 VSS를 사용하는 방법</block>
+  <block id="c928cc6a46d871561d1a99bf84fd2b56" category="paragraph">SnapManager for Hyper-V는 VSS 요청자로서, SMB 3.0 공유에서 실행되는 Hyper-V VM을 위한 Data ONTAP용 VSS 하드웨어 공급자 및 원격 VSS 공급자를 사용하여 일관된 스냅샷 복사본을 생성하기 위해 백업 작업을 조정합니다.</block>
+  <block id="d8f1ba52a2fb60b761725669851909c6" category="paragraph">SnapManager for Hyper-V를 사용하면 VM의 VHD(가상 하드 디스크)에서 Microsoft Exchange, Microsoft SQL 또는 기타 VSS 인식 애플리케이션을 실행 중인 경우, 애플리케이션에서 일관된 VM 백업을 만들 수 있습니다. SnapManager for Hyper-V는 백업이 발생할 때 애플리케이션 데이터의 일관성을 보장하기 위해 VM 내의 애플리케이션 작성자와 조정됩니다.</block>
+  <block id="2334b1c6a70e9b217e27598a51229941" category="paragraph">애플리케이션 정합성 보장 백업에서 VM을 복원할 수도 있습니다. VM에 있는 애플리케이션은 백업 시와 동일한 상태로 복구됩니다. SnapManager for Hyper-V는 VM을 원래 위치로 복구합니다.</block>
+  <block id="8e4c01549f579899f8ef80cf7b0edfec" category="admonition">VSS 통합은 애플리케이션 정합성 보장 백업에서만 사용할 수 있습니다. 충돌 시에도 정합성 보장 백업에는 VSS가 사용되지 않습니다.</block>
+  <block id="618658254a548ad9f293de94cb0515c7" category="summary">SnapManager for Hyper-V에는 SnapManager for Hyper-V에 사용할 수 있도록 비 ONTAP 스토리지에서 ONTAP 스토리지로 가상 머신(VM)을 마이그레이션하는 데 도움이 되는 마이그레이션 마법사가 포함되어 있지 않습니다 대신 Server Manager를 사용하여 VM을 수동으로 내보내고 가져와야 합니다.</block>
+  <block id="515e0d9cceee07e1b69a3ad974c9451d" category="doc">Hyper-V 작업을 위한 SnapManager용 Hyper-V 가상 머신 마이그레이션</block>
+  <block id="f6845f349e886d648b65a1dc8778589c" category="summary">Hyper-V 상위 호스트 또는 호스트 클러스터를 추가하여 가상 머신을 백업 및 복구할 수 있습니다.</block>
+  <block id="1b0d508f3e49b91fa74189bf35f7c3d3" category="doc">Hyper-V 상위 호스트 또는 호스트 클러스터 추가</block>
+  <block id="0d3666cebabc77e7590a58bc267ed47d" category="list-text">탐색 창에서 * 보호 * 를 클릭합니다.</block>
+  <block id="d882a70142a49ef1a13cbfa42d2bdae8" category="list-text">작업 창에서 * 호스트 추가 * 를 클릭합니다.</block>
+  <block id="414231897072d6d0f0d3fc0213b8924c" category="list-text">호스트 추가 마법사를 실행합니다.</block>
+  <block id="bb5ba928513232a58b2bf0eadc1bdd6b" category="paragraph">클러스터에 호스트를 추가할 때 새 호스트에 대한 정보가 GUI에 자동으로 표시되지 않습니다. 설치 디렉터리의 XML 파일에 호스트 정보를 수동으로 추가합니다.</block>
+  <block id="97530fe40e9f75dabd2b2120f27b812f" category="paragraph">각 클러스터 노드에 SnapManager for Hyper-V가 설치되어 있어야 합니다. SnapManager for Hyper-V가 설치되어 있지 않으면 원격 호스트 설치 마법사를 실행하라는 메시지가 표시됩니다.</block>
+  <block id="346b8a90c0a9cbe0b9b480432a61f0bf" category="summary">페일백 후 백업에서 복원</block>
+  <block id="d5aea7672ff6c50c0bf6637337f6ff66" category="paragraph">장애 조치 및 장애 복구를 수행하는 경우, 장애 조치 전에 동일한 운영 사이트에서 생성된 백업에서 기본 사이트의 VM을 복원하지 못할 수 있습니다.</block>
+  <block id="bdb6843d3cb4e489fd8137e5d6a3789b" category="paragraph">스냅샷 복사본 검증에서는 볼륨 GUID를 사용합니다. 재해 복구 후 GUID가 변경됩니다.</block>
+  <block id="50ffd216d2c153e1bd4523e537df92b0" category="list-text">* 시정 조치 *</block>
+  <block id="b5fb2fa4979d9d115456123ae739908a" category="paragraph">PowerShell 또는 복원 마법사를 통해 스냅샷 확인 옵션을 비활성화할 수 있습니다.</block>
+  <block id="be6a68d587794c4e3ef0edd55eb2a248" category="list-text">복원 마법사의 * 복원 옵션 * 페이지에서 "스냅샷 확인 활성화" 옵션의 선택을 취소합니다.</block>
+  <block id="98ad663ef86e393dc076e356ec682cab" category="list-text">PowerShell을 사용하여 -DisableVerifySnapshot 매개 변수가 지정되었는지 확인합니다.</block>
+  <block id="8f93ffc98ff1aa5b53c36e0b48f4b624" category="paragraph"><block ref="8f93ffc98ff1aa5b53c36e0b48f4b624" category="inline-xref-macro-rx"></block></block>
+  <block id="91eb3a157665ba3101f39439240029e4" category="summary">보조 스토리지 시스템으로 페일오버한 후 SnapManager for Hyper-V는 원래 운영 스토리지 시스템으로 페일백하여 재해 복구를 완료합니다.</block>
+  <block id="2756e749caa0fb49a20fae8b02820313" category="doc">재해 복구 페일백 후 스토리지 시스템 재구성</block>
+  <block id="9f18ba857214d13e434316a92491862a" category="paragraph">보조 스토리지 시스템으로 페일오버한 후 SnapManager for Hyper-V는 원래 운영 스토리지 시스템으로 페일백하여 재해 복구를 완료합니다. 페일백은 스토리지 시스템을 다시 설정하거나 교체한 후 운영 스토리지 기능을 원래 운영 스토리지 사이트로 복구합니다.</block>
+  <block id="4d0b2c0caba9cdb12c8fe559c5f70754" category="list-text">운영 스토리지 시스템의 상태에 따라 다음 작업 중 하나를 수행합니다.</block>
+  <block id="ea758a7ca74b1868ab2e94c0888a85ef" category="cell">운영 스토리지 시스템이 다음과 같은 경우</block>
+  <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">그러면...</block>
+  <block id="52f3b9f4c13b3350850c24bc26c0cef8" category="paragraph">복구 가능</block>
+  <block id="9b1f5f712954cb0c8e42a3d02051f301" category="paragraph">보조 호스트에서 운영 스토리지 시스템으로 데이터를 다시 이동합니다.</block>
+  <block id="30e1dbbeba51424baca4534efcd6f744" category="paragraph">완전히 파괴되었습니다</block>
+  <block id="4559b57412d978d8aedaa78c1b755d6c" category="paragraph">새 스토리지 시스템을 프로비저닝합니다.</block>
+  <block id="b9c0f7263d9f4b74ca352eeeec1788f5" category="list-text">SnapMirror 관계 관리:</block>
+  <block id="23bcbeee430d4451cdd2b8442e1495ff" category="list-text">보조 스토리지 시스템에서 운영 스토리지 시스템으로 SnapMirror 관계를 초기화하여 데이터를 복구합니다.</block>
+  <block id="69eaaf7236570fe614a7249b56ae98eb" category="list-text">보조 스토리지 시스템에서 운영 스토리지 시스템으로 기존 SnapMirror 관계를 다시 동기화합니다.</block>
+  <block id="d24b335b2900fcc4d4a507dbfb1372d9" category="list-text">2차 스토리지 시스템에서 SnapDrive를 사용하여 2차 스토리지 시스템의 각 LUN 또는 SMB 공유에 대해 SnapMirror 업데이트를 시작합니다.</block>
+  <block id="103c33edbc4c31e9da06cf321cf1ad2a" category="list-text">구성에 따라 다음 작업 중 하나를 수행합니다.</block>
+  <block id="6c343fe7191b0b21f030da153bbfc23b" category="paragraph">독립 실행형 호스트(SAN)</block>
+  <block id="4f3f9daf16157a89452e2fb33242bb09" category="paragraph">같은 유형의 운영 스토리지 시스템에서 모든 마운트 지점 및 LUN에 접속합니다.</block>
+  <block id="279ecd0411f7b2239e889bb68565c313" category="paragraph">클러스터 호스트(SAN)</block>
+  <block id="256716dd432d5e5251239b4b79bd3c0e" category="paragraph">클러스터 그룹이 온라인 상태인 노드에서 클러스터의 모든 마운트 지점 및 LUN에 연결합니다.</block>
+  <block id="d215e9e1ded4e8681f61596f2d2793a7" category="paragraph">소스 FlexVol 볼륨(SAN)에서 VM을 호스팅하는 단일 LUN으로 구성된 Data ONTAP 8.1.x</block>
+  <block id="e1bcac0c7757d99a0c904af2b662da63" category="paragraph">SnapMirror 업데이트가 성공적으로 수행되려면 백업 작업을 시작하기 전에 소스 FlexVol 볼륨에 두 번째 더 작은 LUN(10MB ~ 100MB)을 생성해야 합니다. 클러스터 그룹이 온라인 상태인 노드에서 클러스터의 모든 마운트 지점 및 LUN에 연결합니다.</block>
+  <block id="c4d0bcec99058a563641699c4862eb6f" category="paragraph">독립 실행형 또는 클러스터 호스트(NAS)</block>
+  <block id="380b1ce18897e8b63553fbcce8999af1" category="paragraph">데이터 보호(DP) 볼륨을 마운트 해제하고, DP 볼륨을 다시 쓰기 가능으로 마운트하고, 볼륨에 rwx 권한이 있는지 확인한 다음, 다른 볼륨에 대한 CIFS 공유를 생성합니다.</block>
+  <block id="d18c9439f740d30f58fa37337a304801" category="list-text">사용자 환경에 따라 SnapInfo를 재구성합니다.</block>
+  <block id="b6929e4968ce2ed48274a887d3709bf9" category="cell">구성이 다음과 같은 경우</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="paragraph">산</block>
+  <block id="accaa22437e5cea04eb223a535dac0fc" category="paragraph">마지막 스냅샷 복사본에서 SnapInfo LUN을 복원합니다.</block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="paragraph">NAS</block>
+  <block id="f53763874d1457ea2ee8c5e65bfabc4e" category="paragraph">SnapInfo 디렉토리를 마운트합니다.</block>
+  <block id="90de4e0ecbf1d2fa55cc2e5d55f1a151" category="paragraph">NAS의 경우 액세스가 거부된 오류가 발생하거나 노출된 SMB 공유 위치를 찾을 수 없는 경우 공유의 ACL을 재설정해야 할 수 있습니다.</block>
+  <block id="6e1ab6d83c2d55dae5d355da64e1f4fb" category="list-text">SnapManager for Hyper-V MMC 에서 운영 호스트 또는 클러스터를 추가하고 SnapInfo 경로를 사용하여 구성합니다.</block>
+  <block id="9c49fc0b62a513703fa7951f104d1176" category="list-text">다음 cmdlet을 입력합니다.</block>
+  <block id="2c8078b6f9aeeaf3f09a6e309ca41d90" category="list-text">Get-VMsFromBackup cmdlet을 사용하여 백업 메타데이터에 있는 VM 목록을 검색합니다.</block>
+  <block id="e7d0f94f0c4a0c0a09dd748d1e657c6d" category="list-text">Get-Backup cmdlet을 사용하여 각 VM에 대한 백업 복사본을 가져옵니다.</block>
+  <block id="c7c18dd465bc05a730bc9b5ff6fc0db6" category="list-text">복구하려면 VM GUID와 함께 복구 백업 을 사용하고 다음 매개 변수를 사용하여 백업 복사본을 사용하십시오.</block>
+  <block id="133b2bd617dde70f06e63226fd43f991" category="cell">복원 대상...</block>
+  <block id="aad95273f4e1ccb563059e89127b7019" category="cell">이 명령을 입력하십시오...</block>
+  <block id="e77ed35fef2422ab5f8dabdd102bb22e" category="paragraph">대체 호스트입니다</block>
+  <block id="0a14af9930a6ef240d14232a286ff4e4" category="paragraph">restore-Backup-Server Secondary_host_system_or_cluster_name - DisableVerifySnapshot-RestoreToAlternateHost입니다</block>
+  <block id="7c219775f90068e2f59bca43ac97aa7f" category="paragraph">나열된 백업 사본입니다</block>
+  <block id="a926027a6303fbe4beb9df2ade39e7f0" category="paragraph">복구 - 백업 - 서버 - VirtualMachinePath - SnapShotFilePath @ VHD</block>
+  <block id="28e33116b6a22ddc29a7cc9bc3d8bdfa" category="paragraph">@ VHD의 경우 VM에 여러 VHD가 있을 수 있으므로 각 VHD에 대해 지정된 소스 및 대상 경로 쌍을 모두 입력해야 합니다.</block>
+  <block id="c44ac792f6318b4caca8ab6004b27c7c" category="list-text">보조 호스트 시스템이 클러스터인 경우 다음 단계를 수행하십시오.</block>
+  <block id="266390977a761c1a63d6ea1ffe21ba82" category="list-text">VM이 상주하는 LUN이 클러스터 그룹을 소유하는 클러스터 노드에서 온라인 상태인지 확인합니다.</block>
+  <block id="ec84a4212b9b0b3453d0aaf2408af16d" category="list-text">페일오버 PowerShell cmdlet을 사용하여 VM의 가용성을 높게 설정합니다.</block>
+  <block id="5b889c3cda07c72df504f46500e9d3ab" category="paragraph">NAS의 경우 VM이 클러스터 노드 한 개의 SMB 공유로 표시된 후 스토리지 시스템 클러스터를 사용하도록 구성된 모든 호스트에서 VM에 액세스할 수 있습니다.</block>
+  <block id="9e84326e8ebd79d26eac2feba9d1788a" category="section-title">장애 복구 예</block>
+  <block id="e336fc280b9f4967e6a4aae8034e6155" category="paragraph">다음 예에서는 smbv-cluster-01이 기본 사이트이고 HV-19-클러스터가 보조 사이트입니다.</block>
+  <block id="1c0b2b3f3a8e5866b0b3af648b3d2750" category="paragraph">다음 예는 N:\이 대상이고 I:\가 소스 LUN 경로인 대체 경로에 대한 SAN 복구 작업을 보여 줍니다.</block>
+  <block id="5ded6738b7d3767a7d3860c051770680" category="paragraph">다음 예에서는 소스 SMB 공유 경로이고 \\172.175.82\가 대상 SMB 공유 경로인 대체 경로로 NAS 복원 작업을 보여 줍니다.</block>
+  <block id="cab828e5fe824c4d8d020edecb16ac87" category="inline-link">7-Mode용 Data ONTAP 8.2 데이터 보호 온라인 백업 및 복구 가이드</block>
+  <block id="c18d0d6796474338de71386e6ee5160f" category="paragraph"><block ref="c18d0d6796474338de71386e6ee5160f" category="inline-link-rx"></block></block>
+  <block id="a0a59362e21ec3c80e71e3d02aa6a8b8" category="inline-link">SMB/CIFS 참조</block>
+  <block id="7768fb642347147278f012855e9b95f1" category="paragraph"><block ref="7768fb642347147278f012855e9b95f1" category="inline-link-rx"></block></block>
+  <block id="857864c9e0841bb5665f5e1c2d468333" category="summary">데이터 세트에 보존, 예약, 복제 정책과 스크립트도 추가하여 데이터를 보호할 수 있습니다.</block>
+  <block id="963979f14d8afd442b64acbb14977ac4" category="doc">정책 추가</block>
+  <block id="089e99f0946277f67f391a816ed1f2b1" category="list-text">정책 이름 및 설명입니다</block>
+  <block id="52ccd4cdf171ac2228358ba547bf1d3a" category="list-text">보존 정보</block>
+  <block id="ca1a21dab93efdbb79370e3b2b61c7ea" category="list-text">스케줄링 정보</block>
+  <block id="dfce3effc9eeb1bbd0c45a39f75e72c2" category="list-text">백업 옵션 정보</block>
+  <block id="c778e64c846dd4cb3d237e56d6c2f07c" category="list-text">백업 스크립트 정보</block>
+  <block id="a4c5d123ad41ec29536c7e3da07ceb8e" category="list-text">탐색 창에서 * Protection * &gt; * Datasets * 를 클릭합니다.</block>
+  <block id="c34b2c89f78638601a9b28feb2a6f89a" category="list-text">정책을 추가할 데이터 세트를 선택합니다.</block>
+  <block id="4dfc62daf461f1d3989bdacd11e8b943" category="list-text">작업 창에서 * 정책 추가 * 를 클릭합니다.</block>
+  <block id="83d1abf74bb79d006c4652f7176d9d13" category="paragraph">정책 생성 마법사가 나타납니다.</block>
+  <block id="150041fc62ca2850bf50581976c08928" category="list-text">마법사의 단계를 완료하여 데이터 세트에 대한 보호 정책을 생성합니다.</block>
+  <block id="bc62e14afadb6d3675a824c92feacbd6" category="summary">SnapManager for Hyper-V를 실행하려면 라이센스 설치 중에 호스트 기반 라이센스 또는 스토리지 시스템 라이센스를 선택해야 합니다.</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="doc">라이센스 요구 사항</block>
+  <block id="d3ebc6b65771da45bd1e393dac2ffc77" category="section-title">SnapManager 제품군 라이센스</block>
+  <block id="2f35ac1b0a5cdae94237fb18ed27a693" category="paragraph">Windows 호스트 시스템에는 SnapManager 제품군 라이센스가 필요합니다. 호스트 기반 라이센스 또는 스토리지 시스템 라이센스 중 하나를 선택할 수 있습니다.</block>
+  <block id="be663e43fbbbd588987bb44c0192f82b" category="section-title">서버 라이센스당</block>
+  <block id="b20a1269302d3675bf122fb4356e322f" category="paragraph">이를 호스트 기반 라이센싱이라고도 합니다. 호스트 기반 라이센스를 선택하는 경우 설치 중에 SnapManager Suite 라이센스 키를 제공해야 하며, 필요한 경우 나중에 변경할 수 있습니다. 설치 후 SnapManager for Hyper-VWelcome 창에서 * 사용권 설정 * 을 클릭하여 사용권 키를 변경할 수 있습니다. 각 상위 호스트에는 SnapManager Suite 라이센스가 필요합니다.</block>
+  <block id="573abdf739bc16ae5833c5d14076dd5c" category="section-title">스토리지 시스템 라이센스당</block>
+  <block id="1d7f9f2cb4ae223172db904691326dcd" category="paragraph">이를 스토리지 시스템 라이센싱이라고도 합니다. 스토리지 시스템 라이센스를 선택한 경우 Hyper-V 작업에 대해 SnapManager를 실행하려면 모든 스토리지 시스템에 SnapManager 제품군 라이센스를 추가해야 합니다.</block>
+  <block id="3b17063956c4c952dad8e287ec101d6f" category="section-title">클라이언트 시스템 라이센스당</block>
+  <block id="7b3e45ecd2ec97799e785c56b5bee0c8" category="paragraph">관리 콘솔을 설치할 때 이 라이센스 옵션을 사용해야 합니다.</block>
+  <block id="67691fe1543bb4b0f6bd22784a467cfc" category="summary">보호 요구에 따라 데이터 세트를 생성, 수정, 보기 및 삭제할 수 있습니다.</block>
+  <block id="854e17480073a7f9c44ad0bf2ae3b20b" category="summary">데이터 세트를 수동으로 백업하려면 먼저 데이터 세트의 이름과 설명을 입력하고 백업 유형 및 옵션을 선택한 다음 보존 정책을 설정해야 합니다.</block>
+  <block id="5af60a8f86833b3c24f3910e384ecdcc" category="doc">데이터 세트를 수동으로 백업하기 위한 요구 사항입니다</block>
+  <block id="00e3bc5cca936cfe2f7a532e3431ce70" category="section-title">백업 이름 및 설명입니다</block>
+  <block id="d58429eac46a83cff222f5a814ee3f97" category="paragraph">백업에 이름과 설명을 할당해야 합니다.</block>
+  <block id="7cbb4b04d4c3e5f4833593507bbb3eaf" category="paragraph">백업의 기본 명명 규칙은 DataSetName_Timestamp 입니다. 항상 백업 이름의 일부로 표시되는 타임스탬프를 제외한 백업 이름의 모든 항목을 변경할 수 있습니다.</block>
+  <block id="7ac371a0a57b60af2b0578fb07b34c1e" category="paragraph">백업 이름과 설명은 다음 문자로 제한됩니다.</block>
+  <block id="85e3f5662f5d8393f464b6fbe9873e2b" category="list-text">a ~ z</block>
+  <block id="deff25dbe9011091c8682fd6f93f3a90" category="list-text">A에서 Z</block>
+  <block id="58c8d474025154d587eb8a3becc73b11" category="list-text">0에서 9</block>
+  <block id="ca5170dffdff86791bd333afa0818321" category="list-text">_ (밑줄)</block>
+  <block id="6816a980223bd400a4d7d7e1110de913" category="list-text">하이픈</block>
+  <block id="3fa8be6addd8848ea558f9dbf62bc509" category="section-title">정책 선택</block>
+  <block id="ce56b535f1d19e7ca636cef262c4137b" category="paragraph">필요 시 백업에 사용할 정책을 결정해야 합니다.</block>
+  <block id="03e7cacff10e2e2fa9503bc3712a028f" category="paragraph">백업 마법사에서 특정 정책을 선택할 수 있습니다. 정책 자체를 변경하지 않고 정책과 연결된 스크립트뿐만 아니라 보존 또는 복제 정책을 재정의할 수 있습니다.</block>
+  <block id="b3aabbded8211defce55f1bd8e9bfba8" category="paragraph">없음 을 선택할 수도 있습니다. 이 옵션을 사용하면 정책을 만들지 않고도 필요 시 백업을 수행할 수 있습니다. 이 옵션은 보존 정책, 복제 정책 및 스크립트의 기본값을 사용합니다.</block>
+  <block id="099c99cfc3001f7909f2d8d330a5b4ba" category="section-title">보존 값</block>
+  <block id="2d372a1baef2785504e6b047dff465f7" category="paragraph">선택한 정책에 지정된 보존 정책을 재정의할 수 있습니다. 이 경우 삭제하기 전에 시간 단위, 일 단위, 주 단위, 월 단위 또는 무제한 백업 복사본을 유지할 최소 시간을 결정해야 합니다.</block>
+  <block id="aa70ad86bef93d3cfb4a27fa47521e30" category="paragraph">시간 또는 지정된 백업 수에 따라 백업을 유지할 수 있습니다. 예를 들어 최신 백업 10개를 유지하거나 15일이 지난 백업을 삭제할 수 있습니다.</block>
+  <block id="d9f0173ed577dd9b2d9a1d9ca85e330c" category="section-title">백업 유형입니다</block>
+  <block id="2b2cbec8203aefb9b0989459586754a3" category="paragraph">애플리케이션 정합성 보장 또는 충돌 시에도 정합성 보장 백업을 수행할 수 있습니다.</block>
+  <block id="30c210e0173f2ff607cc84dc01ffc1f0" category="section-title">백업 옵션</block>
+  <block id="05baf42e4b79b1711411c01fec58f8f7" category="paragraph">저장된 상태 백업을 허용할 수 있습니다.</block>
+  <block id="65f97906e6328cfb3f1495716700a4a5" category="paragraph">SnapManager for Hyper-V의 기본 동작은 하나 이상의 가상 머신을 온라인으로 백업할 수 없는 경우 백업에 실패하는 것입니다. 가상 머신이 Saved(저장됨) 상태이거나 종료된 경우 온라인 백업을 수행할 수 없습니다. 경우에 따라 가상 머신이 Saved(저장됨) 상태에 있거나 유지 보수를 위해 종료되었지만 온라인 백업이 불가능한 경우에도 백업을 계속 진행해야 합니다. 이렇게 하려면 저장된 상태의 가상 머신을 이동하거나 저장된 상태 백업을 허용하는 정책이 있는 다른 데이터 세트로 종료할 수 있습니다.</block>
+  <block id="a4d7ee1a85b8d50766da39bca77ded30" category="paragraph">또한 Allow saved state VM backup 확인란을 선택하여 기존 정책을 수정할 수도 있습니다. 이를 통해 SnapManager for Hyper-V는 저장된 상태의 가상 머신을 백업할 수 있습니다. 이 옵션을 선택하면 Hyper-V VSS 기록기가 가상 머신을 저장된 상태로 백업하거나 가상 머신의 오프라인 백업을 수행할 때 SnapManager for Hyper-V가 백업에 실패합니다. 저장된 상태 또는 오프라인 백업을 수행하면 다운타임이 발생할 수 있습니다.</block>
+  <block id="d40be83026c6456f464275814f7029db" category="paragraph">분산된 애플리케이션 정합성이 보장되는 백업 기능을 사용하면 파트너 클러스터 노드에서 실행되는 여러 VM이 백업 노드에서 생성된 단일 하드웨어 스냅샷 복사본의 일관성을 유지할 수 있습니다. 이 기능은 Windows 페일오버 클러스터의 여러 노드에서 CSV 2.0 Windows 볼륨에서 실행되는 모든 VM에 대해 지원됩니다.</block>
+  <block id="92f511b9eb4bb4295082fbe39d70e007" category="section-title">SnapMirror 백업의 2차 스토리지</block>
+  <block id="edb68b35126b90d94565aba284e497f3" category="paragraph">이러한 옵션을 사용하면 SnapMirror 관계에 정의된 보조 스토리지에 적용할 수 있는 옵션을 적용할 수 있습니다. 백업 후 * SnapMirror 업데이트 * 를 선택할 수 있습니다. 볼트 라벨 옵션 창 아래에서 * 백업 후 SnapVault 업데이트 * 를 선택할 수 있습니다. 백업 후 SnapVault 업데이트 * 를 선택한 경우, 드롭다운 메뉴에서 볼트 라벨을 선택하거나 사용자 정의 라벨을 입력해야 합니다.</block>
+  <block id="bc4ed710ca65416d05c8ac48d8a677ad" category="section-title">백업 스크립트</block>
+  <block id="71b9d00eedc881643233fd1a13f8ffbd" category="paragraph">선택한 정책에 지정된 스크립트 옵션을 재정의할 수 있습니다.</block>
+  <block id="63d0e153d3a329eb9a4d7fe711618579" category="paragraph">스크립트에 특정 호스트를 지정하지 않는 한 이러한 스크립트는 모든 데이터 세트 구성원 호스트에서 실행됩니다.</block>
+  <block id="3fb2d7deed7a56ffb590575548a5a1db" category="inline-link">Microsoft TechNet: Hyper-V</block>
+  <block id="a9736cb44394cf7f4c33dc1e9789dd1d" category="paragraph"><block ref="a9736cb44394cf7f4c33dc1e9789dd1d" category="inline-link-rx"></block></block>
+  <block id="04da4a36dc8631592fed38ad742813b1" category="inline-link">SnapVault Express를 사용한 ONTAP 9 볼륨 백업 가이드</block>
+  <block id="f83ca4a2b0b656560769c0ea618a9675" category="paragraph"><block ref="f83ca4a2b0b656560769c0ea618a9675" category="inline-link-rx"></block></block>
+  <block id="b14b7c56846be90893ffb5cb1391cd34" category="summary">데이터 세트는 Windows 페일오버 클러스터의 새 노드로 자동 복제되지 않습니다.</block>
+  <block id="961ac221e81a771d5cdcc72399350995" category="doc">데이터 세트는 Windows 페일오버 클러스터의 새 노드로 자동 복제되지 않습니다</block>
+  <block id="b6b5c0b074a3420f9148b4a52b40a14f" category="paragraph">Windows 페일오버 클러스터에 새 노드를 추가한 후에는 데이터 세트가 새 노드로 자동 전송되지 않습니다.</block>
+  <block id="6526d728800b72f66aee2d2eb2831ba8" category="paragraph">Windows 페일오버 클러스터에 새 노드를 추가할 때 Hyper-V용 SnapManager는 기존 데이터 세트를 클러스터의 새 노드로 자동 복제하지 않습니다.</block>
+  <block id="757c846baf71761f3cda1fac61cb7804" category="paragraph">데이터 세트 수정 마법사를 실행하고 기본 세부 정보 페이지에서 * 모든 데이터 세트 구성원 노드에 대한 스케줄 정책 업데이트 * 를 클릭합니다.</block>
+  <block id="1061247acb05ca020e1156e308573e87" category="paragraph">가상 머신이 있는 각 데이터 세트에 대해 이 마법사를 실행해야 합니다.</block>
+  <block id="a3100bf3334206028c894a5568ddcf09" category="summary">새로운 기능, 업그레이드 정보, 해결된 문제, 알려진 제한 사항 및 알려진 문제에 대해 설명합니다.</block>
+  <block id="e82ed7d0fe395ab8617386f9b6bc3fdd" category="doc">Hyper-V용 SnapManager 2.1.4 릴리스 정보</block>
+  <block id="50b158528d4ca57587b5d68d878bf767" category="paragraph">를 클릭합니다 <block ref="bc76e11df837d05db8b5f12a7909292f" category="inline-link-macro-rx"></block> 새로운 기능, 업그레이드 노트, 해결된 문제, 알려진 제한 사항 및 알려진 문제에 대해 설명합니다.</block>
+  <block id="dbd469acdcbd52648cb242bcfda6add3" category="paragraph">릴리즈 노트에 액세스하려면 NetApp Support 사이트에 로그인해야 합니다.</block>
+  <block id="8bd0c4b2e4019d7421496ea9febc69d8" category="summary">SnapManager for Hyper-V 소프트웨어의 설치, 구성 및 작동 방법에 대해 설명합니다.</block>
+  <block id="091af7b23f310c94c6c082a427b321c4" category="doc">설치 및 관리 가이드 를 참조하십시오</block>
+  <block id="31b5ce19fb2f7d7064d9d1b248313ee3" category="paragraph">이 가이드에서는 Hyper-V 소프트웨어용 SnapManager 2.1.4를 설치, 구성 및 작동하는 방법에 대해 설명합니다.</block>
+  <block id="2679aa040e48e5b5b4518fba7adb6852" category="summary">SnapManager for Hyper-V는 데이터 세트 및 정책을 사용하므로 가상 머신을 그룹화한 다음 해당 그룹에 규칙을 적용하여 동작을 제어할 수 있습니다.</block>
+  <block id="14ecf602c9be3e8bdbbadaf9997b7d31" category="doc">데이터 관리 개념</block>
+  <block id="58b883c0ea08b0acb505c5d4c026ea0f" category="paragraph">SnapManager for Hyper-V는 데이터 세트 및 정책을 사용하므로 가상 머신을 그룹화한 다음 해당 그룹에 규칙을 적용하여 동작을 제어할 수 있습니다. 이 정보는 SnapManager for Hyper-V를 사용하여 백업을 예약하고 백업에 대한 보존 정책을 지정하는 경우에 유용합니다.</block>
+  <block id="56b5c63c9100767f0aadf367bb078b02" category="list-text">* 데이터 세트 *</block>
+  <block id="8794e19266d669cfdfa406148cd60756" category="paragraph">데이터 세트는 VM(가상 머신)의 그룹으로, 보존, 예약 및 복제 정책을 사용하여 데이터를 보호할 수 있도록 합니다. 데이터 세트를 사용하여 보호 요구 사항이 동일한 가상 머신을 그룹화할 수 있습니다. VM은 여러 데이터 세트의 일부가 될 수 있습니다.</block>
+  <block id="f38052a5ab09ec66d507983761353c29" category="list-text">* Hyper-V 상위 호스트 *</block>
+  <block id="0dab573323092ace51a6943553527f73" category="paragraph">Hyper-V 상위 호스트는 Hyper-V 역할이 설정된 물리적 서버입니다. 가상 시스템이 포함된 호스트는 보호 및 복구를 위해 SnapManager for Hyper-V에 추가됩니다. 각 Hyper-V 상위 호스트에 SnapManager for Hyper-V가 설치되어 실행 중이어야 합니다.</block>
+  <block id="a29fa5416ddd4d214af7fb92dbfa5ce6" category="list-text">* 보호되지 않는 리소스 *</block>
+  <block id="9fa0ab140b3c3a5104a8ee6dd0263161" category="paragraph">보호되지 않는 리소스는 데이터 세트의 일부가 아닌 가상 머신입니다. 이러한 리소스를 데이터 세트에 추가하여 보호할 수 있습니다.</block>
+  <block id="35acce734a6f9b6ff298df226a181050" category="list-text">가상 머신 *</block>
+  <block id="3b1bc0aa1babd01f15814fb1e544ff6a" category="paragraph">Hyper-V 상위 호스트에서 실행되는 가상 시스템은 고유한 운영 체제, 애플리케이션 및 하드웨어가 있는 물리적 시스템을 나타냅니다.</block>
+  <block id="18721329fe471d8632030da31ae5819e" category="paragraph">SnapManager for Hyper-V는 가상 머신 이름이 아니라 가상 머신의 GUID(Globally Unique Identifier)를 추적합니다. SnapManager for Hyper-V로 보호되는 가상 머신을 삭제한 다음 같은 이름의 다른 가상 머신을 생성하면 GUID가 다르기 때문에 새 가상 머신이 보호되지 않습니다.</block>
+  <block id="4f0736bd5c813db580e42dc56c4b509d" category="list-text">* 관리 콘솔 *</block>
+  <block id="3fac341cfb30c99df4fa149330b6edea" category="paragraph">관리 콘솔은 SnapManager for Hyper-V가 설치되어 클라이언트로 실행되는 컴퓨터입니다. 관리 콘솔을 사용하여 원격 Hyper-V 상위 호스트에서 Hyper-V용 SnapManager 작업을 원격으로 관리할 수 있습니다.</block>
+  <block id="57bc5f868b2a34d67d2b51cd651905f1" category="list-text">* 스케줄링 정책 *</block>
+  <block id="b1743b5ded88d798fb37d7879685b3d3" category="paragraph">일정 관리 정책은 특정 시간에 백업 작업을 할당하므로 일정 관리 프로세스를 자동화할 수 있습니다. 데이터 세트 구성원인 모든 가상 머신에 적용되는 여러 예약 정책을 추가할 수 있습니다. SnapManager for Hyper-V는 Windows 스케줄러를 사용하여 예약된 작업을 생성합니다.</block>
+  <block id="1d2c69df5ae41f138f31eb423bba82f4" category="list-text">* 보존 정책 *</block>
+  <block id="8b907a68bc81cf1099542120200c8de6" category="paragraph">보존 정책은 SnapManager for Hyper-V에서 데이터 세트 백업 보존을 관리하는 방법입니다 보존 정책은 백업 복사본의 시간이나 수에 따라 데이터 세트 백업을 유지하는 기간을 결정합니다.</block>
+  <block id="12e81317e988a1f84f2c5ed8b9d86f7f" category="paragraph">보존 정책에서 설정한 제한을 통해 데이터 백업이 향후 스토리지 용량을 손상시키지 않도록 할 수 있습니다.</block>
+  <block id="2621c15f6df51f6afc625d4142579d55" category="paragraph">SnapManager for Hyper-V에서 다음 보존 기간을 설정할 수 있습니다.</block>
+  <block id="850370b35ca3844744e11e622f28254b" category="list-text">1시간</block>
+  <block id="20faf5d958f1d5b65f3a4c67163254f5" category="list-text">1일</block>
+  <block id="d9346ea346566c2f4aaef585681ce309" category="list-text">일주일</block>
+  <block id="974985cd65fa0617f7596b848e78a456" category="list-text">한 달</block>
+  <block id="13911d0d343fdc99201f5754a49a07c4" category="list-text">무제한 * 참고: * 데이터 세트당 보존 기간을 한 번 지정할 수 있습니다.</block>
+  <block id="4f3dcf3fbeedb384dcc84518e9e22d4f" category="paragraph">데이터 세트 백업 삭제 빈도를 선택한 후 지정된 기간보다 오래된 백업이나 최대 합계를 초과하는 백업을 삭제할 수 있습니다.</block>
+  <block id="c5185b0cce4a2698d6e28faa2cfc0a18" category="paragraph">+ 시스템이 이전 백업을 유지하는 것으로 나타나면 보존 정책을 확인합니다. 스냅샷 복사본을 공유하는 모든 개체가 백업 삭제 기준을 충족해야 보존 정책이 스냅샷 복사본 제거를 트리거할 수 있습니다.</block>
+  <block id="e589c1855acbac9c3ff9fc9a48997a89" category="list-text">* 복제 정책 *</block>
+  <block id="334e1a4837375f19e8e71c008ef71137" category="paragraph">복제 정책은 성공적인 백업 작업 후에 SnapMirror 대상이 업데이트되는지 여부를 결정합니다. SnapManager for Hyper-V는 볼륨 기반 SnapMirror만 지원합니다. SnapMirror 업데이트를 시도하기 전에 두 스토리지 시스템에서 SnapMirror 관계를 구성해야 합니다. 이는 소스와 대상 모두에 필요합니다.</block>
+  <block id="25fcd91ebda526a77dcafdb7165ed986" category="inline-link">NetApp 설명서:SnapDrive for Windows(최신 릴리스)</block>
+  <block id="ece0d01a9e0eca4a9f1ff2e684cb3db6" category="paragraph"><block ref="ece0d01a9e0eca4a9f1ff2e684cb3db6" category="inline-link-rx"></block></block>
+  <block id="171e08e666552d8c38607395fe6a2212" category="summary">각 백업에 대해 2개의 스냅샷 복사본을 생성할 때의 공간 소비</block>
+  <block id="764fc9826ef4435c4d9480e76a029697" category="doc">각 백업에 대해 2개의 스냅샷 복사본을 생성할 때의 공간 소비</block>
+  <block id="4cfd514589a1cec5a5a54eb22abe34b1" category="paragraph">Hyper-V 개체가 포함된 모든 백업에 대해 2개의 스냅샷 복사본이 생성되는데, 이는 공간 소비에 대한 우려로 이어질 수 있습니다.</block>
+  <block id="cb466dbf6d5ccf88bca37aef42b7a338" category="admonition">이는 애플리케이션 정합성 보장 백업에만 적용됩니다.</block>
+  <block id="97c289884aa9d4e93a2d07080e0030f9" category="paragraph">Microsoft Hyper-V VSS 작성기는 VM 내에서 VM과 애플리케이션 정합성이 보장되는 백업 복제본을 모두 생성하고 VHD에 상주하는 애플리케이션을 사용합니다. 소프트웨어 정합성 보장 및 VM 정합성 보장 백업 복제본을 모두 생성하기 위해 VSS는 기본 자동 복구 프로세스를 사용하여 VM을 소프트웨어 스냅샷 복사본과 일치하는 상태로 설정합니다. Hyper-V VSS 기록기는 백업의 각 VM에 접촉하고 소프트웨어 정합성이 보장되는 스냅샷 복사본을 생성합니다.</block>
+  <block id="19565b6bd9947d4486fafdd4cb7caeee" category="paragraph">스냅샷 복사본이 생성된 후 상위 파티션은 이러한 VM이 포함된 전체 디스크(LUN)의 VSS 스냅샷 복사본을 생성합니다. 상위 파티션 스냅샷 복사본이 생성된 후 VSS는 이전에 생성된 상위 파티션을 마운트하고, 각 VM을 소프트웨어 정합성 보장 상태로 롤백하고, 소프트웨어 스냅샷 복사본이 생성된 후 VM에 대한 변경 사항을 제거해야 합니다. VHD에 대한 이러한 수정 사항은 영구적으로 이루어져야 합니다. 이러한 스냅샷 복사본은 기본적으로 읽기 전용이므로 업데이트된 VHD 복사본을 유지하려면 새 스냅샷 복사본을 만들어야 합니다. 이러한 이유로 볼륨의 두 번째 스냅샷 복사본이 생성됩니다. 이 스냅샷 복사본은 접미사 *_backup * 으로 표시되며 복원 작업에 사용되는 백업 복사본입니다.</block>
+  <block id="445bebb4a3acef418334f1a863c41277" category="paragraph">2개의 스냅샷 복사본은 쌍으로 간주됩니다. 백업에 대한 보존 기간이 종료되면 두 스냅샷 복사본이 모두 삭제됩니다. 복원 작업에 필요한 첫 번째 스냅샷 복사본이 수동으로 삭제되어서는 안 됩니다.</block>
+  <block id="7e37cd32041062bd7c868857d5575e79" category="paragraph">Microsoft VSS는 CSV(Cluster Shared Volume)를 소유한 호스트에서만 VM 백업을 지원하므로 CSV 소유권이 노드 간에 이동하여 클러스터의 각 호스트에 있는 VM의 백업을 생성합니다.</block>
+  <block id="9e2129e081a7307a723c1e562db578cf" category="paragraph">CSV를 백업할 때 SnapManager for Hyper-V는 클러스터에서 호스트당 두 개의 스냅샷 복사본을 생성하며, 이 스냅샷 복사본은 해당 CSV에서 VM을 실행합니다. 즉, 단일 CSV에서 15개의 VM을 백업하고 해당 VM이 3개의 Hyper-V 서버에 균등하게 분할된 경우 백업당 총 6개의 Snapshot 복사본이 있습니다.</block>
+  <block id="ecfcb2ea2b7a7e6cd20c217ac4449946" category="summary">데이터를 백업 및 복원할 수 있도록 SnapManager for Hyper-V를 설치할 수 있습니다. Hyper-V용 SnapManager를 설치하기 전에 Windows용 SnapDrive를 설치해야 합니다</block>
+  <block id="7f4fd040e5f989a8a41b8c2ce4b46efb" category="doc">Hyper-V용 SnapManager 설치</block>
+  <block id="64eecf62d9a993f9fd78bf8ccf62a2c7" category="paragraph">기존 데이터를 백업해야 하며 다음 정보를 준비해야 합니다.</block>
+  <block id="a77d1540925b8613ddf32b875e4c4685" category="list-text">라이센스 키</block>
+  <block id="7160f16e7fce9cb3115837588b08a8ac" category="list-text">로그인 자격 증명</block>
+  <block id="a47bfbfbde5a03a03b9498fe7de36f9d" category="list-text">포트 번호(기본값: 808, Windows용 SnapDrive 설치 포트 번호와 일치해야 함)</block>
+  <block id="6df8a2f6b4884dd72cd827631f0c8151" category="list-text">SnapManager for Hyper-V 실행 파일을 두 번 클릭하여 SnapManager for Hyper-V 설치 프로그램을 시작합니다.</block>
+  <block id="fc3e022ba062e33a2d214b632fe690b1" category="list-text">설치 위치를 선택하고 * 다음 * 을 클릭합니다.</block>
+  <block id="ccc36e976afe5008e316e7a1746101ff" category="list-text">SnapManager for Hyper-VInstallShieldWizard의 단계를 완료합니다.</block>
+  <block id="acdaf650222f3c0237becc043e307413" category="list-text">설치 준비 완료 페이지에서 * 설치 * 를 클릭합니다.</block>
+  <block id="46b9843e7c5f5ff5fbe2ea34495b1cae" category="list-text">선택 사항 요약을 검토하고 * Finish * 를 클릭합니다.</block>
+  <block id="d97d7bf86f453c78e0139b9a54f5ec65" category="paragraph"><block ref="d97d7bf86f453c78e0139b9a54f5ec65" category="inline-xref-macro-rx"></block></block>
+  <block id="53531bae4b4c3f1b7404a971d070bb17" category="summary">하나의 관리 콘솔에서만 호스트를 관리해야 하지만 여러 콘솔에서 호스트를 관리해야 하는 경우에는 데이터 정합성을 보장하기 위해 한 원격 관리 콘솔에서 다른 원격 관리 콘솔로 호스트 및 데이터 세트 구성 정보를 가져오고 내보낼 수 있습니다.</block>
+  <block id="5a72cd6cdd662de73934212c5acbd0af" category="doc">호스트 및 데이터 세트 구성 정보 가져오기 또는 내보내기</block>
+  <block id="a919825400f339d57b335c9acdc82ab0" category="paragraph">SnapManager for Hyper-V가 설치된 디렉토리로 구성 정보를 가져오거나 내보내서는 안 됩니다. SnapManager for Hyper-V를 제거하면 이 파일이 손실됩니다.</block>
+  <block id="6ab078cbfe1468fcdf159e54ea8679ea" category="admonition">가져오기 및 내보내기 마법사를 사용하여 호스트 및 데이터 세트 구성 설정을 이전에 내보낸 설정으로 변경할 수 있습니다. 클러스터 환경에서 이 작업을 수행하는 경우 모든 호스트 및 데이터 세트 구성이 동일하도록 클러스터의 모든 노드에서 설정을 가져와야 합니다.</block>
+  <block id="f52324a8ae59b8f3c62c3580634a3f65" category="list-text">작업 창에서 * 가져오기 및 내보내기 * 를 클릭합니다.</block>
+  <block id="9b2df22ebea734763e9b824b5dfb58d1" category="paragraph">가져오기 및 내보내기 마법사가 나타납니다.</block>
+  <block id="a97803fe311ef1d2b2cc248b41fb592f" category="list-text">마법사의 단계를 완료하여 관리 콘솔 간에 호스트 및 데이터 세트 구성 정보를 내보냅니다.</block>
+  <block id="a29cc82b0ee32a993180bad71ccebe76" category="admonition">내보내기 파일은 정적 파일이며 내보내기 파일이 실행된 시점에만 현재 파일입니다.</block>
+  <block id="161ff79e48ce5cf248366acf43d2a3bf" category="list-text">마법사의 단계를 완료하여 호스트 및 데이터 세트 구성 정보를 대상 관리 콘솔로 가져옵니다.</block>
+  <block id="3800c0cdaeccf43c635a1ef2fd8c3b82" category="summary">일부 기능은 Hyper-V의 경우 SnapManager 2.1 이상에서 지원되지 않는다는 점을 이해해야 합니다</block>
+  <block id="7c676e363a34616fe899b41f9e540d3c" category="doc">SnapManager for Hyper-V 제한 사항 목록입니다</block>
+  <block id="6e29aba098db79a1ab1f939863149b9a" category="paragraph">일부 기능은 SnapManager 2.1 이상에서 Hyper-V에 지원되지 않는다는 점을 이해해야 합니다.</block>
+  <block id="7f6ee1b72e3402fa0b65e6ca171f8937" category="list-text">백업 및 복원 작업의 취소, 일시 중지 및 다시 재개는 지원되지 않습니다.</block>
+  <block id="c1e824495741db9a98e533bb60d5755a" category="list-text">정책은 데이터 세트 간에 복사할 수 없습니다.</block>
+  <block id="45a471dbdf158d2103da0a832d074a64" category="list-text">역할 기반 액세스 제어(RBAC)는 지원되지 않습니다.</block>
+  <block id="fc4b9e2f932c4d0f4e49d421dfae0d6b" category="list-text">SnapManager for Hyper-V VSS(Volume Shadow Copy Service) 백업 작업에서 VHD(가상 하드 디스크)를 제외하는 것은 지원되지 않습니다.</block>
+  <block id="6293a05f9293306fe723125f627da55f" category="list-text">백업 사본에서 단일 파일 복원이 기본적으로 지원되지 않습니다.</block>
+  <block id="1be60482b0c174c58e2b31dcfe218727" category="list-text">크로스 버전 관리는 지원되지 않습니다. 예를 들어, 클라이언트 콘솔 1.2를 사용하여 Hyper-V용 SnapManager 2.0을 관리할 수 없으며 반대의 경우도 마찬가지입니다.</block>
+  <block id="6c9d0544955bca5ff2e1b6f7cb20a4af" category="list-text">Hyper-V 가상 머신(VM)의 복원을 시작하고 동일한 VM의 다른 백업 또는 복원이 진행 중인 경우 시도가 실패합니다.</block>
+  <block id="c1a6011e9e5599de4f9a5695dbf8542e" category="list-text">충돌 시에도 정합성이 보장되는 백업 복제본에서 삭제된 VM의 복원은 Windows Server 2012에만 지원됩니다.</block>
+  <block id="3900c2af50dfd662383f4640686f9d90" category="list-text">페일오버 클러스터의 다른 노드에서 여러 버전의 SnapManager for Hyper-V를 실행하는 것은 지원되지 않습니다.</block>
+  <block id="4a62f9c3483c269241e02248563f7d6b" category="list-text">Hyper-V에 대해 SnapManager 2.1에서 되돌리는 것은 지원되지 않습니다.</block>
+  <block id="610ff5c0597676311607c8e989c00e7e" category="list-text">백업 또는 복구 중에 사용자가 클러스터 소유권 노드를 변경하면 가상 머신의 백업 또는 복원 작업이 지원되지 않습니다.</block>
+  <block id="04aff58db2c60859b2deece463b4f0b9" category="list-text">혼합 모드 백업(CSV 2.0 볼륨 및 SMB 공유에 파일이 포함된 가상 머신)은 지원되지 않습니다.</block>
+  <block id="05fd7159f14393ffd71e7ac1717c6813" category="list-text">Windows Server 2012를 사용하여 VM의 스토리지를 다른 위치로 마이그레이션한 후에는 마이그레이션 전에 만든 백업 복사본에서 해당 VM을 복원할 수 없습니다.</block>
+  <block id="8f9386708694ecb3a129f6dc8ad1faa2" category="list-text">Windows Server 2012의 경우 백업 세트에 CSV(Cluster Shared Volume)와 공유 디스크가 모두 포함된 백업 작업을 수행할 수 없습니다.</block>
+  <block id="cf3468db2f1d778c40a58eaf163abc6d" category="list-text">저장소 연결 설정 관리 를 구성할 때 RPC(원격 프로시저 호출) 프로토콜을 사용할 수 없습니다. HTTP 및 HTTPS 프로토콜만 사용할 수 있습니다.</block>
+  <block id="f85bb370e755df9a8873b1bdc35d35c7" category="list-text">NAS 스토리지에 저장된 가상 머신(VM)의 애플리케이션 정합성이 보장되는 백업을 생성하는 것은 Windows Server 2012 Hyper-V 운영 체제에서 지원되지 않습니다.</block>
+  <block id="5a3dfbdac5b696f02b128aaf7e587d89" category="paragraph">이 제한은 충돌 시에도 정합성 보장 백업에는 적용되지 않습니다. 파일 공유 섀도 복사본 서비스는 포함되지 않는 무료 Hyper-V 서버에만 적용됩니다.</block>
+  <block id="935b08257442d9573c059f052b17b83f" category="list-text">VM의 가상 스위치 이름은 운영 및 보조 Windows 호스트의 가상 스위치 이름과 정확히 같아야 합니다.</block>
+  <block id="9b595f6c0bc59490774c69c592fd7b88" category="list-text">SMB 3.0을 통해 Hyper-V VM을 구축할 경우 백업 및 복원 작업에 FlexClone 라이센스가 필요합니다.</block>
+  <block id="2dce1098f4447d308f7e77337653b2cb" category="list-text">복구 작업에 지원되는 최대 LUN 크기는 14TB입니다.</block>
+  <block id="c881d99f27b8d012db97b1f839b10b42" category="list-text">다음 Hyper-V Server는 애플리케이션 정합성이 보장되는 VM 백업을 지원하지 않습니다.</block>
+  <block id="e0693813bfc92e2a66d11bb92de96adb" category="list-text">Microsoft Hyper-V Server 2016(무료 에디션)</block>
+  <block id="10864acdf6f438d7b026430077a02b30" category="list-text">Microsoft Hyper-V Server 2019(무료 버전) 이 제한 사항은 충돌 시에도 정합성 보장 백업 또는 다음 Windows 플랫폼에는 적용되지 않습니다.</block>
+  <block id="f25ae1b1e1c33b9eae4b2b668af49026" category="list-text">Microsoft Windows Server 2016 Standard 및 Datacenter Edition</block>
+  <block id="21fae6ca9851125bcb8a2ae0fceec434" category="list-text">Microsoft Windows Server 2019 Standard 및 Datacenter Edition</block>
+  <block id="4bebac47bea2fd62c2530bd391076ae9" category="summary">더 이상 필요하지 않은 경우 데이터 세트에서 정책을 삭제할 수 있습니다.</block>
+  <block id="6e229fa95b4d823df101ee953df5195d" category="doc">정책을 삭제하는 중입니다</block>
+  <block id="65ccc1f4dbb5fa94ffb4607070db942a" category="list-text">삭제할 정책이 포함된 데이터 세트를 선택합니다.</block>
+  <block id="0c877e3a2ccc5492c9c14104b8831f2e" category="list-text">Policies 창에서 삭제할 특정 정책을 선택합니다.</block>
+  <block id="051a915e46f9908c3d0351dda83750bc" category="list-text">작업 창에서 * 제거 * 를 클릭하고 * 확인 * 을 클릭하여 정책을 삭제합니다.</block>
+  <block id="6564101cefe24665c433a7ea662f58e0" category="paragraph">정책을 삭제하면 데이터 세트의 구성원인 모든 호스트에서 예약된 작업도 삭제됩니다.</block>
+  <block id="585e8b16c6d583e9923b5b6886e6da71" category="summary">복구 작업이 진행 중인 동안 생성된 가상 머신 백업이 잘못되었을 수 있습니다.</block>
+  <block id="f87315bce70a053e760c3006bf545883" category="doc">복구 작업이 진행 중인 동안 생성된 가상 머신 백업이 잘못되었을 수 있습니다</block>
+  <block id="41deb5cf6b541b6400cca093802e55a8" category="paragraph">복원 작업이 진행되는 동안 생성된 애플리케이션 정합성 보장 백업이 잘못되었을 수 있습니다. 이 불완전한 백업에서 가상 머신을 복구하면 데이터가 손실되고 가상 머신이 삭제됩니다.</block>
+  <block id="078fc9e4f0435e919bdb5862cab1513e" category="paragraph">SnapManager for Hyper-V 구성 정보가 백업 복사본에 없습니다. 백업 작업이 성공했지만 가상 머신 구성 정보가 포함되어 있지 않아 백업 복사본이 유효하지 않습니다. SnapManager for Hyper-V 복구 작업은 복구 작업을 수행하기 전에 Hyper-V 호스트에서 가상 머신 구성 정보를 삭제합니다. 이 동작은 Microsoft Hyper-V Writer에서 디자인하는 것입니다.</block>
+  <block id="176da1c87a61427a737b5d19d2bba4d3" category="paragraph">백업 스케줄이 복구 작업과 일치하지 않거나, 수행하려는 필요 시 백업이 동일한 데이터에 대한 복구 작업과 겹치지 않도록 해야 합니다.</block>
+  <block id="e3a1a05da7993c293b498f9d9fc624b7" category="summary">데이터 세트의 필요 시 백업을 생성할 수 있습니다.</block>
+  <block id="fb66e3fca73de007d0d242693c367595" category="doc">데이터 세트를 수동으로 백업합니다</block>
+  <block id="cf3e70cf8191160db8090e6540b904ef" category="list-text">필요한 경우 정책 이름입니다</block>
+  <block id="46bfeff4660732494a60393596febe5e" category="list-text">정책 재정의 정보(이전에 지정한 정책 옵션 중 하나를 변경하려는 경우)</block>
+  <block id="a3c82f66d39159c3e9d428cd534beb34" category="list-text">백업 유형</block>
+  <block id="2ae563510af7f43208bdf0a049250571" category="list-text">수동 백업을 생성할 데이터 세트를 선택하고 * Backup * (백업 *)을 클릭합니다.</block>
+  <block id="f8695fe9c9e85add97ec8947ef849b4c" category="paragraph">백업 마법사가 나타납니다.</block>
+  <block id="ec296684cb531baf002c1737a8bad6ec" category="list-text">마법사의 단계를 완료하여 필요 시 백업을 생성합니다.</block>
+  <block id="51f0a22711cc496c6ee23ecc6181d9ff" category="paragraph">마법사를 닫아도 주문형 백업은 취소되지 않습니다.</block>
+  <block id="05c32c67e41cb1a26526aad9bfbb5d51" category="paragraph">작업 관리 창에서 필요 시 백업의 상태를 볼 수 있습니다.</block>
+  <block id="b0339bb9133f07dc81220bf45bf3aee8" category="summary">VSS 요청자 - 백업 구성 요소 실패. 예상 디스크가 시스템에 도착하지 않았습니다</block>
+  <block id="17ebef2f1536eecf24febe2f3ff80eb5" category="paragraph">이 메시지는 Hyper-V용 SnapManager를 사용하여 데이터 세트를 백업할 때 발생하며 Hyper-V 호스트의 Windows 응용 프로그램 이벤트 로그에 다음과 같은 오류가 나타납니다.</block>
+  <block id="f9a8dae1650ede42aa40b730930e4bdb" category="paragraph">데이터 세트 백업을 다시 시도하십시오.</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
+  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="paragraph"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.</block>
+  <block id="547ea2e305891e64d8e744949b0aca2c" category="paragraph"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
+  <block id="50921fca0d376fca62102a5e608994e2" category="paragraph"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
+  <block id="24efa7ee4511563b16144f39706d594f" category="section-title">주의</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
+  <block id="c5b9e90bde2fb032b0e52bfb24173ab1" category="inline-link-macro">SnapManager for Hyper-V에 대한 알림</block>
+  <block id="0331d89981f387a88bcac9456bb6b3c2" category="paragraph"><block ref="0331d89981f387a88bcac9456bb6b3c2" category="inline-link-macro-rx"></block></block>
+  <block id="6ba0d06cfc8e02c6b42874c98ef3e318" category="summary">소프트웨어가 더 이상 필요하지 않은 경우 Windows 호스트에서 SnapManager for Hyper-V를 제거할 수 있습니다. 제거 프로그램을 대화식으로 실행해야 합니다.</block>
+  <block id="2dfe0a7f9309d495d0d3c25f2bcc72fe" category="doc">Windows에서 Hyper-V용 SnapManager 제거</block>
+  <block id="f4b321874f1eac53048a073337df9eae" category="summary">오류: VSS 요청자 - 백업 구성 요소에 실패했습니다.</block>
+  <block id="9372ca9d1d85f69ebdacefd5b1139eb0" category="doc">오류: VSS 요청자 - 백업 구성 요소에 실패했습니다</block>
+  <block id="17e15f437867a5f4e6b814c901ae864e" category="paragraph">SnapManager for Hyper-V 보고서 및 Windows 이벤트 로그에 다음 오류 메시지가 표시됩니다. 오류: VSS 요청자 - 백업 구성 요소 실패. 백업 또는 복구와 관련된 writer Microsoft Hyper-V VSS 작성기에서 다시 수행할 수 있는 오류가 발생했습니다. writer가 오류 코드 0x800423f3을 반환했습니다. writer 상태는 XXX입니다. 자세한 내용은 Windows 이벤트 뷰어의 Hyper-V-VMMS 이벤트 로그를 참조하십시오.</block>
+  <block id="d8fc3002325e48a0d3fc0d78174308e8" category="paragraph">애플리케이션 정합성 보장 백업이 실패하는 VSS 재시도 오류가 발생하면 SnapManager for Hyper-V는 각 시도 사이에 1분 정도 기다리면서 백업을 3회 재시도합니다.</block>
+  <block id="dd5d812d0bb2e347a06973d2fa0346f1" category="paragraph">다음 레지스트리 키를 사용하여 재시도 횟수(재시도 횟수)와 재시도 간의 대기 시간(재시도 간격)을 구성할 수 있습니다.</block>
+  <block id="2ca21b57463c72312d5d629525355c87" category="paragraph">"키: HKLM\System\CurrentControlSet\Services\OnCommandHyperV\Parameters DWORD 값(초): VSS_RETRY_SLEEP(재시도 간 대기 시간) DWORD 값: VSS_RETRY(재시도 횟수)</block>
+  <block id="cdbb776ad5142b1b207ebc2e52decdcf" category="paragraph">이러한 설정은 Hyper-V 호스트 레벨에 있으며 키와 값은 각 가상 머신에 대해 Hyper-V 호스트에서 설정해야 합니다. 가상 머신이 클러스터링되어 있는 경우 클러스터의 각 노드에서 키를 설정해야 합니다.</block>
+  <block id="4a0be8cd9c11021849e7fc56b44fe038" category="paragraph">이러한 레지스트리 키를 변경하거나 추가한 후에는 Hyper-V용 SnapManager를 다시 시작해야 합니다.</block>
+  <block id="ba88d591f87671b80a620329f4aa3c68" category="summary">장애 조치 클러스터링 이벤트 ID 5121.</block>
+  <block id="ee6211ef27874cc88b293c816304c2fa" category="doc">장애 조치 클러스터링 이벤트 ID 5121</block>
+  <block id="15afc85c4d48627126a12dbbb73addb7" category="paragraph">애플리케이션 이벤트 로그의 페일오버 클러스터링 이벤트 ID 5121 또는 호스트 메시지 no_direct_io_due_to_failure.</block>
+  <block id="858e4f65a625a9aa6cfeaef1248c7e87" category="paragraph">이 오류 메시지는 클러스터 공유 볼륨(CSV)을 더 이상 클러스터 노드에서 직접 액세스할 수 없고 I/O 액세스가 볼륨을 소유하는 스토리지 장치로 리디렉션되는 경우에 발생합니다. 이는 조정 노드만 VSS 백업을 사용하여 작업을 수행할 수 있기 때문입니다. 백업 작업 중에 조정 노드는 CSV를 잠그고 모든 비조정 노드가 I/O를 리디렉션해야 합니다</block>
+  <block id="78ebdbc1a2994ad181451bf7f4fe6ce1" category="paragraph">작업이 완료된 후 조정 노드는 CSV에서 잠금을 해제하고 입출력이 더 이상 리디렉션되지 않습니다. VSS 백업 중에만 오류 메시지가 발생하는 경우 오류가 발생하지 않으며 이는 예상된 동작입니다.</block>
+  <block id="e40ccea93b8bd7fd60bb288a3d07c31f" category="summary">SnapManager가 제대로 작동하려면 ONTAP VSS 하드웨어 공급자가 설치되어 있어야 합니다. ONTAP VSS Hardware Provider는 ONTAP를 실행하는 SnapDrive 서비스와 스토리지 시스템을 VSS 프레임워크에 통합합니다. SAN 스토리지에서 실행 중인 VM에 필요합니다.</block>
+  <block id="bfe7a7ad3d1a7441ee7b75e8f14e60e2" category="doc">ONTAP VSS 하드웨어 공급자 요구 사항</block>
+  <block id="93ec4cda146bea59af1d02092a5e99ed" category="paragraph">SnapDrive에 포함된 ONTAP VSS 하드웨어 공급자는 별도로 설치할 필요가 없습니다.</block>
+  <block id="f5ecea394661f7f0b3901b762ff354b1" category="paragraph">SMB 3.0 공유에서 실행 중인 Hyper-V VM의 경우 Data ONTAP 8.2에서 실행되는 원격 VSS 하드웨어 공급자가 Windows 하이퍼바이저에 의해 호출됩니다.</block>
+  <block id="ad2bb8c14d7977a39ba5cdd2b6945f22" category="summary">재해 복구를 위해 SnapManager for Hyper-V 구현을 완벽하게 설정하려면 운영 호스트와 보조 호스트가 동일한 구성을 가지고 있고 PowerShell만 사용하여 재해 복구를 수행할 수 있는지 확인해야 합니다.</block>
+  <block id="51a3cdfcc13216a372d56996eedb0049" category="doc">Hyper-V 페일오버 기능을 위한 SnapManager 구성</block>
+  <block id="bf5e9b3f5954bedb975ebb72a1703bce" category="paragraph">다음 유형의 설정은 재해 복구를 지원합니다.</block>
+  <block id="a51993adcd77282fd3ab8c60861f760b" category="list-text">독립 실행형 운영 호스트 및 독립 실행형 보조 Hyper-V 호스트</block>
+  <block id="ce4a0560534be6e4184a28d4140603a4" category="list-text">클러스터형 운영 및 보조 Hyper-V 호스트</block>
+  <block id="cbea32125c692a82b2f18365172f641e" category="list-text">운영 및 보조 Hyper-V 호스트의 CSV(Cluster Shared Volume</block>
+  <block id="e76d850f5bdb791eadd09b85ffa60e94" category="paragraph">예를 들어 기본 호스트의 클러스터 가상 머신(VM)을 클러스터 VM으로 복구하고 전용(독립 실행형) VM을 전용 VM으로 복구해야 하며 CSV VM을 CSV VM으로 복구해야 합니다.</block>
+  <block id="44170356ae052f02c7081a5cbbdd2cb8" category="paragraph">보조 호스트의 LUN은 운영 호스트의 LUN과 동일한 방식으로 접속되어야 합니다. 즉, LUN 유형(전용, 공유 또는 CSV) 및 드라이브 문자, 마운트 지점 또는 CSV 재분석 지점은 운영 호스트와 보조 호스트에서 동일해야 합니다. SAN 복구 작업을 대체 경로 위치에 수행하면 보조 위치의 LUN 복원 작업에 대해 다른 드라이브 문자를 지정할 수 있습니다.</block>
+  <block id="0dda7108073e7d311318541d5362a5d8" category="admonition">드라이브 문자 또는 CSV 및 볼륨 마운트 지점이 지원됩니다.</block>
+  <block id="c17b3b535d69b83ec58875d048aa7c1b" category="paragraph">다음 예에서는 기본 재해 복구 설정을 보여 줍니다.</block>
+  <block id="6381565192b9680b5689671c36c9b041" category="list-text">사이트 A(운영)에는 스토리지 시스템과 독립 실행형 Hyper-V 호스트 시스템 또는 Hyper-V 호스트 클러스터가 포함됩니다.</block>
+  <block id="d0efe2a2cfe2ce4b13e79ea3bcadf29e" category="paragraph">이러한 호스트에서 실행 중인 VM은 Data ONTAP 스토리지에 상주합니다.</block>
+  <block id="12b4c0bc9da6cbd802b09d4ce65b106f" category="list-text">사이트 B(보조)에는 스토리지 시스템과 Hyper-V 호스트 또는 클러스터(운영 호스트와 동일)가 포함됩니다.</block>
+  <block id="dbd5a2d122952b7b10d3bec5e2f5827e" category="list-text">Windows용 SnapDrive와 Hyper-V용 SnapManager는 사이트 A와 B 모두에 설치됩니다</block>
+  <block id="d026771d7d8aa2c2af2f0415ad5a1173" category="list-text">SnapMirror 관계는 사이트 A에서 사이트 B로 초기화됩니다</block>
+  <block id="3ef3c01221fbc24ebd60feb4cf80d48b" category="list-text">사이트 A에서 Hyper-V용 SnapManager에 추가된 Hyper-V 호스트 또는 클러스터와 VM은 SnapManager for Hyper-V를 사용하여 백업됩니다</block>
+  <block id="b37cd8506f84d61a0b44abf9093bfab2" category="paragraph">백업 확인 후 SnapMirror를 업데이트하는 정책 각 백업 후 보조 사이트가 VM의 새 스냅샷 복사본과 SnapInfo 복사본으로 업데이트됩니다.</block>
+  <block id="206a69513a554c2ee397148c18f7fd5e" category="summary">SnapManager for Hyper-V 라이센스는 사용하는 ONTAP 버전에 따라 다릅니다.</block>
+  <block id="00e2fe0a2c0dcf10ebcbb5322c13827a" category="doc">ONTAP용 SnapManager Hyper-V 라이센스</block>
+  <block id="2d3afe83061284bdabbffa76a340dbaa" category="paragraph">호스트 기반 라이센스 및 스토리지 기반 라이센스의 경우 Data ONTAP 8.0 이상을 사용해야 합니다.</block>
+  <block id="6e8ccd8744d9d11213db2a72e5a3bada" category="paragraph">Hyper-V용 SnapManager에 사용하려면 Data ONTAP 8.2 이상의 MultiStore(vFiler 유닛)를 사용해야 합니다</block>
+  <block id="419f32ca591e98830773cb732397b9b4" category="paragraph">8.2 이전 버전의 Data ONTAP를 사용하는 경우 특정 작업에 몇 가지 제한 사항이 있습니다.</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 상호 운용성 매트릭스 툴</block>
+  <block id="d38df2295bfe768071dcfe28649a9438" category="paragraph"><block ref="d38df2295bfe768071dcfe28649a9438" category="inline-link-rx"></block></block>
+  <block id="74ea49fa75cd05fb118325f9605dccd5" category="summary">보호 요구 사항이 변경될 때 데이터 세트를 삭제할 수 있습니다.</block>
+  <block id="3e15174cd54ab9db4679ac6ced74d91f" category="doc">데이터 세트 삭제</block>
+  <block id="4de283003835ce9c753ed01c103206d2" category="paragraph">데이터 세트를 삭제해도 데이터 세트에 속하는 가상 머신은 삭제되지 않습니다. 데이터 세트가 삭제된 후 해당 데이터 세트에 속한 가상 머신은 다른 데이터 세트에 속하지 않으면 보호되지 않습니다.</block>
+  <block id="4089200b34fa99a60b145b36fb4f8018" category="list-text">탐색 창에서 * Protection * &gt; * Datasets. * 를 클릭합니다</block>
+  <block id="9a7f2045e29c7015a5aef725cf21d715" category="list-text">삭제할 데이터세트를 선택합니다.</block>
+  <block id="73b57cbe35150d214e13c1470f8599ae" category="list-text">작업 창에서 * 삭제 * 를 클릭하고 * 확인 * 을 클릭하여 데이터 세트를 삭제합니다.</block>
+  <block id="25bc160d143584c0503a8a7d599d4268" category="paragraph">데이터 세트를 삭제하면 데이터 세트의 구성원인 모든 호스트에서 예약된 작업도 삭제됩니다. SnapManager for Hyper-V는 데이터 세트를 삭제할 때 같은 이름으로 다시 생성되더라도 백업 보존을 더 이상 관리하지 않습니다.</block>
+  <block id="69ce911ef79a734ef7855400a092a1fc" category="paragraph">SnapManager for Hyper-V는 해당 리소스가 다른 데이터 세트에 속하지 않는 한 삭제된 데이터 집합과 연결된 리소스를 더 이상 보호하지 않습니다.</block>
+  <block id="ae05e937f1abf80c94aa8e13db1fe036" category="summary">VSS 요청자 - 백업 구성 요소 실패. 스냅샷 세트 유지를 호출하지 못했습니다.</block>
+  <block id="ee1aa480797e2ea152dcfd86124099de" category="list-text">* 오류 *</block>
+  <block id="10d98066ee40a7661c2106e4067993ca" category="paragraph">VSS 요청자 - 백업 구성 요소 실패. 스냅샷 세트 유지를 호출하지 못했습니다. Reason Index 및 count 는 문자열 내의 위치를 참조해야 합니다.</block>
+  <block id="146fa05f11b1650e7028db3c82c620c6" category="paragraph">이 오류는 백업 작업의 VM이 이름이 같은 스토리지 가상 머신 및 CIFS 서버에 있을 때 발생합니다.</block>
+  <block id="f5768417859475b0d881b6f2a24a4cc6" category="paragraph">이 릴리스에 사용할 수 있는 항목이 없습니다.</block>
+  <block id="4fd11abfd3c4f9f62f320ec74063e750" category="list-text">* 실패 사례 *</block>
+  <block id="e3bb9328db1513b58e625cf33de9e1bd" category="list-text">같은 이름의 스토리지 가상 머신 및 CIFS 서버를 생성합니다(예: ""test1"").</block>
+  <block id="0aa9ef3b09293cef1028fa824a84ae58" category="list-text">두 IP 주소를 모두 사용하여 DNS에 test1 이름을 추가합니다.</block>
+  <block id="b5dd78876564ec0040f73a144770f5ea" category="list-text">Windows Server 2012 호스트에서 SnapManager for Hyper-V를 설치하고 test1의 CIFS 공유를 사용하여 일부 VM을 생성합니다.</block>
+  <block id="c4fab528a2073847eeca7f2dcd6bb96e" category="list-text">이러한 VM이 포함된 백업 복제본을 생성합니다.</block>
+  <block id="c8fe51e0515bca6e21087bea49bb5400" category="list-text">백업 작업이 실패하고 백업 구성 요소가 실패했습니다. 스냅샷 세트 유지를 호출하지 못했습니다. Reason Index 및 count 는 문자열 내의 위치를 참조해야 합니다.</block>
+  <block id="9bf4093831798b5c4d2e0e0f0c2613ed" category="summary">Hyper-V용 SnapManager에 상위 호스트 또는 호스트 클러스터를 추가하기 전에 필요한 모든 구성 정보를 사용할 수 있어야 합니다</block>
+  <block id="3ccdc0cb8d7b5aef750244f0678e3759" category="doc">Hyper-V 상위 호스트 또는 호스트 클러스터를 추가하기 위한 요구 사항</block>
+  <block id="c3dc9dedf1883d5556cb3815e4da2a40" category="section-title">SnapManager for Hyper-V 설치</block>
+  <block id="cd91a0db6ff13cff1cf946cbb36133b4" category="paragraph">추가하려는 Hyper-V 호스트에 SnapManager for Hyper-V가 설치되어 있어야 합니다.</block>
+  <block id="578181228f759b1ac8b95355ef4d2cc0" category="paragraph">SnapManager for Hyper-V가 설치되어 있지 않으면 원격 호스트 설치 마법사를 실행하라는 메시지가 표시됩니다. 각 클러스터 노드에 동일한 SnapManager for Hyper-V 버전을 설치해야 합니다.</block>
+  <block id="d0d22e03456c3fce1282b8574dfd0c8f" category="section-title">구성 설정</block>
+  <block id="4781cebe5be96afc4191c4cc744a5378" category="paragraph">추가하려는 Hyper-V 상위 호스트를 SnapManager for Hyper-V에 대해 구성해야 합니다</block>
+  <block id="889bdecb58cbb9ece5485c8823bee365" category="paragraph">SnapInfo 설정, 보고서 디렉토리 설정 및 알림 설정이 SnapManager for Hyper-V에 대해 구성되어 있지 않은 경우 구성 마법사를 사용하여 호스트를 추가한 후에 구성할 수 있습니다.</block>
+  <block id="e36bfe5e64d7355ac969bea6f8212660" category="paragraph">처음에는 * 스토리지 접속 관리 * 탭이 비어 있습니다. 스토리지 연결 관리 * 탭에서 스토리지 연결을 추가할 수 있지만 새로 추가된 연결은 SDW(SnapDrive for Windows) TPS(전송 프로토콜 설정)에서 볼 수 있습니다.</block>
+  <block id="2f2d6a0c53fd036afaf80fe6a624bcfa" category="paragraph">SnapManager for Hyper-V를 사용하여 가상 머신을 추가 및 관리하기 위해 백업 저장소 및 보고서 디렉토리 설정을 구성해야 합니다 알림 설정은 선택 사항입니다.</block>
+  <block id="bec2d798891a82b99b71e36d3086f2ef" category="section-title">가상 머신 및 ONTAP LUN</block>
+  <block id="2f3d173ac3b3e7e911aca4487aca0738" category="paragraph">구성 파일, 스냅샷 복사본 파일 위치 및 VHD를 비롯하여 가상 머신과 관련된 모든 파일이 ONTAP LUN에 상주해야 합니다.</block>
+  <block id="d702234e21af8bf8c02b69bd028091b6" category="paragraph">이 작업은 백업을 성공적으로 수행하는 데 필요합니다.</block>
+  <block id="c7291559f829d8719895a830d63494fa" category="admonition">가상 머신을 생성한 후 가상 머신 스냅샷 파일 위치를 다른 ONTAP LUN으로 변경하는 경우 SnapManager for Hyper-V를 사용하여 백업을 수행하기 전에 Hyper-V 관리자를 사용하여 가상 머신 스냅샷 복사본을 하나 이상 생성해야 합니다 스냅샷 복사본 파일 위치를 변경하고 백업을 수행하기 전에 가상 머신 Snapshot 복사본을 사용하지 않으면 백업 작업이 실패할 수 있습니다.</block>
+  <block id="0ebae4c420d4fb62257765f30622a1ea" category="section-title">전용 클러스터 가상 머신</block>
+  <block id="dc8a4c68152b6375c4d7f566aabd0e19" category="paragraph">가상 시스템은 전용 또는 클러스터의 일부가 될 수 있습니다.</block>
+  <block id="8c0677e5dff0ab0a92910776b4c7a62f" category="paragraph">단일 호스트를 추가하는 경우 SnapManager for Hyper-V는 해당 호스트의 전용 가상 머신을 관리합니다. 호스트 클러스터를 추가하면 Hyper-V용 SnapManager가 호스트 클러스터의 공유 가상 머신을 관리합니다. 동일한 호스트 클러스터에 속한 SAN 및 NAS에 상주하는 가상 머신이 동일한 데이터 세트에 있어서는 안 됩니다. 이러한 유형의 리소스를 단일 데이터 세트에 추가하면 데이터 세트 백업이 실패할 수 있습니다.</block>
+  <block id="970377b7107098d943ff5763e6bcdcb6" category="paragraph">애플리케이션 정합성이 보장되는 백업의 경우 클러스터의 다른 노드에서 가상 머신을 실행할 때 클러스터 가상 머신의 데이터 세트 백업을 완료하는 데 시간이 더 오래 걸립니다. 가상 머신이 다른 노드에서 실행될 경우 클러스터의 각 노드에 대해 별도의 백업 작업이 필요합니다. 모든 가상 머신이 동일한 노드에서 실행되는 경우 하나의 백업 작업만 필요하므로 백업 속도가 빨라집니다.</block>
+  <block id="f41eab292eefef8cd8354d80d20462ab" category="section-title">가상 머신 수입니다</block>
+  <block id="9852703357683b259e9a71033740086a" category="paragraph">Hyper-V 호스트 또는 호스트 클러스터에 가상 머신이 1,000개 이상인 경우 Hyper-V Cache Manager에 대한 SnapMgrServiceHost.exe.config 파일에서 maximumElementsInCacheBeforeScavenging 속성의 값을 늘려야 합니다. 이 값은 독립 실행형 호스트 또는 클러스터에서 실행 중인 Hyper-V 호스트 수보다 크거나 같아야 합니다. 이 값은 클러스터의 각 노드에서 변경해야 하며 이 값을 변경한 후 SnapManager for Hyper-V 서비스를 다시 시작해야 합니다. 텍스트 편집기를 사용하여 SnapMgrServiceHost.exe.config 파일을 수동으로 편집해야 합니다.</block>
+  <block id="3ea2fc0fb28b3fb504dc6193ce5a3c54" category="section-title">SnapManager for Hyper-V 서비스 계정 요구 사항</block>
+  <block id="6e164dd4ec04738f16abddb3cb99f5db" category="paragraph">Hyper-V용 SnapManager를 사용하여 Hyper-V 호스트 클러스터를 관리하는 경우 SnapManager for Hyper-V 및 SnapDrive for Windows 서비스 계정은 서버에 대한 로컬 관리자 권한이 있는 도메인 사용자 계정이어야 합니다.</block>
+  <block id="27f5c527b6f2a36da432d987fbe2a974" category="paragraph">SnapManager for Hyper-V 애플리케이션 정합성 보장 백업은 가상 머신이 실행 중인 클러스터 노드에서 실행됩니다. 가상 머신에서 사용하는 CSV(Cluster Shared Volumes)가 동일한 노드에 소유되지 않은 경우, SnapManager for Hyper-V 서비스가 로컬 시스템 계정을 사용 중인 경우(계정에 관리자 권한이 있는 경우에도) 가상 머신 백업이 실패할 수 있습니다. 이 경우 Hyper-V용 SnapManager는 가상 머신 파일이 CSV에 있는지 감지할 수 없어 백업이 실패합니다.</block>
+  <block id="f2b435cb61126cb2311539a153d03b8a" category="admonition">Clustered Data ONTAP SMB 3.0 CA(Continuous Availability) 공유에 저장된 가상 머신을 사용하는 원격 VSS(Volume Shadow Copy Service) 작업이 제대로 작동하려면 SnapDrive for Windows 서비스 계정에 대한 공유에 대한 모든 권한을 부여하고 SnapManager for Hyper-V 웹 서비스 계정에 대한 최소 읽기 수준 액세스를 부여해야 합니다.</block>
+  <block id="a56dd8abb3798a37b1c7790e2a456ec5" category="summary">페일오버 후 백업을 삭제하는 중입니다.</block>
+  <block id="c1ed94f45c8e142708aaee604ef8045e" category="doc">페일오버 후 백업을 삭제하는 중입니다</block>
+  <block id="e770210a45f72b4979b63a196c5e8504" category="paragraph">데이터 세트의 일부 객체에 대해 지정된 백업이 없습니다.</block>
+  <block id="3b84a70fe39b4ce1f059c75552736b65" category="paragraph">보조 사이트(사이트 B)로 페일오버한 후에는 운영 사이트(사이트 A)에서 생성된 백업을 삭제할 수 없습니다. 재해 복구 사이트(사이트 B)에 있는 경우 운영 사이트(사이트 A)에서 만든 백업을 삭제하려고 하면 재해 복구 사이트(사이트 B)가 아닌 기본 사이트 A에서 백업이 삭제됩니다.</block>
+  <block id="5dee9d1a21781195d092306928ae41a6" category="paragraph">재해 복구 작업을 수행한 후에는 현재 작업 사이트에서 만든 백업만 삭제합니다.</block>
+  <block id="5e7c1128e5aa53e6eebe201a3ce32c30" category="summary">특정 데이터세트와 관련된 정책 세부 정보를 볼 수 있습니다.</block>
+  <block id="61e83173e8e1c0e9bf88676e53b8f06c" category="doc">정책 보기</block>
+  <block id="d18d9a78ded0e8683f187facef65a666" category="list-text">보려는 정책이 포함된 데이터 세트를 선택합니다.</block>
+  <block id="d0aa3f91258aff5ef8af7b3895ef0a45" category="list-text">Policies 창에서 세부 정보를 확인할 특정 정책을 선택합니다.</block>
+  <block id="c22e9c878557311ee6057ff5a762d372" category="paragraph">정책에 대한 정보가 세부 정보 창에 나타납니다.</block>
+  <block id="dc719ab420cea5c8b267d389e0f0d53a" category="summary">Microsoft Windows Server VSS(Volume Shadow Copy Service)를 사용하면 데이터 서버, 백업 애플리케이션 및 스토리지 관리 소프트웨어를 조정하여 정합성 보장 백업의 생성 및 관리를 지원할 수 있습니다.</block>
+  <block id="d32cae400d3bb5771392999f91088572" category="doc">VSS 구성 요소</block>
+  <block id="e4b92cec3fd6cb910c8feb81698305c6" category="paragraph">VSS는 스냅샷 복사본 기반 백업 및 복원 작업을 조정하며 다음과 같은 구성 요소를 포함합니다.</block>
+  <block id="2dd4d3e504508a7dd4ded7a84b29c3fb" category="list-text">* VSS 요청자 *</block>
+  <block id="c6cda2cfc23517cc7820477f609cd30a" category="paragraph">VSS 요청자는 SnapManager for Hyper-V 또는 NTBackup과 같은 백업 애플리케이션입니다. VSS 백업 및 복원 작업을 시작합니다. 요청자는 또한 해당 요청자가 시작하는 백업에 대한 스냅샷 복사본 속성을 지정합니다.</block>
+  <block id="407f749f95d0beadeccedd18e9d94e9d" category="list-text">* VSS 기록기 *</block>
+  <block id="a96fd1c100fb63ec8634a45eb47f6a28" category="paragraph">VSS 기록기는 스냅샷 복사본에 캡처될 데이터를 소유하고 관리합니다. Microsoft Hyper-V VSS 작성기는 VSS 작성기의 예입니다.</block>
+  <block id="1995dcadb2aca2f14c66842f1aba1795" category="list-text">VSS 공급자 *</block>
+  <block id="339c65802c22c15b90eb26e484e892c8" category="paragraph">VSS 공급자는 스냅샷 복사본을 생성하고 관리합니다. 공급자는 하드웨어 공급자 또는 소프트웨어 공급자가 될 수 있습니다.</block>
+  <block id="b00334ca1b5ca102c5e2e25c45b8ed4e" category="list-text">하드웨어 공급자는 스토리지 어레이별 스냅샷 복사 및 클론 복제 기능을 VSS 프레임워크에 통합합니다.</block>
+  <block id="a287aaac307fe15de37c683693f07b47" category="paragraph">ONTAP VSS Hardware Provider는 Data ONTAP를 실행하는 SnapDrive 서비스와 스토리지 시스템을 VSS 프레임워크에 통합합니다.</block>
+  <block id="9cd86d400babd755f769fd83ccefe0d7" category="admonition">ONTAP VSS Hardware Provider는 SnapDrive 소프트웨어 설치의 일부로 자동으로 설치됩니다.</block>
+  <block id="cf40ffd26ee3a761d09d3d4db27c8968" category="list-text">소프트웨어 공급자는 Windows 시스템에서 실행 중인 소프트웨어에서 스냅샷 복사본 또는 클론 복제 기능을 구현합니다.</block>
+  <block id="8c215fb257b71c6d8444c7f5cb307458" category="admonition">ONTAP VSS 하드웨어 공급자가 제대로 작동하는지 확인하려면 Data ONTAP LUN에서 VSS 소프트웨어 공급자를 사용하지 마십시오. VSS 소프트웨어 공급자를 사용하여 Data ONTAP LUN에 스냅샷 복사본을 생성하는 경우 VSS 하드웨어 공급자를 사용하여 해당 LUN을 삭제할 수 없습니다.</block>
+  <block id="15e537c840bde26c4ac33c19cf7f2454" category="summary">운영 체제의 제어판 제거 응용 프로그램을 사용하여 Windows 서버에서 Hyper-V용 SnapManager를 제거할 수 있습니다.</block>
+  <block id="1f51ec339f54504123e26bd4e5568895" category="doc">SnapManager for Hyper-V 제거 중</block>
+  <block id="1611f491344ff052478e1e6db93fdc82" category="paragraph">운영 체제의 제어판 제거 응용 프로그램을 사용하여 Windows 서버에서 Hyper-V용 SnapManager를 제거할 수 있습니다. 보호 창의 작업 창에서 원격 호스트 설치 마법사를 사용하여 독립 실행형 노드 및 클러스터 노드 또는 호스트에서 SnapManager for Hyper-V를 원격으로 제거할 수 있습니다.</block>
+  <block id="fed856d312ae48967d1259bd555d517b" category="paragraph">SnapManager for Hyper-V를 제거하면 모든 데이터 세트 및 정책이 삭제됩니다. 제거가 완료된 후에는 해당 정보를 복구할 수 없습니다. 데이터 세트 및 호스트 구성 정보를 저장하려면 를 제거하기 전에 내보낼 수 있습니다.</block>
+  <block id="78e3081567a103abe2e00fabb77db9db" category="list-text">SnapManager for Hyper-V를 설치한 Windows 서버에서 제어판으로 이동하여 * 제어판 * &gt; * 프로그램 * &gt; * 프로그램 및 기능 * 을 선택합니다.</block>
+  <block id="e60317a9056bd822eab4cccc59424c22" category="list-text">설치된 프로그램 목록을 스크롤하여 SnapManager for Hyper-V를 찾습니다</block>
+  <block id="9d35c0608963f2df159f7d7f145b31f9" category="list-text">프로그램 이름을 클릭한 다음 * 제거 * 를 클릭합니다.</block>
+  <block id="d9e82483fc02d94efd8c3c7f1f024825" category="list-text">제거를 확인하는 메시지가 나타나면 * 예 * 를 클릭합니다.</block>
+  <block id="424104f002a58b60418f31efbf7bf5a6" category="paragraph"><block ref="424104f002a58b60418f31efbf7bf5a6" category="inline-xref-macro-rx"></block></block>
+  <block id="ccdcdb65514509fa0bc73249ccd8dba7" category="summary">일부 유형의 백업 실패는 부분 백업 실패를 초래하지 않습니다.</block>
+  <block id="d8b5d4992ee6e8865582c7b07b5beb9f" category="doc">일부 유형의 백업 실패는 부분 백업 실패를 초래하지 않습니다</block>
+  <block id="b99ec583cc5282d67e9e5e18215ee7df" category="paragraph">데이터 세트의 가상 머신 중 하나에 오류가 발생하면 Hyper-V용 SnapManager가 데이터 세트 백업을 성공적으로 완료하지 못하고 일부 시나리오에서는 부분 장애를 생성하지 않습니다. 이러한 경우 전체 데이터 세트 백업이 실패합니다.</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="list-text">* 예 *</block>
+  <block id="67c2917af8830bc6c5370cb1bc747b1f" category="paragraph">하나의 스토리지 시스템 볼륨이 스냅샷 복사본 제한이 255개를 초과하는 경우, SnapManager for Hyper-V는 데이터 세트의 가상 머신 서브셋과 문제가 관련되어 있더라도 부분적으로 장애를 생성합니다.</block>
+  <block id="711c59ccc9dd16e21b6c667e38228187" category="paragraph">백업 작업을 성공적으로 완료하려면 문제가 있는 가상 머신을 수정해야 합니다. 가능하지 않은 경우 데이터 세트에서 가상 머신을 일시적으로 이동하거나 문제가 없는 것으로 알려진 가상 머신만 포함하는 데이터 세트를 생성할 수 있습니다.</block>
+  <block id="8bcb602f8f424d5f10e5fff8a3110791" category="summary">동일한 스토리지 시스템에서 15개 이상의 CSV를 포함하는 백업 작업이 실패할 수 있습니다.</block>
+  <block id="a2eba6171afed7bf3ab72b21a0d96241" category="doc">동일한 스토리지 시스템에서 15개 이상의 CSV를 포함하는 백업 작업이 실패할 수 있습니다</block>
+  <block id="fad4af869b760fa472fd968f4a185f8a" category="paragraph">동일한 스토리지 시스템에서 15개 이상의 CSV(Cluster Shared Volume)가 포함된 Hyper-V 백업 작업에 대한 SnapManager가 실패하고 다음 오류가 표시됩니다.</block>
+  <block id="375150297edd599b7d34916c85c1f285" category="paragraph">이는 Data ONTAP에서 시스템 리소스 보류를 방지하기 위해 발생하는 제한 사항입니다. LUN 15개의 제한은 모든 LUN이 동일한 스토리지 시스템에 속한 경우에만 적용됩니다. 한 스토리지 시스템에서 15개 이하의 CSV를 사용하지 않도록 백업 데이터 세트를 생성하는 경우 이 문제가 발생하지 않습니다.</block>
+  <block id="7961b1422035900b7f2fdace77d2a99e" category="paragraph">동일한 스토리지 시스템에서 15개 이상의 LUN을 포함하는 백업을 만들려면 이 오류를 방지하기 위해 여러 데이터 세트를 생성합니다.</block>
+  <block id="1788e977f20e1f86df49d2cedec68849" category="summary">백업 보고서는 보고서 이름에 관리 콘솔 시간대 정보를 사용합니다.</block>
+  <block id="bf99ca448ce8f3d20c202a99dd06a747" category="doc">백업 보고서는 보고서 이름에 관리 콘솔 시간대 정보를 사용합니다</block>
+  <block id="232951cc31d37beb2ec28193d43493f2" category="paragraph">상위 호스트가 아닌 다른 시간대에 있는 클라이언트 호스트를 사용하여 백업 보고서를 생성하는 경우 보고서 이름은 클라이언트 호스트 시간대 정보를 사용하며 보고서 내용은 상위 호스트 시간대를 사용합니다.</block>
+  <block id="31a824937ad8b8aab6be6fc62cb03c7e" category="paragraph">백업 보고서 이름의 타임스탬프가 클라이언트 호스트 시간대 정보와 함께 표시됩니다.</block>
+  <block id="abb046be6cec841f4556bc725146d71f" category="paragraph">수정 조치가 필요하지 않습니다.</block>
+  <block id="975cb3813294b8e39c92f42ca0227a52" category="summary">호스트를 추가한 후에는 보호\&gt;데이터 세트 관리에서 스토리지 접속 설정 관리를 사용하기 위해 모든 스토리지 접속 \(Windows용 SnapDrive 및 Hyper-V용 SnapManager\)을 입력해야 합니다.</block>
+  <block id="ade2be58fd2780db17586ba0e3e6286a" category="doc">스토리지 접속 설정 관리</block>
+  <block id="03aeaa33152b631e06799c38d29ca83d" category="paragraph">호스트를 추가한 후에는 * 보호 * &gt; * 데이터 세트 관리 * 에서 스토리지 연결 설정 관리를 사용하기 위한 모든 스토리지 접속(Windows용 SnapDrive 및 Hyper-V용 SnapManager)을 입력해야 합니다.</block>
+  <block id="be9a73a0e98cd7be7f653ad024e20233" category="paragraph">스토리지 접속 설정을 관리하려면 SnapManager for Hyper-V에 호스트를 하나 이상 추가해야 합니다.</block>
+  <block id="5327a47470ebf139d313fdc30faa4fde" category="list-text">Protection * &gt; * Dataset Management * 에서 Manage Storage Connection Settings 를 선택합니다.</block>
+  <block id="e5743733f43978d18adb5eded4d83059" category="list-text">스토리지 접속을 추가합니다.</block>
+  <block id="71b09a5ad5bfea4835869efab410501f" category="paragraph">모든 스토리지 연결은 SnapDrive for Windows TPS에서 볼 수 있습니다.</block>
+  <block id="36c5838aab4fa29bd5c9cdad6fa9ac89" category="summary">알림을 받을 e-메일 수신자가 여러 명인 경우 쉼표로 구분해야 합니다.</block>
+  <block id="1d6ad37292fd66fcad97d0d0c43b584c" category="doc">이메일 알림을 구성하는 중입니다</block>
+  <block id="32e3caa78e4a147c7040d3108a792237" category="paragraph">SnapManager for Hyper-V에서 e-메일 알림에 여러 e-메일 수신자를 구성할 경우 각 수신자를 쉼표로 구분하십시오. 이 요구 사항은 각 전자 메일 알림 받는 사람을 세미콜론으로 구분해야 하는 SQL의 SnapManager와는 다릅니다.</block>
+  <block id="1447d6708050e5e3ed4d0c1bdd5c70bc" category="summary">SnapManager for Hyper-V 설치 또는 구성 중에 예기치 않은 동작이 발생하는 경우 특정 문제 해결 절차를 따라 이러한 문제의 원인을 식별하고 해결할 수 있습니다.</block>
+  <block id="c06247ab3f7830ed4ddeac878f635b94" category="doc">Hyper-V용 SnapManager 문제 해결</block>
+  <block id="c5dbce49f6fd4c7e1bae3afca4cec4d4" category="summary">가상 시스템의 세부 정보 창에 있는 가상 시스템 탭과 VHD 탭에서 해당 시스템의 상태에 대한 정보를 보고 모니터링할 수 있습니다.</block>
+  <block id="7bb2d74d450c1bbfdc22700d91e51efd" category="doc">가상 머신 보기</block>
+  <block id="6784dcf6fa583322f2fe694fef065d7b" category="list-text">탐색 창에서 * Protection * &gt; * Hosts * 또는 * Protection * &gt; * Datasets * 를 클릭합니다.</block>
+  <block id="7b753f96317e26050f91e5b27eee026b" category="list-text">가상 머신이 속한 데이터 세트 또는 호스트를 선택합니다.</block>
+  <block id="951892dc8a79b705bf58b07591dcaf0f" category="list-text">적절한 가상 머신을 선택합니다.</block>
+  <block id="13f16352257850b119e32a9509413e14" category="paragraph">가상 머신 탭에는 선택한 가상 머신의 이름, GUID 및 상태가 표시됩니다.</block>
+  <block id="38f6536040e293e93bc3792d9a34e07f" category="paragraph">VHD 탭에는 시스템 디스크, 마운트 지점, VHD 전체 경로, LUN 경로, 스토리지 시스템 이름, 선택한 가상 머신과 연결된 일련 번호 및 볼륨 이름입니다.</block>
+  <block id="fedcd7638790c189ed6bac7695336514" category="summary">해당 호스트 내의 가상 머신 리소스를 데이터 세트에 추가하려면 먼저 호스트에 대한 SnapInfo 설정을 구성해야 합니다.</block>
+  <block id="16466e0f244fbc8d627772c9c9e7cc51" category="doc">SnapInfo 디렉토리 설정을 구성합니다</block>
+  <block id="7fdbb32fcd2831a317f5b4cfb0f71a78" category="paragraph">해당 호스트 내의 가상 머신 리소스를 데이터 세트에 추가하려면 먼저 호스트에 대한 SnapInfo 설정을 구성해야 합니다. Hyper-V 호스트를 SnapManager for Hyper-V에 추가할 때 SnapInfo 설정이 구성되지 않은 경우 나중에 구성 마법사 또는 * SnapInfo settings * 작업을 사용하여 해당 설정을 구성할 수 있습니다.</block>
+  <block id="f01f7a731768e13af1949951a3c80879" category="paragraph">Hyper-V용 SnapManager에 호스트를 추가한 후 SnapInfo 설정을 변경할 수도 있습니다 그러나 SnapInfo 설정을 변경하는 경우 모든 파일을 수동으로 새 위치로 이동해야 합니다. Hyper-V용 SnapManager는 자동으로 업데이트하지 않습니다. 파일을 이동하지 않으면 백업 복사본을 복원하거나 관리할 수 없으며, SnapManager for Hyper-V에는 백업 복사본이 표시되지 않습니다.</block>
+  <block id="c2aa3d9f61982da148456721ae79587e" category="paragraph">SnapManager for Hyper-V부터 SnapInfo 경로는 CSV(클러스터 공유 볼륨)에 상주할 수 있으며 Windows Server 2012의 SMB 공유에도 상주할 수 있습니다.</block>
+  <block id="54bbbae6b75598d96e01a8ef292c1580" category="summary">동일한 보호 요구 사항을 공유하는 가상 시스템 리소스에 대한 데이터 세트를 생성할 수 있습니다. 필요에 따라 여러 데이터 세트에 가상 머신을 추가할 수 있습니다.</block>
+  <block id="d82a6aed3492ef2e7f7b5cbf1eddf8da" category="doc">데이터 세트 생성</block>
+  <block id="618322761e8dcd886ce91475cd7877a5" category="list-text">데이터 세트 이름 및 설명</block>
+  <block id="e50edd97d3a01977ba8ffe981ab1a2fc" category="list-text">데이터 세트에 추가할 가상 머신 리소스</block>
+  <block id="5625da2889c91899be39a9e7a1f676d1" category="paragraph">동일한 호스트 클러스터에 속한 전용 디스크 및 공유 디스크는 동일한 데이터 세트에 배치해서는 안 됩니다. 이러한 유형의 리소스를 단일 데이터 세트에 추가하면 데이터 세트 백업이 실패할 수 있습니다. 데이터 세트당 NAS 또는 SAN 유형의 VM은 한 가지 유형만 가질 수 있습니다. 혼합 모드 데이터 세트는 있을 수 없습니다.</block>
+  <block id="0e71afb1ed54e227a67b45b4ddd9578b" category="paragraph">Dataset 검증 확인란은 기본적으로 선택되어 있습니다. SnapManager for Hyper-V는 데이터 세트를 생성하거나 수정하는 동안 모든 VM에서 구성 오류를 검사합니다. 데이터 집합의 유효성 검사를 사용하지 않으려면 이 확인란을 선택하지 않아야 합니다.</block>
+  <block id="bb2d7ceb9599c8ee580a614582533e4e" category="list-text">작업 창에서 * 데이터 세트 생성 * 을 클릭합니다.</block>
+  <block id="799b0434e98e576358bbb4ff50f65a46" category="list-text">마법사의 페이지를 완료합니다.</block>
+  <block id="19bb48d3ade7ccf63660ddd80481e1cc" category="paragraph">그런 다음 생성한 데이터 세트에 보호 정책을 추가해야 합니다.</block>
+  <block id="d6cc51cf29a35476bbb45dd0854ea089" category="summary">데이터를 보호할 수 있도록 데이터 세트와 관련된 정책을 추가, 수정 또는 삭제할 수 있습니다.</block>
+  <block id="bbf4d8084facd429e86123ec7b6a9bd0" category="doc">정책 구성 중</block>
+  <block id="2e09f66acdc6e3807831e87c2c274677" category="summary">데이터 세트를 새 노드로 업데이트하는 동안 웹 서비스 클라이언트 채널을 연결할 수 없습니다.</block>
+  <block id="8b3b23156be5ac30b137f82199c93fb2" category="doc">데이터 세트를 새 노드로 업데이트하는 동안 웹 서비스 클라이언트 채널을 연결할 수 없습니다</block>
+  <block id="5d26a3bbb243b9111fa1388872d4d277" category="paragraph">웹 서비스 클라이언트가 명시적으로 시작되지 않으면 Hyper-V용 SnapManager에 연결하지 못합니다</block>
+  <block id="fd3156c5d3666c9e747ad687a4899e98" category="paragraph">SnapManager for Hyper-V는 더 이상 웹 서비스 클라이언트 채널을 자동으로 시작할 수 없습니다. 데이터 집합을 새 노드로 업데이트하는 동안 웹 서비스 클라이언트 채널을 연결할 수 없는 경우 다음 이유 중 하나일 수 있습니다.</block>
+  <block id="9518dd0bf8afe06c3cffa0628aed4c71" category="list-text">웹 서비스가 시작되지 않았습니다.</block>
+  <block id="5c68c7379217e4320b79c2a7352f0fc8" category="list-text">SnapManager for Hyper-V가 설치되지 않았습니다.</block>
+  <block id="d0c1faeb6e379a4a2d5039749dd8e9c5" category="list-text">웹 서비스 호스트가 다운되었습니다.</block>
+  <block id="432196714b84ebf92fe914667704041c" category="paragraph">이 동작을 수정하려면 다음 작업을 수행해야 합니다.</block>
+  <block id="c59865ab79a0744a0aec9654ddfc8a5a" category="list-text">웹 서비스를 시작합니다.</block>
+  <block id="70b3a6db887e39dac6f6c45a12d5b44e" category="list-text">SnapManager for Hyper-V를 설치합니다</block>
+  <block id="0f99140d32024a77e05b26ec975e43fa" category="list-text">웹 서비스 호스트를 다시 시작합니다.</block>
+  <block id="c27423bb8e5e6cf832538373c8eaffc3" category="summary">섀도우 복제본 생성이 이미 진행 중인 백업 실패 오류입니다</block>
+  <block id="2ef940b95f23ccd7106b4fd53c93110c" category="doc">"섀도우 복제본 생성이 이미 진행 중입니다." 오류와 함께 백업 실패</block>
+  <block id="8dadc1857407aef266dee20961d67d99" category="paragraph">이 문제는 이전 백업이 중단되지 않고 여전히 활성화되어 있기 때문에 발생합니다. 다음 명령을 사용하여 나열된 항목을 확인합니다. 'cifs share show -shadowcopy</block>
+  <block id="fb6f2e6782f9cbfac9dc69d562f3b75e" category="paragraph">이전 백업 작업을 중단하고 작업을 재시도하십시오.</block>
+  <block id="6ce4fc9e1ea4b9bdd5944a4c4fef1693" category="summary">VSS 요청자 - 부분 작성기 오류로 백업 구성 요소가 실패했습니다.</block>
+  <block id="5aec979810f717c2bd06a3f109296bb6" category="doc">VSS 요청자 - 부분 작성기 오류로 백업 구성 요소가 실패했습니다</block>
+  <block id="d93505cbb4de4cf55bbd8a4f9730af33" category="paragraph">Hyper-V 호스트의 Windows 응용 프로그램 이벤트 로그에 다음 오류가 나타납니다.</block>
+  <block id="9b0af1bcd79b97399ce6605073c34a5a" category="paragraph">이 메시지는 애플리케이션 정합성이 보장되는 데이터 세트 백업을 수행할 때 나타납니다. 이 오류로 인해 데이터 세트의 일부 가상 머신에 대한 백업이 실패합니다.</block>
+  <block id="6832ae75ebdd3174319fb1eb8b03aa45" category="list-text">재시도 시도가 다시 실패하면 데이터 세트를 두 개의 데이터 세트로 분할하여 백업이 실패한 모든 VM이 단일 데이터 세트에 배치되고 다른 모든 VM이 다른 데이터 세트에 배치되도록 합니다. 그런 다음 백업을 다시 실행합니다.</block>
+  <block id="a1f1032aa2d3baced636ad4ef4333b28" category="summary">데이터 세트 또는 가상 머신과 연결된 하나 이상의 백업을 삭제할 수 있습니다.</block>
+  <block id="4574586aa737250bfcda95872412374c" category="doc">백업을 삭제하는 중입니다</block>
+  <block id="e296d076e980ec567325795266c68391" category="list-text">삭제할 백업이 포함된 데이터 세트 내의 가상 머신을 선택합니다.</block>
+  <block id="10fdc0e5c9a54280b130aed4d7a0b6e0" category="paragraph">데이터 세트와 연결된 백업을 삭제하면 해당 데이터 세트에 속한 모든 가상 머신과 연결된 백업도 삭제됩니다. 가상 머신과 연결된 백업을 삭제하면 해당 백업만 삭제됩니다.</block>
+  <block id="87372cabc36ee202e94b8b4d26eaa578" category="list-text">백업 창에서 삭제할 백업을 선택합니다.</block>
+  <block id="3b2dc7db426da50807132dd7a1aee03a" category="paragraph">백업 삭제 * 대화 상자가 표시됩니다. 선택한 VM에 대한 백업이나 전체 데이터 세트에 대한 백업을 삭제할 수 있습니다.</block>
+  <block id="43c71a832bf25c4e9d1dbb3ef536b79d" category="list-text">적절한 옵션을 선택하고 * 삭제 확인 * 을 클릭합니다.</block>
+  <block id="6fd2f78e84faf0f67adc4307fbd62724" category="paragraph">상태 창에서 백업 삭제 작업의 상태를 볼 수 있습니다.</block>
+  <block id="1d54878873bda79ba6f6f488be52b7db" category="summary">더 이상 필요하지 않은 보고서는 하나 이상 삭제할 수 있습니다.</block>
+  <block id="db0a7e575789aeec7430c480d1cdbf90" category="doc">보고서 삭제</block>
+  <block id="492d10510b8068b0b2bd4fd6b5e7db8f" category="list-text">탐색 창에서 * Reports * &gt; * Datasets * 또는 * Reports * &gt; * Hosts * 를 클릭합니다.</block>
+  <block id="cfdb6ad6562c35577220f2d2ea051140" category="list-text">삭제할 보고서 또는 보고서가 포함된 데이터 세트, 가상 머신 또는 호스트를 선택합니다.</block>
+  <block id="177e4969ffcd1fb05e9df1da6273fc62" category="list-text">보고서 창에서 삭제할 보고서를 선택합니다.</block>
+  <block id="160729de3f7b7c0a18a074f71e6d5660" category="list-text">작업 창에서 * 보고서 삭제 * 를 클릭하고 * 확인 * 을 클릭하여 삭제합니다.</block>
+  <block id="56186ca948e6e2f0d7873e6938dad843" category="summary">여러 애플리케이션을 위해 단일 SVM(스토리지 가상 머신) 또는 CIFS 서버를 구성하면 리소스 공유 문제가 발생할 수 있으며, 이로 인해 Hyper-V 환경이 영향을 받을 수 있습니다.</block>
+  <block id="cfab628a3188c03c7095801849d2119e" category="doc">SMB를 통한 Hyper-V에 대해 SVM 또는 CIFS 서버 구성</block>
+  <block id="2a451f26e097f6452847e824aff787d8" category="paragraph">여러 애플리케이션을 위해 단일 SVM(스토리지 가상 머신) 또는 CIFS 서버를 구성하면 리소스 공유 문제가 발생할 수 있으며, 이로 인해 Hyper-V 환경이 영향을 받을 수 있습니다. 요구 사항에 따라 SMB를 통한 Hyper-V용 전용 SVM 또는 CIFS 서버를 구성해야 합니다.</block>
+  <block id="7c9f946d8fc9c1bc8c966878e44efc69" category="inline-link">NetApp KB 문서 1015099: SMB를 통해 Hyper-V에 SVM/CIFS를 설정하는 방법</block>
+  <block id="4c842a7c58d79eb45e70fb117cba80d3" category="paragraph"><block ref="b51738f37f5bb4b910df6838f087c67c" category="inline-link-rx"></block></block>
+  <block id="ddb1e3ae2fe994cd6f2cbf626ec1aec2" category="summary">SnapManager for Hyper-V를 사용하면 여러 호스트에 걸쳐 여러 가상 시스템을 백업 및 복원할 수 있습니다. 데이터 세트를 생성하고 정책을 적용하여 스케줄 지정, 보존 및 복제와 같은 백업 작업을 자동화할 수 있습니다.</block>
+  <block id="56e00e502522f8f9c1bf72739fc7d6b0" category="doc">SnapManager for Hyper-V의 기능</block>
+  <block id="1942f365945297729bd80e08dbd9ef55" category="paragraph">SnapManager for Hyper-V에서 다음 작업을 수행할 수 있습니다.</block>
+  <block id="b20cb048b9feda6e061835940fc5f6ca" category="list-text">가상 머신을 보호 요구사항이 동일한 데이터 세트로 그룹화하고, 해당 데이터 세트에 정책을 적용합니다</block>
+  <block id="0686f7937978ebba5e524899d138763a" category="list-text">ONTAP 소프트웨어를 실행하는 스토리지 시스템에 상주하는 전용 가상 머신과 클러스터링된 가상 머신을 백업 및 복구합니다</block>
+  <block id="54d4c0474d7100ef471223471ea39232" category="list-text">CSV(Cluster Shared Volumes)에서 호스팅되는 가상 머신 백업 및 복원</block>
+  <block id="c1ba19d1fa9f7fe81b4469bf18569455" category="list-text">예약 정책을 사용하여 데이터 세트 백업을 자동화합니다</block>
+  <block id="c0b5b722d2fc5e7702a26493b71e7284" category="list-text">데이터 세트의 필요 시 백업을 수행합니다</block>
+  <block id="08a84764e165844b72e72b3c361f75bf" category="list-text">보존 정책을 사용하여 필요한 기간 동안 데이터 세트 백업을 보존합니다</block>
+  <block id="ff913bf483085ae67b6db660a9b54769" category="list-text">백업이 성공적으로 완료되면 SnapMirror 대상 위치를 업데이트합니다</block>
+  <block id="df30d2a876f35e3c55ab84e445c1bdee" category="list-text">백업 전후에 실행할 사용자 지정 스크립트를 지정합니다</block>
+  <block id="2b6f0d8477449afa9c1f20ac00cfac4c" category="list-text">백업에서 가상 머신을 복구합니다</block>
+  <block id="fecd9fbae73a24e6d80dc51a54a9d6d6" category="list-text">모든 예약 및 실행 중인 작업의 상태를 모니터링합니다</block>
+  <block id="3c2190647b63a0bc718d912624647267" category="list-text">관리 콘솔에서 원격으로 호스트를 관리합니다</block>
+  <block id="b71cbe96d87276f01b10df5bc5ff5166" category="list-text">데이터 세트 백업, 복원 및 구성 작업에 대한 통합 보고서를 제공합니다</block>
+  <block id="4623328acd481dbe715800e88dc07488" category="list-text">충돌 시에도 정합성 보장 백업과 애플리케이션 정합성 보장 백업을 함께 수행합니다</block>
+  <block id="b218fcb26f722d30f041dd0af9669b87" category="list-text">PowerShell cmdlet을 사용하여 재해 복구 작업을 수행합니다</block>
+  <block id="85ce68ce75d094769a965ba2dc1947a6" category="list-text">클러스터 운영 체제(OS) 롤링 업그레이드를 수행합니다</block>
+  <block id="f375afd3b93b2a4700a74a4d41f5e198" category="summary">SnapManager for Hyper-V의 기본 동작은 저장된 상태의 가상 머신을 포함하는 백업이 종료 또는 실패하도록 하는 것이지만, 가상 머신을 저장된 상태 백업을 허용하는 정책이 있는 데이터 세트로 이동하여 저장된 상태 백업을 수행할 수 있습니다.</block>
+  <block id="0bf1b700eaedae30d9d1c644e8027120" category="doc">SnapManager for Hyper-V가 저장된 상태 백업을 처리하는 방법</block>
+  <block id="9845564fe8752b966d5bc32e7dd5b247" category="paragraph">데이터 세트 정책을 생성하거나 편집하여 저장된 상태의 가상 머신 백업을 허용할 수도 있습니다. 이 옵션을 선택하면 Hyper-V용 SnapManager는 Hyper-V VSS 기록기가 저장된 상태를 사용하여 가상 머신을 백업하거나 가상 머신의 오프라인 백업을 수행할 때 백업이 실패하지 않습니다. 그러나 저장된 상태 또는 오프라인 백업을 수행하면 다운타임이 발생할 수 있습니다.</block>
+  <block id="32d1bfdf8c6344fe503f87687f5a8962" category="summary">SnapInfo 스냅샷 복사본이 삭제되었습니다.</block>
+  <block id="c5d492b9a95788785d322809db0f5d3a" category="doc">SnapInfo 스냅샷 복사본이 삭제되었습니다</block>
+  <block id="1e24c774a941f73ff113ac649bb5ee65" category="paragraph">Hyper-V용 SnapManager는 SnapInfo 스냅샷 복사본을 유지하거나 삭제하지 않습니다.</block>
+  <block id="952de9aa949a3ae5e9c9175bd9f009ac" category="paragraph">데이터 세트 백업을 생성한 후 SnapManager for Hyper-V는 SnapInfo LUN의 스냅샷 복사본을 생성합니다. 백업이 삭제되면 SnapInfo 스냅샷 복사본이 삭제되지 않습니다. 기본적으로 Hyper-V용 SnapManager는 30개의 SnapInfo LUN 스냅샷 복사본을 유지하며, 최신 복사본이 30개 복사본 임계값을 초과할 때마다 가장 오래된 복사본을 최신 복사본으로 대체합니다.</block>
+  <block id="8ae7a4b621e7286f83f2e0b5b0e7abdb" category="paragraph">다음 레지스트리 키 중 하나를 사용하여 각 Hyper-V 호스트에 대해 보존할 SnapInfo Snapshot 복사본 수를 구성할 수 있습니다.</block>
+  <block id="a462ca2398fe279403cf60c92d13855d" category="paragraph">독립 실행형 Hyper-V 호스트의 경우 키: HKLM\SOFTWARE\NetApp\SnapManager for Hyper-V\Server\&lt;hostname&gt; DWORD 값: snapinfo_snap_count(유지할 SnapInfo Snapshot 복사본 수)</block>
+  <block id="6058b8b336df7e71c918e9bfaa78a869" category="paragraph">클러스터 Hyper-V 호스트(클러스터의 각 노드에서 구성됨): key: HKLM\Cluster\software\NetApp\SnapManager for Hyper-V\Server\&lt;clustername&gt; DWORD 값: snapinfo_snap_count(유지할 SnapInfo Snapshot 복사본 수)</block>
+  <block id="335cdc1cdd845dd68fb0af4318d17323" category="summary">MSI 사용자 정의 속성은 자동 설치에 사용됩니다.</block>
+  <block id="c2b018668fb0b779ead5f9f95bae0698" category="doc">MSI 사용자 정의 속성은 자동 설치에 사용됩니다</block>
+  <block id="e33f003e65659cbd1b34de1441c9a0b6" category="paragraph">Windows Server 2008 또는 Windows Installer 버전 4.5가 설치된 Vista를 실행하는 시스템에서는 SnapManager for Hyper-V 설치의 기본 제공 속성을 인식하지 못합니다.</block>
+  <block id="840a7fa4f3f1957770bb36e45ef90ae3" category="paragraph">설치 시 MSIRESTARTMANAGERCONTROL=Disable command switch 매개 변수를 사용합니다.</block>
+  <block id="4ea9f7e1381b19e48a38a7a35061e916" category="inline-link">MSDN(Microsoft Developer Network) 라이브러리</block>
+  <block id="fe7c1b974e579dd2b5c229a1c5cebf3c" category="paragraph"><block ref="fe7c1b974e579dd2b5c229a1c5cebf3c" category="inline-link-rx"></block></block>
+  <block id="585932dc663b862a65f668864742bb10" category="summary">Microsoft는 SMB 대상에서 실행되는 새로운 원격 VSS 하드웨어 공급자를 사용하여 SMB 3.0 공유에서 실행되는 Hyper-V 가상 머신(VM)의 애플리케이션 정합성이 보장되는 백업을 지원하도록 VSS 인프라를 개선했습니다.</block>
+  <block id="01cb67706eed4ef65de10c645b6657c1" category="doc">Windows Server 2012에서 Hyper-V VM을 지원하는 SMB 3.0</block>
+  <block id="67c8b8d5e0462b6752a2c97f85948d9d" category="paragraph">SMB 3.0 공유에서 실행되는 Hyper-V VM 백업을 지원하고 조정하기 위해 Windows 2012 하이퍼바이저에서 SMB File Share Provider라는 새 공급자를 사용할 수 있습니다.</block>
+  <block id="2d9c02a3cfb8e65c9c1aaa46b2fc8e86" category="paragraph">VSS 요청자(SnapManager for Hyper-V)가 Hyper-V VM이 포함된 SMB 3.0 공유를 VSS 스냅샷 세트에 추가하면 VSS는 새로운 SMB 파일 공유 복사본 공급자를 호출하여 MSRPC 명령을 SMB 타겟으로 보내 VSS 백업을 조정합니다.</block>
+  <block id="4ae232dd83c1800c9700a41a957e5a0a" category="paragraph">SMB 대상에서 실행되는 새 파일 공유 섀도 복사본 에이전트(원격 VSS 공급자)는 실제 하드웨어 스냅샷 복사본을 생성합니다.</block>
+  <block id="066bf8e788a744db3f1d3d776ae6d60b" category="paragraph">Data ONTAP 8.2는 파일 공유 섀도 복사본 에이전트(원격 VSS 하드웨어 공급자)를 구현하여 SMB 공유의 애플리케이션 정합성이 보장되는 백업 복사본을 수행합니다.</block>
+  <block id="d329328b4b22a529b57fff240766dc66" category="summary">데이터 집합을 만든 후에는 데이터 집합 설명과 데이터 집합과 연결된 리소스를 수정할 수 있습니다.</block>
+  <block id="6d98fc44786239f4b5144fd84d482ba8" category="list-text">수정할 데이터세트를 선택합니다.</block>
+  <block id="8b003fa95f73f3b785cb6e0ec4ec2df7" category="list-text">작업 창에서 * 데이터 세트 수정 * 을 클릭합니다.</block>
+  <block id="a35bd6b16b9341c7c3c28c63b800b49e" category="list-text">마법사의 단계를 완료합니다.</block>
+  <block id="113433cb14879d5855c0cfcff78e7366" category="summary">재해 복구 기능을 사용하면 재해 또는 기타 상황에서 운영 스토리지 사이트에서 중요 보호 데이터를 사용할 수 없게 될 경우 보조 스토리지 사이트를 통해 해당 데이터의 백업 복사본에 대한 액세스 권한을 제공할 수 있습니다. 재해 복구는 PowerShell 인터페이스를 통해서만 수행할 수 있습니다.</block>
+  <block id="455a9d5e4a47da0f33133f449ad5f856" category="doc">재해 복구를 수행하는 중입니다</block>
+  <block id="e1c209ac85bfb81e9855f0e3b99afb7e" category="summary">IVssWriterCallback 인터페이스에 대한 예기치 않은 쿼리 오류. hr=0x80070005, 액세스가 거부되었습니다.</block>
+  <block id="521166875196b366b08ccb1fe3582b86" category="paragraph">CSV가 클러스터 그룹 소유자가 소유하고 VM이 파트너 노드에서 소유하는 경우 VM 백업이 성공적으로 완료되고 애플리케이션 이벤트 로그에 VSS 오류가 표시됩니다. 이 문제는 주로 작성자 또는 요청자 프로세스에서 잘못된 보안 설정으로 인해 발생합니다.</block>
+  <block id="7ea39b60427774995e2bee8e874dca9e" category="paragraph">없음: 이 오류 메시지는 무시해도 됩니다.</block>
+  <block id="601935beb642d668b3969656d707806c" category="summary">스냅샷 복사본이 생성된 후 Data ONTAP VSS 하드웨어 공급자가 성공적으로 사용되었는지 확인할 수 있습니다.</block>
+  <block id="4817f39c0025365c4b2b581ea7d8627a" category="doc">VSS Hardware Provider가 성공적으로 사용되었는지 확인</block>
+  <block id="f66fa44621c6a877026312208f6c7ae1" category="list-text">MMC에서 * 시스템 도구 * &gt; * 이벤트 뷰어 * &gt; * 응용 프로그램 * 으로 이동하여 다음 값을 가진 이벤트를 찾습니다.</block>
+  <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">출처</block>
+  <block id="1be7f4094822039b4634c93c23dd7efb" category="cell">이벤트 ID입니다</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">설명</block>
+  <block id="311859000270251f433cd8b94760970d" category="paragraph">Navsssprv</block>
+  <block id="be93cca187e923aabc702667ba5f0d06" category="paragraph">4089</block>
+  <block id="a9b5235dd78cbe7fe1b1c523e48d02a7" category="paragraph">VSS 공급자가 SnapshotSetId에 대한 CommitSnapshots을 n ms 단위로 성공적으로 완료했습니다.</block>
+  <block id="38b3dc2a6f667646b5f282943f9f6219" category="paragraph">* 참고: * VSS를 사용하려면 공급업체가 10초 이내에 스냅샷 복사본을 커밋해야 합니다. 이 시간 제한을 초과하면 Data ONTAP VSS 하드웨어 공급자가 이벤트 ID 4364를 기록합니다. 이 제한은 일시적인 문제로 인해 초과될 수 있습니다. 실패한 백업에 대해 이 이벤트가 기록된 경우 백업을 다시 시도하십시오.</block>
+  <block id="358bb410ee4fdb1466406179a2d7e7c1" category="summary">정책 수정 마법사를 사용하여 데이터 세트를 보호하는 정책을 수정할 수 있습니다.</block>
+  <block id="03d1659c055878f5063665deaef01e56" category="doc">정책을 수정하는 중입니다</block>
+  <block id="0fff1f36590a637c233d1cddf99f3433" category="list-text">수정할 정책이 포함된 데이터 세트를 선택합니다.</block>
+  <block id="cf9e7be685e452f2c08dda68d30ae872" category="list-text">수정할 정책을 선택합니다.</block>
+  <block id="ca9c50f2667ce74f476bc4348cbdb40e" category="list-text">작업 창에서 * 정책 수정 * 을 클릭합니다.</block>
+  <block id="b3dd7ffc8a54676ed3847b3f7998dc8a" category="paragraph">정책 수정 마법사가 나타납니다.</block>
+  <block id="2f7f4ca12b1f546b90c2369696eddb77" category="list-text">마법사의 단계를 완료하여 데이터 세트에 대한 보호 정책을 수정합니다.</block>
+  <block id="07553da01bd8f0509367dab702f0df9b" category="summary">SnapManager for Hyper-V를 사용하여 백업 복사본에서 가상 머신(VM)을 복원할 수 있습니다. 클러스터의 일부인 VM을 복구할 수도 있습니다. SnapManager for Hyper-V는 클러스터에서 VM을 복원할 적절한 노드를 결정합니다.</block>
+  <block id="b2423fe04190a4d2fa2e997bc883b91f" category="paragraph">VM을 복구하기 위해 SnapManager for Hyper-V는 SnapDrive for Windows의 파일 레벨 복구 기능을 사용합니다. 구성 파일, 스냅샷 복사본 및 VHD를 비롯한 VM의 연결된 파일을 여러 ONTAP LUN에 분산할 수 있습니다. LUN에는 여러 VM에 속하는 파일이 포함될 수 있습니다.</block>
+  <block id="f7535d861055071a871a1a379dc967cd" category="paragraph">LUN에 복원하려는 VM과 연결된 파일만 있는 경우 SnapManager for Hyper-V는 LCSR(LUN 클론 분할 복원)을 사용하여 LUN을 복원합니다. LUN에 복원하려는 가상 머신과 연결되지 않은 추가 파일이 포함되어 있는 경우, SnapManager for Hyper-V는 파일 복사 복원 작업을 사용하여 가상 머신을 복구합니다.</block>
+  <block id="154cac16b753308457b9a262443343ba" category="summary">Hyper-V용 SnapManager를 설치하기 전에 Hyper-V용 SnapManager를 설치하기 전에 모든 Hyper-V 호스트에 Windows용 SnapDrive를 설치하는 등 환경을 구성하는 방법을 결정하는 것이 좋습니다</block>
+  <block id="8a58858995de7d124bdacc564f7d7d41" category="summary">스토리지 시스템 볼륨 이름 변경 후 복구 실패.</block>
+  <block id="9d56008e7cafbef0c16363409787df4b" category="doc">스토리지 시스템 볼륨 이름 변경 후 복구 실패</block>
+  <block id="b73953d69b5826bc994c59820fe70281" category="paragraph">VM 복원에 필요한 스토리지 시스템 스냅샷 중 일부가 누락되었거나 일치하지 않습니다.</block>
+  <block id="414fc30787c8e1cec056910d40c873e9" category="paragraph">스토리지 시스템 볼륨의 이름을 바꾼 경우에는 볼륨 이름을 바꾸기 전에 생성된 백업에서 가상 머신(VM)을 복원할 수 없습니다.</block>
+  <block id="e240593319cfdae29dea4e050a0b9c5d" category="paragraph">스토리지 시스템 볼륨의 이름을 바꾸고 볼륨 이름을 바꾸기 전에 생성된 백업에서 VM을 복원해야 하는 경우 다음을 완료합니다.</block>
+  <block id="391acb1460138f2c146d23275cb16d0e" category="list-text">MMC에서 VM을 복원하는 동안 복원 마법사의** 복원 옵션** 페이지에서 "스냅샷 확인 활성화" 옵션이 선택 취소되어 있는지 확인합니다.</block>
+  <block id="f7c055253485e427f46278db4076d0bf" category="list-text">PowerShell을 사용하여 VM을 복원하는 동안 -DisableVerifySnapshot 매개 변수가 지정되었는지 확인합니다.</block>
+  <block id="ee1fb48cf427020b1bc11a95d41e1b89" category="summary">SnapManager for Hyper-V에서 관리되는 데이터 세트 또는 가상 머신 리소스에 대한 보고서를 볼 수 있습니다</block>
+  <block id="6e0141f614c580e105922d35f1522f47" category="doc">데이터 세트 보고서 보기</block>
+  <block id="3fb30d8f1e545b766aa6fbe1fb0270c9" category="list-text">탐색 창에서 * Reports * &gt; * Datasets * 를 클릭합니다.</block>
+  <block id="f76c0baf15ead2975d705e3c32493a76" category="list-text">보려는 보고서가 포함된 데이터 세트 또는 가상 머신을 선택합니다.</block>
+  <block id="93b5a720f8e4504a3412458bd9c452d7" category="list-text">보고서 창에서 백업 탭 또는 복구 탭을 클릭합니다.</block>
+  <block id="5f6940ecd347062b2a819310646bd413" category="list-text">보려는 보고서를 선택하고 * 보고서 보기 * 를 클릭합니다.</block>
+  <block id="2143271db1b4deadd83681d45a3475e6" category="cell">을(를) 보려면...</block>
+  <block id="d1f0ba34e78627dc049ace1d8ae99de8" category="paragraph">* 데이터 세트 보고서 *</block>
+  <block id="b593829a06bd7d897992774622814a90" category="paragraph">백업 보고서를 볼 수 있습니다.</block>
+  <block id="12ae71df924eae6ed493da1acd0a74f5" category="paragraph">* 가상 머신 보고서 *</block>
+  <block id="e4a52aa830b539c290e19001441428ff" category="paragraph">백업 또는 복구 보고서를 볼 수 있습니다.</block>
+  <block id="6dc624ee7751a3136ddfb2246d7a757f" category="paragraph">보고서가 별도의 창에 나타납니다.</block>
+  <block id="b8bfde7509ea6e746a0d2dc3fa8e035b" category="summary">원격 호스트 설치 마법사를 사용하면 독립 실행형 및 클러스터 호스트 또는 노드에서 SnapManager for Hyper-V를 원격으로 설치 또는 제거할 수 있습니다.</block>
+  <block id="f288e721031c69ab5958873c60b80a6c" category="doc">노드나 호스트에 SnapManager for Hyper-V를 원격으로 설치 또는 제거합니다</block>
+  <block id="7c7073c19cc9ef7ce5633f713af732c6" category="paragraph">원격 호스트 설치 마법사를 사용하면 독립 실행형 및 클러스터 호스트 또는 노드에서 SnapManager for Hyper-V를 원격으로 설치 또는 제거할 수 있습니다. 각 개별 노드에 소프트웨어를 설치하는 대신 한 번에 클러스터의 모든 노드에 소프트웨어를 설치하려는 경우, Hyper-V용 SnapManager를 원격으로 설치할 수 있습니다.</block>
+  <block id="92ca4e5f52582eb9dfaa6711eeeeb8aa" category="paragraph">원격 호스트 설치 마법사를 사용하려면 호스트 노드에 SnapManager for Hyper-V가 이미 설치되어 있어야 합니다.</block>
+  <block id="c1228ebb2ee56220624e3fc941f39a1d" category="list-text">작업 창에서 * 원격 호스트 설치 * 를 클릭합니다.</block>
+  <block id="9713a6b14a0ea321bda5f3bf2348ebd6" category="list-text">원격 호스트 설치 마법사를 실행합니다.</block>
+  <block id="0f1ab98cd7d8b82174962ce96d682725" category="paragraph">원격 호스트 설치 마법사를 실행할 때 호스트 노드는 SnapManager for Hyper-V 설치 또는 제거를 클러스터의 다른 노드 또는 호스트로 푸시합니다.</block>
+  <block id="a824865ad11687b869fb7c3688b30aab" category="summary">운영 스토리지 시스템에 VM을 백업한 후 운영 스토리지 시스템에서 보조 스토리지 시스템으로 SnapMirror 관계를 사용하여 원래 구성으로 돌아갈 수 있습니다.</block>
+  <block id="229eb0a0aaf5bb5e417996de47006416" category="doc">클러스터된 호스트에 대한 원래 구성을 복원합니다</block>
+  <block id="1e85116c51e33e89bd1860490e8526bf" category="list-text">모든 VM에 대한 가상 머신 리소스 및 가상 머신 구성 리소스를 오프라인 상태로 설정합니다.</block>
+  <block id="8193de4cd637235b89646ee62bd3ae58" category="list-text">클러스터에서 이러한 리소스를 삭제합니다.</block>
+  <block id="27f116dd2c8a9ae5e03e493e359cc954" category="list-text">Hyper-V Manager에서 모든 VM을 삭제합니다.</block>
+  <block id="7a6480918ea2439065c4289577ac8e48" category="list-text">SnapDrive를 사용하여 모든 디스크를 분리합니다.</block>
+  <block id="c3ba3fc89fcdafe39f808075d73d0f49" category="summary">명령줄 스위치를 사용하여 자동 설치를 수행할 수 있습니다. 이 경우 설치 스크립트를 사용하여 SnapManager for Hyper-V를 설치할 수 있습니다</block>
+  <block id="e306b1733b6ed9e0a5c51db654088e20" category="doc">자동 설치를 위한 명령줄 스위치 목록 및 설명</block>
+  <block id="4e895b550bc9aa4297d558e23e3849a5" category="paragraph">다음 표에서는 값 목록을 제공하고 사용 가능한 각 명령줄 설치 스위치에 대해 설명합니다.</block>
+  <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="cell">스위치</block>
+  <block id="689202409e48743b914713f96d93947c" category="cell">값</block>
+  <block id="198b4e57fb63a5deedec193f2fb2325c" category="paragraph">silent_mode =</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1</block>
+  <block id="266a184f6d07d85f07a8590b69dc4bc7" category="paragraph">SnapManager for Hyper-V가 자동 설치 기능을 올바르게 실행할 수 있도록 합니다. 이 스위치는 최초 설치, 업그레이드 및 전체 설치 해제에 필요합니다.</block>
+  <block id="ad03e4e307289bacbb9cc0a680af3da0" category="paragraph">REINSTALLMODE =</block>
+  <block id="47a5489e00a9e07702fa39ff6845dce4" category="paragraph">사용할 재설치 모드를 지정합니다.</block>
+  <block id="9e3669d19b675bd57058fd4664205d2a" category="paragraph">V</block>
+  <block id="2d64b7b8ec30590efc918a142a275576" category="paragraph">소스 패키지에서 설치가 실행되고 로컬 패키지가 캐시됨을 나타냅니다. Hyper-V용 SnapManager를 처음 설치할 때는 이 옵션을 사용하지 마십시오 버전, 날짜 또는 체크섬 값에 관계없이 모든 파일을 다시 설치합니다.</block>
+  <block id="0cc175b9c0f1b6a831c399e269772661" category="paragraph">A</block>
+  <block id="457e9669098ea7596bf25b32e8216120" category="paragraph">이전 버전이 있거나 파일이 누락된 경우 Hyper-V용 SnapManager 파일을 다시 설치합니다.</block>
+  <block id="d95679752134a2d9eb61dbd7b91c4bcc" category="paragraph">o</block>
+  <block id="837b0d7799666e7109f4312ed3c8aca4" category="paragraph">HKEY_LOCAL_MACHINE 및 HKEY_CLASSES_ROOT의 Hyper-V용 모든 SnapManager에 필요한 레지스트리 항목을 다시 작성해야 함을 나타냅니다.</block>
+  <block id="6f8f57715090da2632453988d9a1501b" category="paragraph">M</block>
+  <block id="c95a26abe96bacd1248a25f386e6a53d" category="paragraph">HKEY_CURRENT_USER 및 HKEY_USERS의 Hyper-V에 필요한 모든 SnapManager 레지스트리 항목을 다시 작성해야 함을 나타냅니다.</block>
+  <block id="7b774effe4a349c6dd82ad4f4f21d34c" category="paragraph">U</block>
+  <block id="080fb47f00779e46697aa15e68ce40da" category="paragraph">모든 바로 가기를 다시 설치하고 모든 아이콘을 다시 설치하며 기존 바로 가기 및 아이콘을 덮어씁니다.</block>
+  <block id="6837cb2ef440deda62cdfd92f893462c" category="paragraph">재설치 =</block>
+  <block id="5fb1f955b45e38e31789286a1790398d" category="paragraph">모두</block>
+  <block id="b3caa15fd4cdc96f686c9e3caa66672c" category="paragraph">모든 Hyper-V용 SnapManager 기능을 다시 설치합니다.</block>
+  <block id="b3f1e272edb813115cf66bf7b2bcc282" category="paragraph">/LI</block>
+  <block id="435ed7e9f07f740abf511a62c00eef6e" category="paragraph">파일 이름</block>
+  <block id="d40d4ca09f94bec6ac232ec9abdb8a75" category="paragraph">SnapDrive 설치 로그를 생성하도록 지정합니다.</block>
+  <block id="76ffdf03cd11a15447f8ff236347a48f" category="paragraph">SMHV_LICENSE =</block>
+  <block id="718779752b851ac0dc6281a8c8d77e7e" category="paragraph">라이센스</block>
+  <block id="aa9997668080e600098201c800794a9a" category="paragraph">Hyper-V에 대해 적절하고 유효한 SnapManager 라이센스를 지정합니다.</block>
+  <block id="902e50640559acf2618232cb467d71c6" category="paragraph">INSTALLDIR=</block>
+  <block id="92174ec7a91131c3d23e5ec8e145b56e" category="paragraph">대상 설치 디렉토리</block>
+  <block id="f6136c894dd665b771dc27dfcdb15e5b" category="paragraph">SnapManager for Hyper-V가 설치되는 타겟 설치 디렉토리를 지정합니다. 이 스위치는 SnapManager for Hyper-V를 처음 설치할 때만 필요합니다.</block>
+  <block id="4308fbf9e781c7b5b49ce2679e42f116" category="paragraph">SV고객 이름 =</block>
+  <block id="5e5fdbee204306d3d25070f14577adb5" category="paragraph">도메인\사용자 이름</block>
+  <block id="b1a5a00134f1d26f309333310a714bb3" category="paragraph">SnapManager for Hyper-V가 무인 설치 중에 사용하는 도메인 및 사용자 이름을 지정합니다.</block>
+  <block id="b3bafd27e7a73f30ce8732de686ce492" category="paragraph">SMHVSRV_PASSWORD =</block>
+  <block id="5f4dcc3b5aa765d61d8327deb882cf99" category="paragraph">암호</block>
+  <block id="983e205468372f5b54306075f011c3e7" category="paragraph">SMHVSRV_PASSWORD 사용자의 암호를 지정합니다.</block>
+  <block id="50bd414adb9352637601f7b9213aa96d" category="paragraph">SMHVSRV_CONFIRMUSERPASSWORD =</block>
+  <block id="8983eeecdf244f22cec1336291134ec3" category="paragraph">SMHVSRV_CONFIRMUSERPASSWORD 사용자의 암호를 확인합니다.</block>
+  <block id="a61a3b5b5e4cead0800f62ae9bb66136" category="paragraph">SMHV_WEBSRV_TCP_PORT</block>
+  <block id="b8ebd2c0b854ff6570d728914e7849e8" category="paragraph">포트 번호입니다</block>
+  <block id="b746df63e4f5f356b289dbe20ff3ddf7" category="paragraph">Net.tcp에 SnapManager for Hyper-V 웹 서비스가 사용하는 포트를 지정합니다. 기본 포트는 808입니다.</block>
+  <block id="63b9599be551312d5e3cf53bc555bc96" category="paragraph">다음 구문은 새로 설치하는 방법을 보여 줍니다.</block>
+  <block id="81fedb9b338bf45d21d66418f59a062b" category="paragraph">'etup.exe /s /v"/qn silent_mode=1/L * v SMHVInstall.log SVCUSERNAME=Domain\User Name SMHVSRV_PASSWORD=password SMHVSRV_CONFIRMUSERPASSWORD=password"'를 입력합니다</block>
+  <block id="d04a98437172200dd00fe91c21b12a6a" category="paragraph">다음 구문은 업그레이드를 보여 줍니다.</block>
+  <block id="263e5a95756538f004b9f4be0693d047" category="paragraph">S etup.exe /s /v"/qn REINSTALLMODE=vamus reinstall=all silent_mode=1/L * v SMHVUpgrade.log SVCUSERNAME=Domain\User Name SMHVSRV_password=password SMHVSRV_CONFIRMUSERPASSWORD=password""를 입력합니다</block>
+  <block id="712ef0af99264750df06acf2ceaeb496" category="paragraph">다음 구문은 설치 제거를 보여 줍니다.</block>
+  <block id="c678cc6163ef02a2dd28b9cbe0db5d16" category="paragraph">'etup.exe /s/x/v"/qn silent_mode=1/L * v SMHVuninstall.log"</block>
+  <block id="ce7db543aa06ec7ff44a4bc12924f66f" category="summary">Hyper-V 상위 호스트는 Hyper-V 역할이 설정된 물리적 서버입니다.</block>
+  <block id="e82c4340e2eafd38e062fccd93987b16" category="paragraph">Hyper-V 상위 호스트는 Hyper-V 역할이 설정된 물리적 서버입니다. 가상 시스템이 포함된 호스트 서버는 보호 및 복구를 위해 SnapManager for Hyper-V에 추가됩니다. 모든 SnapManager for Hyper-V 소프트웨어 구성 요소를 설치하고 실행하려면 Hyper-V 상위 호스트가 최소 운영 체제 및 Hyper-V 요구 사항을 충족하는지 확인해야 합니다.</block>
+  <block id="d2c33f738e00f240ee4b4cf84fe38db1" category="list-text">* 지원되는 운영 체제 *</block>
+  <block id="0346e0e72471991307e842e6d2a221a9" category="paragraph">SnapManager for Hyper-V는 다음 운영 체제에서 실행됩니다.</block>
+  <block id="5ed6d03e7c3f615ab8fdbae833ffb0b9" category="list-text">Windows Server 2008 R2 SP1</block>
+  <block id="96bc7f42979153694e05a6a2b867772e" category="list-text">Windows Server 2012 R2</block>
+  <block id="00aae0645113cb861020a7a42ded48c2" category="list-text">Windows Server 2012 를 참조하십시오</block>
+  <block id="ed590cb2453f0683b64cb528f78610a2" category="list-text">Windows Server 2016</block>
+  <block id="31f8757839909e87266f2b53482c86ef" category="list-text">Windows Server 2019</block>
+  <block id="ba498e453ebf249225711f39b1e238cc" category="list-text">* 지원되는 관리 콘솔 운영 체제 *</block>
+  <block id="6e513523c6dc9a4c1cc51397b63aed1c" category="paragraph">관리 콘솔은 다음 운영 체제를 실행해야 합니다.</block>
+  <block id="4e968295ae15428d21e4d601d133970d" category="list-text">* Hyper-V 요구 사항 *</block>
+  <block id="16854cdf08f480287c8423a246622e5a" category="paragraph">자세한 내용은 Microsoft TechNet 라이브러리에서 Hyper-V 시작 정보를 참조하십시오.</block>
+  <block id="2e569174a670e65be51fa1a29861108d" category="list-text">* 국제화 지원 *</block>
+  <block id="18478c0d096363246455e61681139d9f" category="paragraph">SnapManager for Hyper-V는 독일어 및 일본어 운영 체제에서 테스트되었습니다.</block>
+  <block id="9ef9aa257b15f049fe45bfeadd581901" category="summary">클러스터 OS 롤링 업그레이드를 수행할 때 다음 절차를 사용하여 Windows 2012 R2 노드에서 LUN 매핑을 해제하고, LUN을 클러스터에 추가한 후 Windows Server 2016 노드에 다시 매핑할 수 있습니다.</block>
+  <block id="4f95ae6fef70ed87e3e8d5be1f86db4e" category="doc">혼합 운영 체제 모드에서 LUN 매핑</block>
+  <block id="1230344a2fabe714726457cfbea52ca9" category="paragraph">Windows Server 2016 노드를 클러스터에 추가해야 합니다.</block>
+  <block id="693d74cdde31ff59f565613960bb98cf" category="admonition">클러스터 롤링 업그레이드는 Windows Server 2016에서 Windows Server 2019로 지원됩니다</block>
+  <block id="44794b5aca0963aac9c7913a28588d56" category="list-text">ONTAP 시스템 관리자에 로그인합니다.</block>
+  <block id="7b3fd96975e5acb98ccd6d057ee36e1c" category="list-text">Windows 2012 R2에 매핑된 LUN을 선택합니다.</block>
+  <block id="f0e334dd11c87357165565ccbe3cd55b" category="list-text">Edit * 를 클릭하고 이니시에이터 그룹을 선택합니다.</block>
+  <block id="51064c1864ef207564681f1f4a30562f" category="image-alt">혼합 OS 모드 3</block>
+  <block id="ccaa470ad4830933be058d46b71753bf" category="list-text">클러스터에서 제거된 노드의 igroup을 선택 취소합니다.</block>
+  <block id="01b136dfa868398668f555e864e6aab4" category="list-text">새로 추가된 모든 Windows 2016 노드에 대해 새 이니시에이터 그룹을 추가합니다.</block>
+  <block id="063d97ac5e2b1de822379713510c1b5f" category="image-alt">혼합 OS 모드 4</block>
+  <block id="1e4247399d5002eefa579ab314bcaa09" category="list-text">새로 생성한 이니시에이터 그룹 옆의 확인란을 선택하여 LUN을 클러스터에 추가된 Windows 2016 호스트에 매핑합니다.</block>
+  <block id="7d2a80dae0d60498c0c6a64099e7a6b4" category="image-alt">혼합 OS 모드 6</block>
+  <block id="f7b89b3e8b56f0c37b434e4f1e9c4cea" category="list-text">4단계와 6단계를 반복하여 모든 LUN을 Windows 2016 노드에 매핑합니다.</block>
+  <block id="eb527f5a61ced06c8190410aaf6114de" category="paragraph">모든 LUN은 Windows 2016 노드에서 볼 수 있어야 합니다.</block>
+  <block id="a150560e09fb15f8bb63c8735c5a3138" category="list-text">Windows 2016 노드의 디스크 관리 도구에서 디스크를 다시 검색합니다.</block>
+  <block id="80316dd1c05a83cead5bd9bc18d01e38" category="image-alt">혼합 OS 모드 8</block>
+  <block id="0eee869e562049efec90606fcfb92495" category="list-text">새로운 Windows 2016 SnapDrive 전송 프로토콜 설정(TPS)에 스토리지 관리 LIF를 추가한 다음 디스크를 업데이트합니다.</block>
+  <block id="447031a2c3ddc330f826b1707f165254" category="image-alt">혼합 OS 모드 9</block>
+  <block id="3784cdca88e33c31b92e73c29cc6281d" category="summary">웹 서비스 클라이언트 채널이 시스템 smhv51_81clus의 ConfigurationManagementService 인스턴스에 연결할 수 없습니다.</block>
+  <block id="9dfbb9d6f545bc2012ccb952dffaa54f" category="doc">웹 서비스 클라이언트 채널이 시스템 smhv51_81clus의 ConfigurationManagementService 인스턴스에 연결할 수 없습니다</block>
+  <block id="978d91cb9f7c24b46e19b15fcd94244d" category="paragraph">NET.TCP://smhv51_81clus/SnapManager/HyperV/ConfigMgmtService/v_10에서 메시지를 수락할 수 있는 엔드포인트가 없습니다. 이 문제는 종종 잘못된 주소 또는 SOAP 작업으로 인해 발생합니다. 자세한 내용은 InnerException (있는 경우)을 참조하십시오.</block>
+  <block id="a2b084a9f95ba3b25f1f637979847b5d" category="paragraph">구성 정보를 내보내면 관리되는 호스트의 로컬 웹 서비스 포트 설정이 내보낸 구성 파일에 저장됩니다. 나중에 다른 웹 서비스 포트를 사용하여 Hyper-V용 SnapManager를 다시 설치하고 이전 구성 정보를 가져와야 하는 경우 연결 문제가 발생합니다.</block>
+  <block id="5eb53b8f7ae08c399198ee7c4a0e7ffe" category="paragraph">이 문제를 방지하려면 Hyper-V용 SnapManager를 다시 설치할 때 내보낸 구성 파일에 포함된 동일한 웹 서비스 포트 설정을 사용하십시오</block>
+  <block id="dd5cfb29bd3e878ccef8250cee1cc7d2" category="summary">IPv6 전용 환경에서는 백업 및 복원 알림이 전송되지 않습니다.</block>
+  <block id="6654ce07e74638a6c41c7de8fd372bab" category="doc">IPv6 전용 환경에서는 백업 및 복원 알림이 전송되지 않습니다</block>
+  <block id="8f62d60c72e411a69a11527016246b16" category="paragraph">IPv6 전용 호스트를 실행할 때 백업 또는 복구 작업 알림이 수신되지 않습니다.</block>
+  <block id="6ec78d8f9e0e84024ab564c4750d7ca7" category="paragraph">SMTP 서버가 IPv6을 지원하지 않거나 IPv6이 설정되어 있지 않습니다.</block>
+  <block id="65f89a77c7a404d833288f80127ffc9a" category="paragraph">SMTP 서버에서 IPv6을 사용하도록 설정합니다.</block>
+  <block id="54b04bc0d41ab31a5f12b1196896e27e" category="summary">호스트에 설치된 VSS 공급자를 볼 수 있습니다.</block>
+  <block id="aac15e699d8896a7b2d986e0648e7384" category="doc">설치된 VSS 공급자를 보는 중입니다</block>
+  <block id="792a7c8ccc244135b48be8fb180811ad" category="list-text">시작 * &gt; * 실행 * 을 선택하고 다음 명령을 입력하여 Windows 명령 프롬프트를 엽니다.</block>
+  <block id="64cd475900b6fddfc9d4d9fb7f2ef8b1" category="paragraph">'cmd'</block>
+  <block id="b988824771d7c292abce3028b1a6ee99" category="list-text">프롬프트에서 다음 명령을 입력합니다.</block>
+  <block id="b82379d924b247bed1d063953160eead" category="paragraph">'vssadmin list providers'</block>
+  <block id="a68c3c53417789e724bdb983d1b29d52" category="paragraph">출력은 다음과 비슷해야 합니다.</block>
+  <block id="03786309c480465fa5faa4bb7bc17de2" category="summary">볼륨 섀도 복사본 서비스 오류: 내부 불일치가 감지되었습니다.</block>
+  <block id="cb42bb6a16f9f1beae25774adb796dba" category="doc">볼륨 섀도 복사본 서비스 오류: 내부 불일치가 감지되었습니다</block>
+  <block id="b8bdcd5f4cd224e9a0c218984a005234" category="paragraph">볼륨 섀도 복사본 서비스 오류: 섀도 복사본 서비스 작성기에 연결하려고 할 때 내부 불일치가 감지되었습니다. 이벤트 서비스 및 볼륨 섀도 복사본 서비스가 제대로 작동하고 있는지 확인하십시오.</block>
+  <block id="bc531f5732c0fe66d5a145a5c79c3b83" category="paragraph">Windows Server 2003을 사용하는 가상 머신의 백업을 수행할 때 재시도 오류로 인해 가상 컴퓨터가 반복적으로 실패합니다.</block>
+  <block id="5d4856a31047c0d9604a8bf4214195d7" category="paragraph">가상 머신 내의 Windows 애플리케이션 이벤트 로그에서 VSS 오류를 확인합니다.</block>
+  <block id="8ca3a1c2cee34714baa3cdbb555be8fa" category="inline-link">Microsoft 지원 문서 940184: Windows Server 2003 기반 컴퓨터에서 "vssadmin list writers" 명령을 실행할 때 나타나는 오류 메시지: "오류: 0x8000FFFF"</block>
+  <block id="66ddb81cfb2b9c3cb20556525aa3ef06" category="paragraph"><block ref="66ddb81cfb2b9c3cb20556525aa3ef06" category="inline-link-rx"></block></block>
+  <block id="ac9af776a3185cf2b06fb0d0a7cd7a64" category="summary">데이터 세트를 생성하여 데이터를 보호하려면 특정 요구사항을 충족해야 합니다.</block>
+  <block id="92887ee2efa3d6433ca84970a02d8e2b" category="doc">데이터 세트 생성 요구 사항</block>
+  <block id="fc01ba2e746c58919b429d2fd4e376e2" category="paragraph">데이터 세트를 생성하여 데이터를 보호하려면 특정 요구사항을 충족해야 합니다. 먼저 Hyper-V용 SnapManager에 호스트 또는 호스트 클러스터를 추가한 다음 호스트 또는 호스트 클러스터에 가상 머신을 추가해야 합니다.</block>
+  <block id="fd5bb59e7d014d235c68789b1135795d" category="paragraph">데이터 세트의 이름을 지정할 때 사이트에서 명명 규칙을 사용하여 관리자가 데이터 세트를 찾고 식별할 수 있도록 해야 합니다. 이러한 문자는 다음과 같습니다.</block>
+  <block id="592e3c4687690a8e75020c4f4585edc6" category="section-title">데이터 세트 리소스</block>
+  <block id="173db84d210ae07ad8b5cd80aab52026" category="paragraph">가상 머신 등의 리소스를 데이터 세트에 추가하기 전에 Hyper-V용 SnapManager에 호스트 또는 호스트 클러스터를 추가해야 합니다.</block>
+  <block id="fd3940b5cf818e85baca9b042e0bcb89" category="paragraph">호스트, 전용 가상 머신 또는 공유 가상 머신을 데이터 세트에 추가할 수 있습니다. 호스트를 추가하는 경우 호스트에 속한 모든 가상 시스템을 추가합니다. 다른 호스트에 속하는 가상 머신을 데이터 세트에 추가할 수도 있습니다. 가상 시스템은 여러 데이터 세트에 속할 수 있습니다.</block>
+  <block id="8c0679507602d4802b80d3cf5c7efbef" category="admonition">동일한 호스트 클러스터에 속한 전용 및 공유 가상 머신은 동일한 데이터 세트에 존재하지 않아야 합니다. 이러한 유형의 리소스를 단일 데이터 세트에 추가하면 데이터 세트 백업이 실패할 수 있습니다.</block>
+  <block id="a737d3e7798680e23775f1e5f35c182c" category="paragraph">구성 파일, 스냅샷 복사본 및 VHD를 비롯하여 가상 머신과 관련된 모든 파일이 ONTAP LUN에 상주해야 합니다.</block>
+  <block id="b277e186379856ae1bd03b2e5d1c9abb" category="section-title">데이터 세트 리소스 사용</block>
+  <block id="f29e5485ef3e75c61f25913cdbcefbf2" category="paragraph">애플리케이션 정합성이 보장되는 백업 작업은 항상 호스트에서 한 번만 수행할 수 있습니다. 동일한 가상 머신이 다른 데이터 세트에 속해 있는 경우 애플리케이션 정합성이 보장되는 데이터 세트 백업을 동시에 예약해서는 안 됩니다. 이 경우 백업 작업 중 하나가 실패합니다.</block>
+  <block id="936b9c10d3f3932ec845567bb28015a5" category="paragraph">데이터 세트를 생성할 때는 특정 ONTAP LUN에 있는 모든 가상 머신을 선택해야 합니다. 따라서 하나의 스냅샷 복사본에 모든 백업을 만들고 스토리지 시스템의 공간 사용을 줄일 수 있습니다.</block>
+  <block id="699aaa675ca238a5dab5d28da08a3035" category="summary">백업 실패 후 스토리지 성능이 저하됩니다.</block>
+  <block id="a2794223e9d576724f127b652b416ed6" category="doc">백업 실패 후 스토리지 성능이 저하됩니다</block>
+  <block id="5ad8aa6ff5b24dfffd0b1f734bc98a6b" category="paragraph">백업 작업이 실패하면 스토리지 성능이 저하될 수 있습니다.</block>
+  <block id="757401961a2d50be2256c37ea70ff8f0" category="paragraph">백업 중에 Microsoft Hyper-V VSS 구성 요소에 예외가 발생하면 CSV(Cluster Shared Volume)가 리디렉션된 I/O 모드로 남아 Windows 페일오버 클러스터 내에서 입출력 오버헤드 및 잠재적 병목 현상이 발생할 수 있습니다. 이로 인해 전체 성능 저하가 발생할 수 있으며, 리디렉션된 I/O 모드의 CSV에 상주하는 VM에 가장 큰 영향을 줄 수 있습니다.</block>
+  <block id="64dd56c59188950b0ec09057b8734bf1" category="paragraph">이 문제에 대한 지원을 받으려면 Microsoft 지원 센터에 문의하십시오.</block>
+  <block id="0266b3a5f13d93fbbf84109b9387cb7e" category="summary">백업 또는 복원 기능을 위해 데이터 세트에 정책을 적용하려면 특정 요구사항을 충족해야 합니다. 여러 보존, 예약 및 복제 정책을 동일한 데이터 세트에 추가할 수 있습니다.</block>
+  <block id="3a9a3dc805cdcfcaae25ecb4c15f163e" category="doc">데이터 세트에 정책을 추가하기 위한 요구사항</block>
+  <block id="ae39c66937b8980b60d9388be573019c" category="section-title">정책 이름 및 설명입니다</block>
+  <block id="2befe0bbee2fa8767d0083c8195b4bc5" category="paragraph">정책 이름 및 설명은 다음 문자로 제한됩니다.</block>
+  <block id="1f0b72c9fe5aa6fa1bc0bc0d67fa1404" category="list-text">(하이픈)</block>
+  <block id="950e7111974d7a592ec3959027d83548" category="section-title">백업 보존 제한</block>
+  <block id="f8995014c19a701588f3b457bb3bd210" category="paragraph">삭제하기 전에 시간별, 일별, 주별 또는 월별 백업 복사본을 유지할 최소 시간을 결정해야 합니다.</block>
+  <block id="4b477474ab2a7b8255b8ca1e04af4a3a" category="admonition">보존 유형이 "무제한"인 백업은 삭제되지 않습니다.</block>
+  <block id="5c1534d7d0b2f06ed73fa0138b59de0e" category="paragraph">시간 또는 지정된 수에 따라 백업을 유지할 수 있습니다. 예를 들어 최신 백업 10개를 유지하거나 15일이 지난 백업을 삭제할 수 있습니다.</block>
+  <block id="b2ce75868082f42f112c8a0f38225a95" category="paragraph">시스템이 이전 백업을 유지하는 것으로 나타나면 보존 정책을 확인해야 합니다. 스냅샷 복사본을 공유하는 모든 백업 개체는 보존 정책이 스냅샷 복사본 제거를 트리거하기 위한 백업 삭제 기준을 충족해야 합니다.</block>
+  <block id="2a82a0be63dfab9ffb7147358323f75c" category="section-title">예약된 백업 작업 이름입니다</block>
+  <block id="4242f84e8731df3d9beef42442106e7d" category="paragraph">예약된 백업 작업에 이름을 할당해야 합니다.</block>
+  <block id="8f2e8de2d528d2fcff64889bfc234dcc" category="section-title">백업 예약 권한</block>
+  <block id="245c70f2ec0507bd8c36848846bae3b9" category="paragraph">데이터 세트 백업을 예약하려면 적절한 자격 증명이 있어야 합니다.</block>
+  <block id="0c989ccfc82014c30ee8b0c47e404ac3" category="section-title">동시에 백업하도록 예약된 가능한 데이터 세트의 수입니다</block>
+  <block id="2c401305a667f888e89bbd9a52476871" category="paragraph">동일한 가상 머신이 다른 데이터 세트에 속해 있는 경우 동일한 VM이 포함된 둘 이상의 데이터 세트에 대한 백업을 동시에 예약해서는 안 됩니다. 이 경우 백업 작업 중 하나가 실패합니다. 한 호스트에서 한 번에 하나의 백업 작업만 수행할 수 있습니다.</block>
+  <block id="dd3c46dc8f4da0f46e3f6f7837b02cf2" category="section-title">예약된 백업의 유형입니다</block>
+  <block id="1ebe2f403310f20afc46fd5b5fdb3b4b" category="paragraph">애플리케이션 정합성 보장 또는 장애 발생 시 정합성이 보장되는 백업을 수행할 수 있습니다.</block>
+  <block id="f7d4327488390afe4c65725ff82002de" category="paragraph">백업이 완료된 후 SnapMirror 대상 위치를 업데이트할지 여부를 선택해야 합니다.</block>
+  <block id="446bf6a6fe4e3f61cc97e65cdc55726b" category="paragraph">이 업데이트는 SnapMirror가 이미 구성되어 있고 데이터 세트의 가상 시스템이 포함된 LUN이 소스 SnapMirror 볼륨에 속한 경우에만 성공합니다.</block>
+  <block id="afe6bb39ca14f26068030842ad6d03ce" category="paragraph">SnapManager for Hyper-V의 기본 동작은 하나 이상의 가상 머신을 온라인으로 백업할 수 없는 경우 백업에 실패하는 것입니다. 가상 머신이 Saved(저장됨) 상태이거나 종료된 경우 온라인 백업을 수행할 수 없습니다. 경우에 따라 가상 시스템이 저장된 상태이거나 유지 관리를 위해 종료되었지만 온라인 백업이 불가능한 경우에도 백업을 계속 진행해야 하는 경우가 있습니다. 이렇게 하려면 저장된 상태의 가상 머신을 이동하거나 저장된 상태 백업을 허용하는 정책이 있는 다른 데이터 세트로 종료할 수 있습니다.</block>
+  <block id="c9fe310a0f2be6e993252a806083cdfd" category="paragraph">또한 Allow Saved State VM backup 확인란을 선택하여 SnapManager for Hyper-V를 활성화하여 저장된 상태의 가상 머신을 백업할 수 있습니다. 이 옵션을 선택하면 Hyper-V VSS 기록기가 가상 머신을 저장된 상태로 백업하거나 가상 머신의 오프라인 백업을 수행할 때 SnapManager for Hyper-V가 백업에 실패합니다. 저장된 상태 또는 오프라인 백업을 수행하면 다운타임이 발생할 수 있습니다.</block>
+  <block id="f9c4c1efdf6118da046109d8e0cb6733" category="paragraph">분산된 애플리케이션 정합성이 보장되는 백업 기능을 사용하면 파트너 클러스터 노드에서 실행되는 여러 VM이 백업 노드에서 생성된 단일 하드웨어 스냅샷 복사본의 일관성을 유지할 수 있습니다. 이 기능은 Windows 페일오버 클러스터의 여러 노드에서 CSV 2.0 Windows 볼륨에서 실행되는 모든 VM에 대해 지원됩니다. 이 기능을 사용하려면 응용 프로그램 일치 백업 유형을 선택하고 * 분산 백업 사용 * 확인란을 선택합니다.</block>
+  <block id="bd49ab85818f7b15f21fb9bfebdacfbe" category="paragraph">이러한 옵션을 사용하면 SnapMirror 관계에 정의된 보조 스토리지에 적용할 수 있는 옵션을 적용할 수 있습니다. 여기서 * 백업 후 SnapMirror 업데이트 * 를 선택할 수 있습니다. 볼트 라벨 옵션 창 아래에서 * 백업 후 SnapVault 업데이트 * 를 선택할 수 있습니다. 백업 후 SnapVault 업데이트 * 를 선택한 경우, 드롭다운 메뉴에서 볼트 라벨을 선택하거나 사용자 정의 라벨을 입력해야 합니다.</block>
+  <block id="dccc207d2e8bb25d32111190fdcef439" category="paragraph">백업 실행 전후에 선택적 백업 스크립트를 실행할지 여부를 결정해야 합니다.</block>
+  <block id="b3ef543ddc4a07d75f614e67df474b1e" category="paragraph">이러한 스크립트는 특정 서버를 지정하지 않는 한 모든 데이터 세트 구성원 호스트에서 실행됩니다.</block>
+  <block id="4079acb40e762ec368ceca219971f2d1" category="paragraph">백업 스크립트는 데이터 세트의 각 노드에서 실행됩니다. 데이터 세트 정책을 설정하여 스크립트를 실행할 호스트의 이름을 지정할 수 있습니다. 이 정책은 백업할 VM이 실행 중인 클러스터의 각 노드에서 처리됩니다.</block>
+  <block id="e38e6cb3f20f9d6511778003946ac36e" category="image-alt">smhv 정책 마법사가 호스트를 지정했습니다</block>
+  <block id="eb9bd6f9e51c769289fc9968644d25e4" category="paragraph">백업 postscripts의 인수에 다음 환경 변수를 사용할 수 있습니다.</block>
+  <block id="3eda86050d67f5eb2434d54aeae569a6" category="list-text">* $VMSnapshot *: 이 백업의 결과로 스토리지 시스템에 생성되는 스냅샷 복사본의 이름을 지정합니다. 7-Mode에서 실행 중인 ONTAP 환경에서 애플리케이션 정합성이 보장되는 백업을 수행할 경우 이 이름이 두 번째(백업) 스냅샷 복사본의 이름입니다. 이름은 두 번째 이름과 같지만 _backup 접미사는 없습니다.</block>
+  <block id="b5133b11033d21a21643b9257a0736dc" category="list-text">* $SnapInfoName *: SnapInfo 디렉토리 이름에 사용되는 타임스탬프를 지정합니다.</block>
+  <block id="6fe06e28a445c63b4f719be1cc245050" category="list-text">* $SnapInfoSnapshot *: 스토리지 시스템에 생성된 SnapInfo 스냅샷 복사본의 이름을 지정합니다. SnapManager for Hyper-V는 데이터 세트 백업 작업이 끝날 때 SnapInfo LUN의 스냅샷 복사본을 만듭니다.</block>
+  <block id="b6e45987b96add476796a4d8f3f1f1fe" category="admonition">$SnapInfoSnapshot 변수는 전용 가상 머신에만 지원됩니다.</block>
+  <block id="838cf5b575a0505a14018f6e663ec5a1" category="summary">Hyper-V용 SnapManager를 사용하여 더 이상 Hyper-V를 관리하지 않으려는 경우 Hyper-V 상위 호스트 또는 상위 호스트 클러스터를 제거할 수 있습니다</block>
+  <block id="cc43b98b4cb49bdf19bbb52431e65493" category="doc">Hyper-V 상위 호스트 또는 상위 호스트 클러스터 제거</block>
+  <block id="78b37256b05600c143aa52ea55f13809" category="list-text">탐색 창에서 * 보호 * &gt; * 호스트 * 를 클릭합니다.</block>
+  <block id="73ffaf70fdb5268887be5437d428aa9e" category="list-text">제거할 호스트 또는 호스트 클러스터를 선택합니다.</block>
+  <block id="b12e37979532378004a27949cf339e83" category="list-text">작업 창에서 * 제거 * 를 클릭합니다.</block>
+  <block id="a809b7569832b3c3064a2b1ce1e39453" category="paragraph">모든 VM 백업 삭제 * 를 선택하여 호스트와 연결된 모든 가상 머신 백업을 삭제할 수 있습니다.</block>
+  <block id="62f5b4fd0e05bed543854db08c47a6da" category="paragraph">Hyper-V 상위 호스트 또는 호스트 클러스터는 Hyper-V 관리를 위해 SnapManager에서 제거되지만 영구적으로 삭제되지는 않습니다. 해당 호스트 또는 호스트 클러스터에 속한 가상 머신도 해당 호스트 또는 호스트 클러스터가 속한 모든 데이터 세트에서 제거됩니다.</block>
+  <block id="8353750689069297c64bbb7feb0a4149" category="summary">가상 머신(VM\)을 내보낸 후 ONTAP 호스트로 가져올 수 있습니다.</block>
+  <block id="9f5885ba762c8085111beef15fe81cd3" category="doc">ONTAP 호스트로 VM 가져오기</block>
+  <block id="cca2b2116e2d1dd4d836c88a8dc2927c" category="paragraph">가상 머신(VM)을 내보낸 후 ONTAP 호스트로 가져올 수 있습니다.</block>
+  <block id="74af0dfe33bb453e9ffe9a2de207f04a" category="paragraph">VM을 비 ONTAP 호스트에서 내보내야 합니다.</block>
+  <block id="8f593d38cee342b7f34d9d4f9737fa53" category="list-text">왼쪽 창에서 VM을 가져올 ONTAP 호스트의 이름을 마우스 오른쪽 버튼으로 클릭합니다.</block>
+  <block id="6ff51118664c90823cf111e1e86a7a17" category="list-text">Import virtual machine * 을 선택합니다.</block>
+  <block id="35f5eb39140590b7f450a26eaac73f44" category="image-alt">ServerManager에서 smhv VM을 가져옵니다</block>
+  <block id="048004d77f09a6a45275ec0bc957d0c8" category="paragraph">Import Virtual Machine 창이 열립니다.</block>
+  <block id="acc0f5a6972e5e0985054875c3e5c26d" category="list-text">이전에 VM을 내보낸 호스트의 이름을 클릭한 다음 * 폴더 선택 * 을 클릭합니다.</block>
+  <block id="1c86bec301f53929e1351bfa96d02a25" category="list-text">설정 가져오기에서 * 가상 컴퓨터 복사 [새 고유 ID 만들기] * 를 선택합니다.</block>
+  <block id="e4ca0be6435e2cb971783f45129d42f6" category="list-text">가져오기 * 를 클릭합니다.</block>
+  <block id="0b29b174c2c020e59433e336ef666b9d" category="list-text">VM을 성공적으로 가져왔는지 확인하고 비 ONTAP 호스트에서 VM을 삭제합니다.</block>
+  <block id="da0d5b8f0133d5bc40085dfa02016eb9" category="list-text">Hyper-V 2016의 경우 구성 버전을 5.0에서 8.0으로 업그레이드합니다.</block>
+  <block id="ca781f7941adb700d92ae2f74dfb1a9e" category="list-text">오른쪽 창에서 업그레이드할 VM의 이름을 마우스 오른쪽 버튼으로 클릭합니다.</block>
+  <block id="82f27991e861e4bacbaf70378a1f6fee" category="list-text">Upgrade Configuration Version * 을 선택합니다.</block>
+  <block id="088198923469d6bd61bb711fa1f35cf3" category="paragraph">VM의 구성 버전이 8.0으로 업그레이드됩니다.</block>
+  <block id="156ef710da0dc6ef70ebcd96483cd0be" category="list-text">VM을 시작합니다.</block>
+  <block id="4de9c592c9c483c15c12e019e53af4e0" category="summary">재해를 복구하려면 Hyper-V용 SnapManager를 먼저 2차 스토리지 시스템으로 페일오버해야 합니다. 페일오버에는 PowerShell의 일련의 수동 단계가 포함됩니다.</block>
+  <block id="049b485e63b9d0a8f09be1d721e8d109" category="doc">재해 복구 페일오버에서 복구 및 복원</block>
+  <block id="a62b489ed8388f31c051be160c2a7a1c" category="paragraph">대부분의 백업은 NAS와 SAN 모두에 대해 대체 호스트로 복원할 수 있지만 Windows Server 2008 R2 장애 발생 시 정합성이 보장되는 백업은 대체 호스트로 복원할 수 없습니다.</block>
+  <block id="b3cf58f2e0c64638e85e47fa73969973" category="list-text">Data ONTAP 8.1.x를 실행 중인 경우 2차 사이트에서 SVM(Storage Virtual Machine) 정보를 SnapDrive for Windows MMC의 TPS(Transport Protocol Setting)에 입력합니다.</block>
+  <block id="68e9602f82dcc2fbbe7a63fd2836e5bf" category="list-text">2차 스토리지 시스템에서 모든 LUN에 접속합니다.</block>
+  <block id="2445745a3c1237d089b42b9bc34de800" category="paragraph">2차 스토리지 시스템이 클러스터링되어 있는 경우, 대상 클러스터에서 사용 가능한 스토리지 그룹 소유자 노드인 클러스터 그룹이 온라인 상태인 노드로 이동하여 클러스터의 해당 노드에 있는 모든 LUN에 연결합니다. LUN 매핑에 대한 자세한 내용은 Windows용 SnapDrive 설명서를 참조하십시오.</block>
+  <block id="f0fdff1de5564d478e585eb301849c76" category="paragraph">운영 스토리지 시스템에서 동일한 유형의 모든 마운트 지점 및 LUN에 접속합니다.</block>
+  <block id="221778cf2906612d5524dbe68a0c2956" category="paragraph">클러스터 그룹이 온라인 상태인 노드에서 클러스터의 모든 마운트 지점 및 LUN에 연결합니다.</block>
+  <block id="37e5d5064c98f8aff06e461d8fdf6f98" category="paragraph">SnapMirror 업데이트가 성공하려면 백업을 시작하기 전에 소스 FlexVol 볼륨에 두 번째 더 작은 LUN(10MB - 100MB)을 생성해야 합니다. 클러스터 그룹이 온라인 상태인 노드에서 클러스터의 모든 마운트 지점 및 LUN에 연결합니다.</block>
+  <block id="4d2404f1f314e76e2aff542b67926dad" category="paragraph">NAS의 경우 액세스가 거부된 오류가 발생하거나 노출된 SMB 공유 위치를 찾을 수 없는 경우 공유의 액세스 제어 목록을 재설정해야 할 수 있습니다.</block>
+  <block id="f83c890bd05e09abd044579352d4d154" category="admonition">이는 일반적으로 SCVMM(System Center Virtual Machine Manager) 콘솔 및 Data ONTAP SMI-S 에이전트를 사용할 때 발생합니다.</block>
+  <block id="1f47c5f8fb489d346eeb6fbea74fa541" category="list-text">SnapManager for Hyper-V MMC에서 보조 스토리지 시스템 또는 클러스터를 추가한 다음 SnapInfo 경로를 사용하여 구성합니다.</block>
+  <block id="37b2da3eb5fb6fcbad0e779ecd0c4ccc" category="list-text">Get-VMsFromBackup을 입력하여 백업 메타데이터에 있는 VM 목록을 검색합니다.</block>
+  <block id="05887e10a85da9d61eba4d604ca4c1c8" category="list-text">Get-Backup을 입력하여 각 VM에 대한 백업 복사본을 가져옵니다.</block>
+  <block id="6d922687b694d91c33858bcc43e91608" category="paragraph">나열된 백업입니다</block>
+  <block id="362b72df7531b147c68ef42baa4dab0e" category="paragraph">@ VHD의 경우 VM에 여러 VHD가 있을 수 있으므로 각 VHD에 대해 지정된 소스 및 대상 경로 쌍을 모두 입력해야 합니다.</block>
+  <block id="f118b05c5987541658924b4b3861a41c" category="section-title">페일오버 예</block>
+  <block id="bb457fed9f40315999456df6d76baeb8" category="summary">데이터 세트와 연결된 가상 머신을 볼 수 있습니다.</block>
+  <block id="e2c5fd00749a48ae5cdf6a58b4da108a" category="doc">데이터 세트 보기</block>
+  <block id="67003e9e0d77b8a5bb5e8f13b32fb888" category="list-text">트리 보기를 확장하여 데이터 세트에 속한 가상 머신을 확인합니다.</block>
+  <block id="02f2739a7ac8086d93880546b5e81bcd" category="summary">Hyper-V용 SnapManager를 중지하지 않고 클러스터 운영 체제(OS) 롤링 업그레이드를 수행하여 클러스터 노드의 OS를 업그레이드할 수 있습니다 이 기능은 다운타임을 줄여 SLA 준수를 지원합니다.</block>
+  <block id="9dd7630a4b702ca0bc5829bc710af18b" category="doc">클러스터 운영 체제 롤링 업그레이드 수행</block>
+  <block id="e0d9a1c74a891cca8fcc653471ff5e01" category="paragraph">SnapManager for Hyper-V를 실행하는 페일오버 클러스터를 Windows Server 2012 R2에서 Windows Server 2016 및 Windows Server 2019로 다운타임 없이 업그레이드할 수 있습니다.</block>
+  <block id="53f46f0ad5e5e48eb602230bb6b7bdf4" category="paragraph">클러스터 OS 롤링 업그레이드의 이점, 설치 프로세스 및 제한에 대한 자세한 내용은 관련 정보를 참조하십시오.</block>
+  <block id="5a0bd2d9eacaf1e1597799c6d6822d15" category="inline-link">Microsoft TechNet: 클러스터 운영 체제 롤링 업그레이드</block>
+  <block id="38f3dbcb8b2856f29d646be11e300c2e" category="paragraph"><block ref="38f3dbcb8b2856f29d646be11e300c2e" category="inline-link-rx"></block></block>
+  <block id="65f7569620d04db9505d950ab1e58a34" category="summary">특정 Hyper-V 상위 호스트 또는 호스트 클러스터에 대한 구성 정보를 볼 수 있으므로 해당 상태를 모니터링할 수 있습니다.</block>
+  <block id="06f5fb73a66b1b97eef5b0e41c6bb9ce" category="doc">Hyper-V 상위 호스트 또는 호스트 클러스터 보기</block>
+  <block id="5428c4d335b305e6b134fe69a03dc499" category="list-text">보려는 호스트 또는 호스트 클러스터를 선택합니다.</block>
+  <block id="150f95faef726d7318a48f6b2a63d883" category="paragraph">세부 정보 창에는 호스트 또는 호스트 클러스터 이름, 도메인, 클러스터 구성원(해당하는 경우) 및 구성 메시지가 표시됩니다. 구성되지 않은 호스트를 선택하면 세부 정보 창에 구성되지 않은 사항에 대한 정보가 표시됩니다.</block>
+  <block id="f0a99465e51dce4c6fb2ba331e84d9dc" category="summary">가상 머신(VM)이 SnapManager for Hyper-V가 설치된 호스트에 속하고 관리 콘솔로 사용할 Hyper-V용 SnapManager를 해당 VM에 설치하는 경우, SnapManager for Hyper-V를 사용하여 VM이 속한 호스트를 관리할 수 없습니다.</block>
+  <block id="ecd18fc31ef844e27ee1b2ae1c07688e" category="doc">가상 시스템 관리</block>
+  <block id="f3813a8c5f322373abcf4783c08a3e3c" category="paragraph">가상 머신의 Hyper-V용 SnapManager는 자체적으로 관리할 수 없습니다.</block>
+  <block id="14dcd2586f39f173d4b29e763e432e69" category="paragraph">수정 조치가 필요하지 않습니다.</block>
+  <block id="6fd38c0075da1b37198bdce33f27e6b4" category="paragraph">VM1이 호스트1에 속하고(SnapManager for Hyper-V가 설치된 상태) VM1에 SnapManager for Hyper-V를 설치하는 경우, VM1에서 호스트1을 관리하기 위해 SnapManager for Hyper-V를 사용해서는 안 됩니다.</block>
+  <block id="73ec114e82bec10ec0fab5d13d464c20" category="paragraph">이렇게 하고 VM 자체를 복구하려고 하면 Hyper-V Manager에서 VM이 삭제되거나 다시 시작됩니다.</block>
+  <block id="fbe2d0a0910e141c9a8f2e55c41c89a4" category="summary">SnapManager for Hyper-V 대시보드에는 현재 보호 중인 리소스와 보호되지 않는 리소스에 대한 개요가 표시됩니다. VM 보호 상태 파이 차트 또는 작업 내역 막대 그래프의 다른 세그먼트를 선택하여 작업, 자원 및 기록의 상태에 대한 일반 정보를 볼 수 있습니다.</block>
+  <block id="5ceb2bce5b2f8cd2564671c353768215" category="doc">대시보드 설정</block>
+  <block id="120b5d70e55ff9181d0fc250186c98d6" category="image-alt">smhv 대시보드</block>
+  <block id="1d2a3b6e961cc31ace5fe0348dcda069" category="list-text">* VM 보호 상태 *</block>
+  <block id="7e820355f26b47a309017c28cf42f5b0" category="paragraph">VM 보호 상태 원형 차트에서 세그먼트를 선택하면 세부 정보 창에서 가상 머신의 보호 상태에 대한 정보를 볼 수 있습니다. 유효한 값에 대한 설명은 다음과 같습니다.</block>
+  <block id="d894f72fcb26b6e46eaec333d56fc64c" category="list-text">* OK *(확인 *)</block>
+  <block id="eafb6e6e01d296df9fd05aec086aac34" category="paragraph">모든 가상 머신의 최근 성공한 백업을 표시합니다.</block>
+  <block id="f44027b669999f97854e8ef8c8215f16" category="list-text">* 실패 *</block>
+  <block id="9a67da2f211972aa1f89de5e4aeef2f0" category="paragraph">각 가상 머신에 대해 가장 최근에 실패한 백업을 표시합니다.</block>
+  <block id="a9e2b370126b715cc6b8e32af977c417" category="list-text">* 보호되지 않음 *</block>
+  <block id="5fbdb05dd6bda477ba1532e2c07213f4" category="paragraph">데이터 세트에 속하지 않고 보호되지 않는 가상 머신을 표시합니다.</block>
+  <block id="8ebdf3d0ee92cd5df7dd3210579dffb4" category="list-text">* 작업 내역 *</block>
+  <block id="ecad8c823f2697d551d42ff06468b06f" category="paragraph">작업 내역 막대 그래프에서 세그먼트를 선택하면 세부 정보 창에서 지정된 기간 동안 완료, 실패 및 실행 중인 작업의 기록을 볼 수 있습니다. 작업 내역 막대 그래프에 작업 세부 정보가 표시되는 시간을 변경할 수 있습니다. 기본값은 7일입니다.</block>
+  <block id="71f8cc6d9ab3ad57e930240cf2e1b73a" category="list-text">* 새로 고침 구성 *</block>
+  <block id="aae38610bead65a7d2127e7b2c9c88a6" category="paragraph">[새로 고침 구성] * 버튼을 사용하여 대시보드가 표시된 정보를 새로 고치는 빈도를 변경할 수 있습니다. 기본값은 10분입니다.</block>
+  <block id="ab4daba51c77334b22d9ee8a92a9d98c" category="summary">원격 호스트 설치 마법사를 사용하여 호스트 또는 노드에 SnapManager for Hyper-V를 원격으로 설치하기 전에 필요한 호스트 세부 정보를 수집해야 합니다.</block>
+  <block id="d9101724dd2995ac7e40db52bb9fa12e" category="doc">원격 호스트 설치 마법사 사용에 대한 요구 사항</block>
+  <block id="0f27cb4b9e262641740b6024e4a9cf82" category="paragraph">보호 창의 작업 창에서 원격 호스트 설치 마법사에 액세스할 수 있습니다. 독립 실행형 및 클러스터 노드 또는 호스트에 SnapManager for Hyper-V를 원격으로 설치하거나 제거할 수 있습니다.</block>
+  <block id="92396d12132cf037fee50e3292f232d5" category="paragraph">SnapManager for Hyper-V가 없는 호스트를 추가하는 경우 호스트 추가 마법사에서 호스트에 설치하라는 메시지를 표시합니다.</block>
+  <block id="764c5e4962b6e24d210c25c9056f848d" category="list-text">* 설치 또는 제거 *</block>
+  <block id="5c184795ac1979a7fafe69711a820356" category="paragraph">마법사를 사용하여 호스트나 노드에서 SnapManager for Hyper-V를 원격으로 설치하거나 제거할 것인지 선택해야 합니다.</block>
+  <block id="3cf9f264c7e0412a7d84ef83c7d3995b" category="list-text">* 서버당 또는 스토리지당 *</block>
+  <block id="4efda04b842b589387afb2523faa1f7f" category="paragraph">서버당 SnapManager for Hyper-V를 설치할지 또는 스토리지별로 설치할지를 선택해야 합니다.</block>
+  <block id="7e08b1f5898656f33b1a750acefe92d0" category="list-text">* 호스트 이름/IP *</block>
+  <block id="eb1c730b91c1eceed6b450eaee2a19bc" category="paragraph">SnapManager for Hyper-V를 설치할 호스트의 이름 또는 IP 주소를 제공해야 합니다 찾아보기... * 를 선택하여 호스트 또는 노드를 찾을 수 있습니다.</block>
+  <block id="5ddcf17f54788a5bb9148e8671562c06" category="list-text">* 포트 *</block>
+  <block id="59b8cc8c01bbed8087ca45df9b0fcffa" category="paragraph">호스트 또는 노드에 연결할 포트 번호를 제공해야 합니다.</block>
+  <block id="c2494ab9d3d742993d7ea729fba1ce94" category="list-text">* SMHV 라이센스 키 *</block>
+  <block id="5e6533ed3317e3a0ea0aa766adb519c8" category="paragraph">Hyper-V용 SnapManager 라이센스 키를 제공해야 합니다.</block>
+  <block id="ca8347de6191aaa9753655df4a58f7b4" category="list-text">* SDW 라이센스 키 *</block>
+  <block id="a59b67300e72e3be62783c96dd5ea93f" category="paragraph">Windows용 SnapDrive 라이센스 키를 제공해야 합니다.</block>
+  <block id="9b1ea6d299d8e415d53a65fe6c78bafe" category="list-text">* 사용자 이름 *</block>
+  <block id="3e51ca4c0e5005fc512ad64d916856ac" category="paragraph">domain\username 형식을 사용하여 호스트 또는 노드 관리자 수준 사용자 이름을 제공해야 합니다.</block>
+  <block id="519a06883e7db4dbb9a21eeecb16986a" category="list-text">* 암호 *</block>
+  <block id="2dcadfb9eb7d2a79f3d948fbd94f9ed7" category="paragraph">호스트 또는 노드 암호를 입력해야 합니다.</block>
+  <block id="a1c00612102855350eb712748e306b75" category="list-text">* 암호 확인 *</block>
+  <block id="133a94d79622ad277f38fde90995deeb" category="paragraph">확인을 위해 호스트 또는 노드 암호를 다시 입력해야 합니다.</block>
+  <block id="3715e6ae6b6bc5a7d00a1dcf39caa1b4" category="summary">구성 마법사 또는 SnapInfo 설정 작업을 사용하여 SnapInfo 디렉토리 경로 설정을 제어할 수 있습니다.</block>
+  <block id="46c247a1004ec7215f682df4b41dfd79" category="doc">SnapInfo 디렉토리 경로를 변경하는 중입니다</block>
+  <block id="69528947109f0d89a0cff98cabdba541" category="paragraph">구성 마법사 또는 * SnapInfo settings * 작업을 사용하여 SnapInfo 디렉토리 경로 설정을 제어할 수 있습니다.</block>
+  <block id="802d13f66c7f1dcd73c7a3c855c7ff42" category="paragraph">SnapInfo 디렉토리 설정은 SnapManager for Hyper-V의 호스트 레벨에서 지정됩니다 SnapManager for Hyper-V는 NAS(SMB) 호스트 및 SAN 호스트를 지원합니다. SAN 호스트의 경우 SnapInfo 설정이 볼륨 레벨에 적용되고, NAS 호스트의 경우 SnapInfo 설정이 SMB 공유 레벨에 적용됩니다.</block>
+  <block id="c9aaf3938a037437bbec77a4b37ca048" category="paragraph">스토리지 시스템의 IP 주소를 SnapDrive for Windows TPS에 추가한 경우, SnapManager for Hyper-V에서 구성 마법사를 실행하면 SnapDrive for Windows의 스토리지 설정이 자동으로 채워집니다 Windows TPS용 SnapDrive가 구성되어 있지 않은 경우, Hyper-V용 SnapManager의 스토리지 연결 관리 탭에서 스토리지 시스템의 IP 주소를 지정해야 합니다</block>
+  <block id="fc667cb0846d2e6308c1062d1b31a9a1" category="list-text">SnapInfo 디렉토리 경로를 변경할 호스트를 선택합니다.</block>
+  <block id="9c82ae420300b9dd6a925b910eddba4b" category="list-text">작업 창에서 * SnapInfo settings * 를 선택합니다.</block>
+  <block id="a3e0a45fa17b7a80cfaa22dcd77428cd" category="paragraph">SnapInfo Settings(SnapInfo 설정) 대화 상자가 열립니다.</block>
+  <block id="35860252ffa58c8c17a9f10686668483" category="list-text">표시된 옵션에서 스토리지 유형을 선택합니다.</block>
+  <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">옵션을 선택합니다</block>
+  <block id="50525418dca9302d23550ea6a4182c12" category="paragraph">기본 스토리지 유형입니다.</block>
+  <block id="f5d4b592b21fbeb4a61c20c6f0d40726" category="paragraph">SMB 공유에 이 옵션을 사용합니다.</block>
+  <block id="6b0c274b49a81c634eaa34f74d894d44" category="paragraph">폴더 찾아보기 창이 열립니다.</block>
+  <block id="ebf28afd430534d0f687caf9402c5957" category="list-text">SnapInfo 스토리지 시스템(SAN) 또는 볼륨(NAS)을 선택하고 * OK * 를 클릭합니다.</block>
+  <block id="679a7f6a14179d30487e739357af4565" category="paragraph">표시되는 호스트는 호스트 레벨에서 스토리지 접속 관리 옵션을 사용하여 등록된 스토리지 시스템에 해당하는 NAS 공유입니다. 찾고 있는 공유가 표시되지 않으면 스토리지 접속 관리가 올바르게 구성되어 있는지 확인하십시오.</block>
+  <block id="36b090838e736bd51f0e55001e8c1689" category="list-text">SnapInfo Settings 창에서 * OK * 를 클릭합니다.</block>
+  <block id="5388f79ac89eec582c7c61678f20a405" category="summary">SnapManager for Hyper-V에서 관리되는 호스트에 대한 보고서를 볼 수 있습니다</block>
+  <block id="fcb212f7c22020d335c9e387a0a07e4f" category="doc">호스트 보고서 보기</block>
+  <block id="c3c5ca3418a15b4026538b1580f06ceb" category="list-text">탐색 창에서 * 보고서 * &gt; * 호스트 * 를 클릭합니다.</block>
+  <block id="24b2c55d686927dec582979f5bcc45c0" category="list-text">보려는 보고서가 포함된 호스트를 선택합니다.</block>
+  <block id="27560bbce6a8c3ed31ead266803aa867" category="list-text">보고서 창에서 보려는 보고서를 선택하고 * 보고서 보기 * 를 클릭합니다.</block>
+  <block id="ef5a8d85343305fa10c26cf95a30d0a6" category="paragraph">구성 보고서가 별도의 창에 나타납니다.</block>
+  <block id="d70f5be61d8dfe9c40d866f0c9b93484" category="summary">SnapManager for Hyper-V에서 MBR LUN이 지원되지 않습니다</block>
+  <block id="79d176df7c036fff171dfcacb9040eba" category="doc">SnapManager for Hyper-V에서 MBR LUN이 지원되지 않습니다</block>
+  <block id="3f1aadc503dede86134b0f8d3d531e85" category="paragraph">SnapManager for Hyper-V는 공유 볼륨 또는 클러스터 공유 볼륨에서 실행되는 가상 머신에 대한 MBR LUN을 지원하지 않습니다.</block>
+  <block id="195bbb0e90cf353d7344be556a33722c" category="paragraph">Microsoft API 문제는 클러스터 공유 볼륨 디스크 소유권이 변경될 때 다른 볼륨 GUID를 반환합니다. 볼륨 GUID는 클러스터 디스크 리소스 속성의 GUID와 다릅니다. 이 문제는 Microsoft 장애 조치 클러스터링을 사용하여 가용성이 높은 가상 컴퓨터에도 적용됩니다.</block>
+  <block id="25a907990086c3b74fbc72cc3818bd9a" category="paragraph">Microsoft 기술 자료를 참조하십시오.</block>
+  <block id="b32f4108776356b16f608914024f481f" category="summary">백업 복제본에서 가상 머신을 복구하려면 먼저 백업 복제본을 복구할 방법을 결정해야 합니다.</block>
+  <block id="0e581f9dd5766b699240f5d0904b087d" category="doc">가상 머신 복구 요구 사항</block>
+  <block id="9d85a093959031782de1b3bf5921ccca" category="section-title">VM 백업 복제본 이름입니다</block>
+  <block id="3d577c50cef9bb538d236a3d7af073cf" category="paragraph">복원할 백업 복사본을 결정해야 합니다.</block>
+  <block id="fc801efef30c203e31b1360062aaa5c1" category="paragraph">모든 백업 복사본은 Recovery Management 창의 Backups 창에 이름별로 나열됩니다.</block>
+  <block id="43e8ccc7b6f2cdf7cb177e093798e358" category="section-title">VM 백업 복제본 유형입니다</block>
+  <block id="03feea99991cbcd9161de5bfea7b80a0" category="paragraph">애플리케이션 정합성이 보장되는 백업에서 VM을 복구하는 작업은 VSS와 조율하여 수행됩니다. Hyper-V VSS writer는 복원 작업이 완료된 후 VM을 복원하기 전에 VM을 삭제하고 Hyper-V Manager에 등록합니다.</block>
+  <block id="d238be103eebb14866b32be53d84dd7b" category="paragraph">충돌 시에도 정합성 보장 백업에서 VM을 복원하는 것은 VSS와 관련이 없습니다. 복구 작업 전에 VM이 꺼져 있습니다. 충돌 시에도 정합성 보장 백업에서 복원하는 경우 VM이 존재해야 하며 충돌 시에도 정합성 보장 백업에서 삭제된 VM을 복원하지 못합니다.</block>
+  <block id="a651aaaf069e68138281beb92ba34c5c" category="section-title">VM 백업 복사 상태입니다</block>
+  <block id="9d75b3669b134eae06587df25b02c4aa" category="paragraph">가상 머신이 아직 있는지 확인해야 합니다.</block>
+  <block id="00b7c0a5e36bd62d36e3de7e1a690572" category="paragraph">가상 머신이 더 이상 존재하지 않는 경우에도 가상 머신이 생성된 LUN이 여전히 존재할 경우 가상 머신을 복구할 수 있습니다. LUN은 백업 시와 드라이브 문자 및 Windows 볼륨 GUID가 같아야 합니다.</block>
+  <block id="a6aa9113d4ad56733e70e2f2fd14e4f7" category="paragraph">Windows Server 2008 R2에서 가상 머신을 삭제하면 애플리케이션 정합성이 보장되는 백업에서 가상 머신을 복구할 수 있지만, Windows Server 2012 및 Windows Server 2012 R2에서는 충돌 및 애플리케이션 정합성이 보장되는 백업 모두에서 삭제된 가상 머신을 복구할 수 있습니다.</block>
+  <block id="0eac70134b21e1d7f02651e5f43025de" category="paragraph">가상 머신이 삭제되기 전에 모든 데이터 세트에서 제거된 경우에도 보호되지 않은 리소스를 선택하고 가상 머신이 속한 백업을 선택하여 가상 머신을 복원할 수 있습니다.</block>
+  <block id="6fad907a1e0858a858c0fd998edd83fc" category="section-title">VM 백업 복제본 구성 상태입니다</block>
+  <block id="4076f8baf81109cc452c9661ef7d6e81" category="paragraph">가상 머신 구성이 백업 시점의 구성과 동일한지 확인해야 합니다.</block>
+  <block id="89489127ea11c91995fda4da581f0758" category="paragraph">현재 가상 머신 구성이 백업 시점과 다른 경우, SnapManager for Hyper-V는 가상 머신 레이아웃이 변경되었음을 알리고 백업에 존재했던 가상 머신 구성 및 데이터를 복원할 것인지 묻습니다.</block>
+  <block id="6be75dfd4ad3eb2ebdecaa0d583fa42c" category="admonition">SnapManager for Hyper-V는 가상 머신의 클러스터 구성을 백업하지 않으므로 클러스터 구성을 복원할 수 없습니다. 가상 머신 및 클러스터 구성이 손실되면 SnapManager for Hyper-V에서 가상 머신을 복구할 수 있지만, 고가용성을 수동으로 설정해야 합니다.</block>
+  <block id="47560442ef973392bad1f503047f9ab2" category="paragraph">가상 머신이 백업에 포함된 가상 머신의 현재 구성과 다르게 구성된 경우 새로 추가되거나 제거된 가상 하드 디스크(VHD)를 반영하도록 클러스터 구성을 업데이트해야 할 수 있습니다.</block>
+  <block id="88cb7b202eace6296ee01cd0881e9cbc" category="section-title">스냅샷 복사 상태입니다</block>
+  <block id="1adbfcf0ea2a1b2b74479f8deddd78a4" category="paragraph">복구 작업을 시도하기 전에 스토리지 시스템에 백업 스냅샷 복사본이 있는지 확인할 수 있습니다.</block>
+  <block id="fe5c5c937b5cafc4dccbc844523f2851" category="section-title">VM을 다시 시작합니다</block>
+  <block id="e0899440c7c83cc20c1c4d2cc2beb8cf" category="paragraph">가상 머신이 복구된 후 시작하도록 선택할 수 있습니다.</block>
+  <block id="de60b57f630a569347a0ebfb03f51f73" category="inline-link">Microsoft TechNet: Windows Server 2008 R2의 장애 조치 클러스터</block>
+  <block id="7c890966217440f252398dd7820efb40" category="paragraph"><block ref="7c890966217440f252398dd7820efb40" category="inline-link-rx"></block></block>
+  <block id="fbf5e949cfd0e7ec5f30158744d3a05d" category="summary">Windows Server 2012 이상에서는 새 파일 시스템, CSV 작성기의 변경 사항, CSV 섀도 복사본 변경 사항, CSV 백업 기능 향상을 포함하는 CSV(Cluster Shared Volume) 2.0의 새로운 기능을 제공합니다.</block>
+  <block id="12dc8916c1d106eb0eaf92ab73647be7" category="doc">Windows Server 2012 이상에서 CSV 2.0</block>
+  <block id="ebab76ddd0a719d01cf3ea91dc8841a8" category="paragraph">Windows Server 2012 이상에서는 CSV 2.0에 대한 다음과 같은 변경 사항이 포함됩니다.</block>
+  <block id="903e7fccbabfe3126418737fdeba9dfc" category="list-text">CSV 파일 시스템(CSVFS)은 클러스터의 모든 노드에서 새 분산 파일 시스템으로 사용할 수 있습니다.</block>
+  <block id="e9c2e73ac73fd0ae380ef7f28ed66085" category="list-text">CSV writer는 CSV 볼륨에 대해 요청하지 않은 노드의 볼륨 및 구성 요소 수준 메타데이터를 제공하며 백업 세션에 대해 원격 노드의 Hyper-V writer를 포함하여 프록시 역할을 합니다.</block>
+  <block id="2ebf2c6d77ebd0396ab1ed1d56324c98" category="list-text">CSV 섀도우 복제본 공급자는 CSV 볼륨의 기본 소프트웨어 공급자 역할을 하며 모든 클러스터 노드에서 VSS 고정 및 VSS 고정 해제를 조정하여 애플리케이션 및 충돌 일관성을 제공합니다.</block>
+  <block id="8f06bda8ca313d7f140e14a08afe8f51" category="paragraph">CSV 섀도 복사본 공급자는 CSV 스냅샷 볼륨을 요청 노드에서 쓸 수 있도록 합니다.</block>
+  <block id="fa130d138fad9e89a6b021992155c9db" category="list-text">CSV는 이제 여러 가상 머신에 대해 모든 CSV에서 하나의 애플리케이션 정합성 보장 스냅샷 볼륨을 지원합니다.</block>
+  <block id="543d339f28d66beb0b28502ae21d5985" category="paragraph">스냅샷 볼륨의 CSV 볼륨은 자동 복구를 수행하기 위해 모든 가상 머신 소유자 노드에 노출됩니다.</block>
+  <block id="82719e24f601e00b0b0375e6bf912e8f" category="paragraph">CSV는 스냅샷 생성 중이지 백업 중이지 않고 리디렉션된 I/O 모드로 전환됩니다.</block>
+  <block id="88afa0f950757277b9cd0a86d35b94bb" category="summary">이벤트가 발생할 경우 이메일, Syslog 및 AutoSupport 메시지를 보내도록 이벤트 알림 설정을 구성할 수 있습니다.</block>
+  <block id="84e8a88048bb97b5a6416d8b9f99a8b0" category="doc">이벤트 알림 설정</block>
+  <block id="997dd00ff1d3ff7ca24a0de47fef203c" category="paragraph">Hyper-V 상위 호스트를 SnapManager for Hyper-V에 추가할 때 이벤트 알림 설정이 구성되지 않은 경우 나중에 구성 마법사를 사용하여 해당 설정을 구성할 수 있습니다.</block>
+  <block id="0235fd2d5cccf9c82b4b94b7f03a5e1a" category="paragraph">호스트가 SnapManager for Hyper-V에 추가된 후에도 구성 마법사를 사용하여 이벤트 알림 설정을 변경할 수 있습니다</block>
+  <block id="b26a8aad4334f73863648d787bd12b09" category="paragraph">데이터 세트에 가상 머신 리소스를 추가하기 전에 이벤트 알림 설정을 구성할 수 있습니다.</block>
+  <block id="7c3ef091f5e9de900650e022373ffe32" category="summary">바이러스 백신 솔루션으로 인한 높은 메모리 소비</block>
+  <block id="9accf46f4705bca9602a29da75a6d11a" category="doc">바이러스 백신 솔루션으로 인한 높은 메모리 소비</block>
+  <block id="f5ccf0f5a43d30ed01c351daf610c72c" category="paragraph">파일 수준 바이러스 백신 솔루션으로 인해 메모리 사용량이 높을 수 있으며, 이는 메모리 누수로 보일 수 있습니다.</block>
+  <block id="302341b993add035e17852f48ede6ba1" category="paragraph">특정 조건에서 Hyper-V용 SnapManager는 VM 구성 파일을 검사하는 바이러스 백신 솔루션을 잘못 구성하여 지속적으로 증가하는 대용량 메모리를 사용할 수 있습니다. 바이러스 백신 솔루션이 VM 구성 파일을 검색할 때 변경 사항을 설명하는 _InstanceModificationEvent 이벤트가 표시됩니다. Hyper-V용 SnapManager에서 이 알림을 받으면 SnapDrive for Windows를 사용하여 스토리지 및 VM의 열거가 트리거됩니다. 경우에 따라 이러한 이벤트는 Windows용 SnapDrive에서 처리할 수 없는 빠른 속도로 인해 발생할 수 있으며, 이로 인해 SnapManager for Hyper-V가 이러한 이벤트를 대기열에 지정할 수 있습니다.</block>
+  <block id="9dcb12971ce7ee1ca4a0e6c1aa6602ac" category="paragraph">SnapManager for Hyper-V VM 파일이 바이러스 백신 솔루션에서 검사되지 않도록 합니다.</block>
+  <block id="0949c83f1f00368865bd1bf8d478711f" category="summary">IPv6 전용 호스트에서는 연결 시간이 길어집니다.</block>
+  <block id="d51691493b478822bf45a736a571c098" category="doc">IPv6 전용 호스트에서는 연결 시간이 길어집니다</block>
+  <block id="1b4e1cebc792cbce25156d6e542ae745" category="paragraph">IPv4 및 IPv6 혼합 환경에서 작업 중이고 SnapManager for Hyper-V에 IPv6 전용 호스트를 추가하는 경우 연결이 정상보다 오래 걸릴 수 있습니다.</block>
+  <block id="bb29b6e6a49fb6882e905eeab395597d" category="paragraph">이 지연은 SnapManager for Hyper-V가 IPv4 프로토콜을 먼저 시도하기 때문에 발생합니다.</block>
+  <block id="54761137c08a41abfde2004613c26d51" category="paragraph">이 지연 시간을 해결하려면 \windows\system32\drivers\etc\hosts 파일에 호스트를 추가하십시오.</block>
+  <block id="8cf04a9734132302f96da8e113e80ce5" category="sidebar">홈</block>
+  <block id="bc75d43ed20a1ef476a229e08f6582f1" category="sidebar">다음 VM에 대한 백업이 실패하였습니다. 온라인 백업 또는 백업 대상 VM을 찾을 수 없기 때문입니다</block>
+  <block id="4f9d4ca3184d1887e8be4f7de3aa95bf" category="sidebar">"섀도우 복제본 생성이 이미 진행 중입니다." 오류와 함께 백업 실패</block>
+</blocks>

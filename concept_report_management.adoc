@@ -1,0 +1,37 @@
+---
+permalink: concept_report_management.html 
+sidebar: sidebar 
+keywords: view, delete, backup, restore, configuration, report, snapmanager, hyper-v, information, virtual, machine, vm, managing, manage 
+summary: SnapManager for Hyper-V에서 백업, 복원 및 구성 보고서를 보고 삭제할 수 있습니다 이러한 보고서에는 데이터 세트, 가상 머신 및 호스트에 대한 중요한 정보가 포함되어 있습니다. 보고서를 여러 가지 형식으로 내보낼 수도 있습니다. 
+---
+= 보고서 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V에서 백업, 복원 및 구성 보고서를 보고 삭제할 수 있습니다 이러한 보고서에는 데이터 세트, 가상 머신 및 호스트에 대한 중요한 정보가 포함되어 있습니다. 보고서를 여러 가지 형식으로 내보낼 수도 있습니다.
+
+* * 보고서 백업 *
++
+백업 보고서는 특정 데이터 세트에 속한 모든 호스트의 모든 백업 정보를 표시합니다. 데이터 세트 또는 가상 머신에 대한 백업 보고서를 볼 수 있습니다. 가상 머신에 대해 표시되는 보고서는 GUID 대신 가상 머신 이름을 사용합니다.
+
++
+백업 보고서가 표시되면 여러 가지 형식으로 내보낼 수 있습니다.
+
+* * 보고서 복원 *
++
+복원 보고서는 VM 단위로 복원 작업에 대한 모든 정보를 표시합니다.
+
++
+복원 보고서가 표시되면 여러 가지 다른 형식으로 내보낼 수 있습니다.
+
+* * 구성 보고서 *
++
+구성 보고서에는 선택한 호스트에 대한 알림 설정, 보고서 경로 및 SnapInfo 경로가 표시됩니다.
+
++
+구성 보고서가 표시되면 여러 가지 다른 형식으로 내보낼 수 있습니다.
+
+

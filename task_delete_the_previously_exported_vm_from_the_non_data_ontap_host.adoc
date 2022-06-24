@@ -1,0 +1,28 @@
+---
+permalink: task_delete_the_previously_exported_vm_from_the_non_data_ontap_host.html 
+sidebar: sidebar 
+keywords: import, virtual, machine, vm, successful, delete, non-ontap, host, deleting 
+summary: '가상 머신(VM)을 성공적으로 가져온 후 비 ONTAP 호스트에서 VM을 삭제할 수 있습니다.' 
+---
+= 비 ONTAP 호스트에서 이전에 내보낸 VM 삭제
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+가상 머신(VM)을 성공적으로 가져온 후 비 ONTAP 호스트에서 VM을 삭제할 수 있습니다.
+
+VM을 성공적으로 가져와야 합니다.
+
+. VM이 원래 호스팅되었던 비 ONTAP 호스트를 선택합니다.
+. Virtual Machines 창에서 이전에 내보낸 VM의 이름을 마우스 오른쪽 버튼으로 클릭합니다.
+. 삭제 * 를 클릭합니다.
++
+VM을 삭제할 것인지 확인하는 창이 열립니다.
+
+. 삭제 * 를 클릭합니다.
++
+VM이 원래 호스트에서 제거됩니다.
+
+

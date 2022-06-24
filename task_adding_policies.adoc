@@ -1,0 +1,33 @@
+---
+permalink: task_adding_policies.html 
+sidebar: sidebar 
+keywords: add, retention, schedule, scheduling, replication, policies, policy, script, dataset, data, protect 
+summary: 데이터 세트에 보존, 예약, 복제 정책과 스크립트도 추가하여 데이터를 보호할 수 있습니다. 
+---
+= 정책 추가
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+데이터 세트에 보존, 예약, 복제 정책과 스크립트도 추가하여 데이터를 보호할 수 있습니다.
+
+다음 정보를 사용할 수 있어야 합니다.
+
+* 정책 이름 및 설명입니다
+* 보존 정보
+* 스케줄링 정보
+* 백업 옵션 정보
+* 백업 스크립트 정보
++
+.. 탐색 창에서 * Protection * > * Datasets * 를 클릭합니다.
+.. 정책을 추가할 데이터 세트를 선택합니다.
+.. 작업 창에서 * 정책 추가 * 를 클릭합니다.
++
+정책 생성 마법사가 나타납니다.
+
+.. 마법사의 단계를 완료하여 데이터 세트에 대한 보호 정책을 생성합니다.
+
+
+
