@@ -1,0 +1,33 @@
+---
+permalink: reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html 
+sidebar: sidebar 
+keywords: backup, job, 15, csv, storage, system, fail 
+summary: 동일한 스토리지 시스템에서 15개 이상의 CSV를 포함하는 백업 작업이 실패할 수 있습니다. 
+---
+= 동일한 스토리지 시스템에서 15개 이상의 CSV를 포함하는 백업 작업이 실패할 수 있습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+동일한 스토리지 시스템에서 15개 이상의 CSV(Cluster Shared Volume)가 포함된 Hyper-V 백업 작업에 대한 SnapManager가 실패하고 다음 오류가 표시됩니다.
+
++
+[listing]
+----
+Failed to rename the Snapshot copy of the LUN to the new Snapshot copy name.
+Error code: The attempt to get the named attribute for the LUN on the storage system failed.
+Error code: 13057.
+Error description: An error occurred in the reception and processing of the API reply from the appliance.
+----
+* * 원인 *
++
+이는 Data ONTAP에서 시스템 리소스 보류를 방지하기 위해 발생하는 제한 사항입니다. LUN 15개의 제한은 모든 LUN이 동일한 스토리지 시스템에 속한 경우에만 적용됩니다. 한 스토리지 시스템에서 15개 이하의 CSV를 사용하지 않도록 백업 데이터 세트를 생성하는 경우 이 문제가 발생하지 않습니다.
+
+* * 시정 조치 *
++
+동일한 스토리지 시스템에서 15개 이상의 LUN을 포함하는 백업을 만들려면 이 오류를 방지하기 위해 여러 데이터 세트를 생성합니다.
+
+

@@ -1,0 +1,38 @@
+---
+permalink: task-view-installed-vss-providers.html 
+sidebar: sidebar 
+keywords: view, vss, provider, install, host 
+summary: 호스트에 설치된 VSS 공급자를 볼 수 있습니다. 
+---
+= 설치된 VSS 공급자를 봅니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+호스트에 설치된 VSS 공급자를 볼 수 있습니다.
+
+.단계
+. 메뉴: 시작 [실행]을 선택하고 다음 명령을 입력하여 Windows 명령 프롬프트를 엽니다.
++
+'cmd'
+
+. 프롬프트에서 다음 명령을 입력합니다.
++
+'vssadmin list providers'
+
++
+출력은 다음과 비슷해야 합니다.
+
++
+[listing]
+----
+
+Provider name: ‘Data ONTAP VSS Hardware Provider’
+Provider type: Hardware
+Provider ID: {ddd3d232-a96f-4ac5-8f7b-250fd91fd102}
+Version: 7.0.0.xxxx
+----
+

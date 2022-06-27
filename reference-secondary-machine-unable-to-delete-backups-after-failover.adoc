@@ -1,0 +1,25 @@
+---
+permalink: reference-secondary-machine-unable-to-delete-backups-after-failover.html 
+sidebar: sidebar 
+keywords: deleting, delete, backup, failover 
+summary: 페일오버 후 백업을 삭제하는 중입니다. 
+---
+= 페일오버 후 백업을 삭제합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 메시지 *
++
+"데이터 세트의 일부 객체에 대해 지정된 백업이 존재하지 않습니다.
+
+* * 설명 *
++
+보조 사이트(사이트 B)로 페일오버한 후에는 운영 사이트(사이트 A)에서 생성된 백업을 삭제할 수 없습니다. 재해 복구 사이트(사이트 B)에 있는 경우 운영 사이트(사이트 A)에서 만든 백업을 삭제하려고 하면 재해 복구 사이트(사이트 B)가 아닌 기본 사이트 A에서 백업이 삭제됩니다.
+
+* * 시정 조치 *
++
+재해 복구 작업을 수행한 후에는 현재 작업 사이트에서 만든 백업만 삭제합니다.
+
+

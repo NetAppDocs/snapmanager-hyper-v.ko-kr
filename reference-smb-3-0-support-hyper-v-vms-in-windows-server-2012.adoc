@@ -1,0 +1,22 @@
+---
+permalink: reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html 
+sidebar: sidebar 
+keywords: microsoft, enhance, vss, infrastructure, support, application-consistent, backup, hyper-v, virtual, machine, vm, smb, target 
+summary: 'Microsoft는 SMB 대상에서 실행되는 새로운 원격 VSS 하드웨어 공급자를 사용하여 SMB 3.0 공유에서 실행되는 Hyper-V 가상 머신(VM)의 애플리케이션 정합성이 보장되는 백업을 지원하도록 VSS 인프라를 개선했습니다.' 
+---
+= Windows Server 2012에서 Hyper-V VM을 지원하는 SMB 3.0
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft는 SMB 대상에서 실행되는 새로운 원격 VSS 하드웨어 공급자를 사용하여 SMB 3.0 공유에서 실행되는 Hyper-V 가상 머신(VM)의 애플리케이션 정합성이 보장되는 백업을 지원하도록 VSS 인프라를 개선했습니다.
+
+SMB 3.0 공유에서 실행되는 Hyper-V VM 백업을 지원하고 조정하기 위해 Windows 2012 하이퍼바이저에서 SMB File Share Provider라는 새 공급자를 사용할 수 있습니다.
+
+VSS 요청자(SnapManager for Hyper-V)가 Hyper-V VM이 포함된 SMB 3.0 공유를 VSS 스냅샷 세트에 추가하면 VSS는 새로운 SMB 파일 공유 복사본 공급자를 호출하여 MSRPC 명령을 SMB 타겟으로 보내 VSS 백업을 조정합니다.
+
+SMB 대상에서 실행되는 새 파일 공유 섀도 복사본 에이전트(원격 VSS 공급자)는 실제 하드웨어 스냅샷 복사본을 생성합니다.
+
+Data ONTAP 8.2는 파일 공유 섀도 복사본 에이전트(원격 VSS 하드웨어 공급자)를 구현하여 SMB 공유의 애플리케이션 정합성이 보장되는 백업 복사본을 수행합니다.

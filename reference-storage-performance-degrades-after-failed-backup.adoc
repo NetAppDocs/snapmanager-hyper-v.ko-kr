@@ -1,0 +1,25 @@
+---
+permalink: reference-storage-performance-degrades-after-failed-backup.html 
+sidebar: sidebar 
+keywords: storage, performance, degrade, fail, backup 
+summary: 백업 실패 후 스토리지 성능이 저하됩니다. 
+---
+= 백업 실패 후 스토리지 성능이 저하됩니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+백업 작업이 실패하면 스토리지 성능이 저하될 수 있습니다.
+
+* * 원인 *
++
+백업 중에 Microsoft Hyper-V VSS 구성 요소에 예외가 발생하면 CSV(Cluster Shared Volume)가 리디렉션된 I/O 모드로 남아 Windows 페일오버 클러스터 내에서 입출력 오버헤드 및 잠재적 병목 현상이 발생할 수 있습니다. 이로 인해 전체 성능 저하가 발생할 수 있으며, 리디렉션된 I/O 모드의 CSV에 상주하는 VM에 가장 큰 영향을 줄 수 있습니다.
+
+* * 시정 조치 *
++
+이 문제에 대한 지원을 받으려면 Microsoft 지원 센터에 문의하십시오.
+
+

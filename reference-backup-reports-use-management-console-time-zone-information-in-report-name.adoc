@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-reports-use-management-console-time-zone-information-in-report-name.html 
+sidebar: sidebar 
+keywords: backup, report, use, management, console, time, zone, information, report, name 
+summary: 백업 보고서는 보고서 이름에 관리 콘솔 시간대 정보를 사용합니다. 
+---
+= 백업 보고서는 보고서 이름에 관리 콘솔 시간대 정보를 사용합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+상위 호스트가 아닌 다른 시간대에 있는 클라이언트 호스트를 사용하여 백업 보고서를 생성하는 경우 보고서 이름은 클라이언트 호스트 시간대 정보를 사용하며 보고서 내용은 상위 호스트 시간대를 사용합니다.
+
+* * 원인 *
++
+백업 보고서 이름의 타임스탬프가 클라이언트 호스트 시간대 정보와 함께 표시됩니다.
+
+* * 시정 조치 *
++
+수정 조치가 필요하지 않습니다.
+
+

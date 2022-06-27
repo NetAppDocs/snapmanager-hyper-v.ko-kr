@@ -1,0 +1,14 @@
+---
+permalink: concept-uninstall-snapmanager-for-hyper-v-on-windows.html 
+sidebar: sidebar 
+keywords: uninstall, snapmanager, hyper-v, windows, host, software, uninstallation, program, interactive 
+summary: 소프트웨어가 더 이상 필요하지 않은 경우 Windows 호스트에서 SnapManager for Hyper-V를 제거할 수 있습니다. 제거 프로그램을 대화식으로 실행해야 합니다. 
+---
+= Windows에서 Hyper-V용 SnapManager를 제거합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+소프트웨어가 더 이상 필요하지 않은 경우 Windows 호스트에서 SnapManager for Hyper-V를 제거할 수 있습니다. 제거 프로그램을 대화식으로 실행해야 합니다.

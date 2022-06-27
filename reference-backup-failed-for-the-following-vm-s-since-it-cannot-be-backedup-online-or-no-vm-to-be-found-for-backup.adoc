@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html 
+sidebar: sidebar 
+keywords: backup, fail, follow, vm, backed, up, online 
+summary: 다음 VM을 온라인으로 백업할 수 없거나 백업할 VM을 찾을 수 없으므로 백업이 실패했습니다. 
+---
+= 다음 VM을 온라인으로 백업할 수 없거나 백업할 VM을 찾을 수 없으므로 백업이 실패했습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 메시지 *
++
+"다음 VM의 백업이 온라인으로는 백업되지 않거나 백업을 위해 VM을 찾을 수 없기 때문에 백업이 실패했습니다.
+
+* * 설명 *
++
+이 메시지는 Windows 2008 R2 SP1 Hyper-V 부모에서 저장된 상태 VM 백업 허용 옵션을 사용하지 않고 Windows 2012 VM을 백업하지 못한 경우에 발생합니다.
+
+* * 시정 조치 *
++
+Windows 2012 백업의 경우 "Allow saved state" VM backup 옵션이 설정된 상태로 백업을 실행합니다.
+
+

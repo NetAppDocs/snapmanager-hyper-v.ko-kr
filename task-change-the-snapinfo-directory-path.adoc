@@ -1,0 +1,56 @@
+---
+permalink: task-change-the-snapinfo-directory-path.html 
+sidebar: sidebar 
+keywords: control, snapinfo, directory, path, setting, configuration, wizard, action, changing, change 
+summary: 구성 마법사 또는 SnapInfo 설정 작업을 사용하여 SnapInfo 디렉토리 경로 설정을 제어할 수 있습니다. 
+---
+= SnapInfo 디렉토리 경로를 변경합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+구성 마법사 또는 * SnapInfo settings * 작업을 사용하여 SnapInfo 디렉토리 경로 설정을 제어할 수 있습니다.
+
+SnapInfo 디렉토리 설정은 SnapManager for Hyper-V의 호스트 레벨에서 지정됩니다 SnapManager for Hyper-V는 NAS(SMB) 호스트 및 SAN 호스트를 지원합니다. SAN 호스트의 경우 SnapInfo 설정이 볼륨 레벨에 적용되고, NAS 호스트의 경우 SnapInfo 설정이 SMB 공유 레벨에 적용됩니다.
+
+스토리지 시스템의 IP 주소를 SnapDrive for Windows TPS에 추가한 경우, SnapManager for Hyper-V에서 구성 마법사를 실행하면 SnapDrive for Windows의 스토리지 설정이 자동으로 채워집니다 Windows TPS용 SnapDrive가 구성되어 있지 않은 경우, Hyper-V용 SnapManager의 스토리지 연결 관리 탭에서 스토리지 시스템의 IP 주소를 지정해야 합니다
+
+.단계
+. 탐색 창에서 보호 [호스트] 메뉴를 클릭합니다.
+. SnapInfo 디렉토리 경로를 변경할 호스트를 선택합니다.
+. Actions * 창에서 * SnapInfo settings * 를 선택합니다.
++
+SnapInfo 설정 * 대화 상자가 열립니다.
+
+. 표시된 옵션에서 스토리지 유형을 선택합니다.
++
+|===
+| 옵션을 선택합니다 | 설명 
+
+
+ a| 
+산
+ a| 
+기본 스토리지 유형입니다.
+
+
+
+ a| 
+NAS
+ a| 
+SMB 공유에 이 옵션을 사용합니다.
+
+|===
+. 찾아보기 * 를 클릭합니다.
++
+폴더 찾아보기 창이 열립니다.
+
+. SnapInfo 스토리지 시스템(SAN) 또는 볼륨(NAS)을 선택하고 * OK * 를 클릭합니다.
++
+표시되는 호스트는 호스트 레벨에서 "스토리지 접속 관리" 옵션을 사용하여 등록된 스토리지 시스템에 해당하는 NAS 공유입니다. 찾고 있는 공유가 표시되지 않으면 '저장소 연결 관리'가 올바르게 구성되어 있는지 확인하십시오.
+
+. SnapInfo Settings * 창에서 * OK * 를 클릭합니다.
+

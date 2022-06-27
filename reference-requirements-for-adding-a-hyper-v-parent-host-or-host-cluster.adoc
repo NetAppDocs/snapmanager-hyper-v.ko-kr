@@ -1,0 +1,90 @@
+---
+permalink: reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html 
+sidebar: sidebar 
+keywords: configuration, information, available, parent, host, cluster, snapmanager, hyper-v 
+summary: Hyper-V용 SnapManager에 상위 호스트 또는 호스트 클러스터를 추가하기 전에 필요한 모든 구성 정보를 사용할 수 있어야 합니다 
+---
+= Hyper-V 상위 호스트 또는 호스트 클러스터를 추가하기 위한 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hyper-V용 SnapManager에 상위 호스트 또는 호스트 클러스터를 추가하기 전에 필요한 모든 구성 정보를 사용할 수 있어야 합니다
+
+
+
+== SnapManager for Hyper-V 설치
+
+추가하려는 Hyper-V 호스트에 SnapManager for Hyper-V가 설치되어 있어야 합니다.
+
+SnapManager for Hyper-V가 설치되어 있지 않으면 원격 호스트 설치 마법사를 실행하라는 메시지가 표시됩니다. 각 클러스터 노드에 동일한 SnapManager for Hyper-V 버전을 설치해야 합니다.
+
+
+
+== 구성 설정
+
+추가하려는 Hyper-V 상위 호스트를 SnapManager for Hyper-V에 대해 구성해야 합니다
+
+SnapInfo 설정, 보고서 디렉토리 설정 및 알림 설정이 SnapManager for Hyper-V에 대해 구성되어 있지 않은 경우 구성 마법사를 사용하여 호스트를 추가한 후에 구성할 수 있습니다.
+
+처음에는 * 스토리지 접속 관리 * 탭이 비어 있습니다. 스토리지 연결 관리 * 탭에서 스토리지 연결을 추가할 수 있지만 새로 추가된 연결은 SDW(SnapDrive for Windows) TPS(전송 프로토콜 설정)에서 볼 수 있습니다.
+
+SnapManager for Hyper-V를 사용하여 가상 머신을 추가 및 관리하기 위해 백업 저장소 및 보고서 디렉토리 설정을 구성해야 합니다 알림 설정은 선택 사항입니다.
+
+
+
+== 가상 머신 및 ONTAP LUN
+
+구성 파일, 스냅샷 복사본 파일 위치 및 VHD를 비롯하여 가상 머신과 관련된 모든 파일이 ONTAP LUN에 상주해야 합니다.
+
+이 작업은 백업을 성공적으로 수행하는 데 필요합니다.
+
+
+NOTE: 가상 머신을 생성한 후 가상 머신 스냅샷 파일 위치를 다른 ONTAP LUN으로 변경하는 경우 SnapManager for Hyper-V를 사용하여 백업을 수행하기 전에 Hyper-V 관리자를 사용하여 가상 머신 스냅샷 복사본을 하나 이상 생성해야 합니다 스냅샷 복사본 파일 위치를 변경하고 백업을 수행하기 전에 가상 머신 Snapshot 복사본을 사용하지 않으면 백업 작업이 실패할 수 있습니다.
+
+
+
+== 전용 클러스터 가상 머신
+
+가상 시스템은 전용 또는 클러스터의 일부가 될 수 있습니다.
+
+단일 호스트를 추가하는 경우 SnapManager for Hyper-V는 해당 호스트의 전용 가상 머신을 관리합니다. 호스트 클러스터를 추가하면 Hyper-V용 SnapManager가 호스트 클러스터의 공유 가상 머신을 관리합니다. 동일한 호스트 클러스터에 속한 SAN 및 NAS에 상주하는 가상 머신이 동일한 데이터 세트에 있어서는 안 됩니다. 이러한 유형의 리소스를 단일 데이터 세트에 추가하면 데이터 세트 백업이 실패할 수 있습니다.
+
+애플리케이션 정합성이 보장되는 백업의 경우 클러스터의 다른 노드에서 가상 머신을 실행할 때 클러스터 가상 머신의 데이터 세트 백업을 완료하는 데 시간이 더 오래 걸립니다. 가상 머신이 다른 노드에서 실행될 경우 클러스터의 각 노드에 대해 별도의 백업 작업이 필요합니다. 모든 가상 머신이 동일한 노드에서 실행되는 경우 하나의 백업 작업만 필요하므로 백업 속도가 빨라집니다.
+
+
+
+== 가상 머신 수입니다
+
+Hyper-V 호스트 또는 호스트 클러스터에 가상 머신이 1,000개 이상 있는 경우 Hyper-V Cache Manager의 'sapMgrServiceHost.exe.config' 파일에서 Maximum 'Elements in Cache Before Scavenging' 속성의 값을 늘려야 합니다. 이 값은 독립 실행형 호스트 또는 클러스터에서 실행 중인 Hyper-V 호스트 수보다 크거나 같아야 합니다. 이 값은 클러스터의 각 노드에서 변경해야 하며 이 값을 변경한 후 SnapManager for Hyper-V 서비스를 다시 시작해야 합니다. 텍스트 편집기를 사용하여 'sapMgrServiceHost.exe.config' 파일을 수동으로 편집해야 합니다.
+
+[listing]
+----
+<cacheManagers>
+…
+      <add name="HyperV Cache Manager"
+                        type="Microsoft.Practices.EnterpriseLibrary.Caching.CacheManager,
+                           Microsoft.Practices.EnterpriseLibrary.Caching"
+                        expirationPollFrequencyInSeconds="60"
+                        maximumElementsInCacheBeforeScavenging="1200"
+                        numberToRemoveWhenScavenging="10"
+                        backingStoreName="inMemory" />
+…
+</cacheManagers>
+----
+
+
+== SnapManager for Hyper-V 서비스 계정 요구 사항
+
+Hyper-V용 SnapManager를 사용하여 Hyper-V 호스트 클러스터를 관리하는 경우 SnapManager for Hyper-V 및 SnapDrive for Windows 서비스 계정은 서버에 대한 로컬 관리자 권한이 있는 도메인 사용자 계정이어야 합니다.
+
+SnapManager for Hyper-V 애플리케이션 정합성 보장 백업은 가상 머신이 실행 중인 클러스터 노드에서 실행됩니다. 가상 머신에서 사용하는 CSV(Cluster Shared Volumes)가 동일한 노드에 소유되지 않은 경우, SnapManager for Hyper-V 서비스가 로컬 시스템 계정을 사용 중인 경우(계정에 관리자 권한이 있는 경우에도) 가상 머신 백업이 실패할 수 있습니다. 이 경우 Hyper-V용 SnapManager는 가상 머신 파일이 CSV에 있는지 감지할 수 없어 백업이 실패합니다.
+
+
+NOTE: Clustered Data ONTAP SMB 3.0 CA(Continuous Availability) 공유에 저장된 가상 머신을 사용하는 원격 VSS(Volume Shadow Copy Service) 작업이 제대로 작동하려면 SnapDrive for Windows 서비스 계정에 대한 공유에 대한 모든 권한을 부여하고 SnapManager for Hyper-V 웹 서비스 계정에 대한 최소 읽기 수준 액세스를 부여해야 합니다.
+
+* 관련 정보 *
+
+http://technet.microsoft.com/library/cc753637(WS.10).aspx["Microsoft TechNet: Hyper-V"]

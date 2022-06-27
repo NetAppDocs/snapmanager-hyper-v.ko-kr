@@ -1,0 +1,49 @@
+---
+permalink: task-map-luns-after-the-windows-server-2016-node-addition.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, procedure, unmap, lun, windows, r2, node, server, cluster, mixed, operating, system, map 
+summary: 클러스터 OS 롤링 업그레이드를 수행할 때 다음 절차를 사용하여 Windows 2012 R2 노드에서 LUN 매핑을 해제하고, LUN을 클러스터에 추가한 후 Windows Server 2016 노드에 다시 매핑할 수 있습니다. 
+---
+= 혼합 운영 체제 모드에서 LUN을 매핑합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+클러스터 OS 롤링 업그레이드를 수행할 때 다음 절차를 사용하여 Windows 2012 R2 노드에서 LUN 매핑을 해제하고, LUN을 클러스터에 추가한 후 Windows Server 2016 노드에 다시 매핑할 수 있습니다.
+
+Windows Server 2016 노드를 클러스터에 추가해야 합니다.
+
+
+NOTE: 클러스터 롤링 업그레이드는 Windows Server 2016에서 Windows Server 2019로 지원됩니다
+
+.단계
+. ONTAP 시스템 관리자에 로그인합니다.
+. Windows 2012 R2에 매핑된 LUN을 선택합니다.
+. Edit * 를 클릭하고 * Initiator Groups * 를 선택합니다.
++
+image::mixed_os_mode_3.gif[혼합 OS 모드 3]
+
+. 클러스터에서 제거된 노드의 igroup을 선택 취소합니다.
+. 새로 추가된 모든 Windows 2016 노드에 대해 새 이니시에이터 그룹을 추가합니다.
++
+image::mixed_os_mode_4.gif[혼합 OS 모드 4]
+
+. 새로 생성한 이니시에이터 그룹 옆의 확인란을 선택하여 LUN을 클러스터에 추가된 Windows 2016 호스트에 매핑합니다.
++
+image::mixed_os_mode_6.gif[혼합 OS 모드 6]
+
+. 4단계와 6단계를 반복하여 모든 LUN을 Windows 2016 노드에 매핑합니다.
++
+모든 LUN은 Windows 2016 노드에서 볼 수 있어야 합니다.
+
+. Windows 2016 노드의 디스크 관리 도구에서 디스크를 다시 검색합니다.
++
+image::mixed_os_mode_8.gif[혼합 OS 모드 8]
+
+. 새로운 Windows 2016 SnapDrive 전송 프로토콜 설정(TPS)에 스토리지 관리 LIF를 추가한 다음 디스크를 업데이트합니다.
++
+image::mixed_os_mode_9.gif[혼합 OS 모드 9]
+
+

@@ -1,0 +1,14 @@
+---
+permalink: task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, contain, migration, wizard, migrate, virtual, machine, vm, non-ontap, ontap, service, manager, operation, migrating 
+summary: 'SnapManager for Hyper-V에는 SnapManager for Hyper-V에 사용할 수 있도록 비 ONTAP 스토리지에서 ONTAP 스토리지로 가상 머신(VM)을 마이그레이션하는 데 도움이 되는 마이그레이션 마법사가 포함되어 있지 않습니다 대신 Server Manager를 사용하여 VM을 수동으로 내보내고 가져와야 합니다.' 
+---
+= Hyper-V 작업을 위한 SnapManager용 Hyper-V 가상 머신을 마이그레이션합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V에는 SnapManager for Hyper-V에 사용할 수 있도록 비 ONTAP 스토리지에서 ONTAP 스토리지로 가상 머신(VM)을 마이그레이션하는 데 도움이 되는 마이그레이션 마법사가 포함되어 있지 않습니다 대신 Server Manager를 사용하여 VM을 수동으로 내보내고 가져와야 합니다.

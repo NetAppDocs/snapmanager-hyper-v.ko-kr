@@ -1,0 +1,25 @@
+---
+permalink: task-manage-storage-connection-settings.html 
+sidebar: sidebar 
+keywords: host, storage, connection, snapdrive, windows, snapmanager, hyper-v, storage, communication, protection, dataset, management 
+summary: '호스트를 추가한 후에는 보호\>데이터 세트 관리에서 스토리지 접속 설정 관리를 사용하기 위해 모든 스토리지 접속 \(Windows용 SnapDrive 및 Hyper-V용 SnapManager\)을 입력해야 합니다.' 
+---
+= 저장소 연결 설정을 관리합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+호스트를 추가한 후에는 보호 [데이터 세트 관리] 메뉴에서 스토리지 접속 설정 관리를 사용하기 위한 모든 스토리지 접속(Windows용 SnapDrive 및 Hyper-V용 SnapManager)을 입력해야 합니다.
+
+스토리지 접속 설정을 관리하려면 SnapManager for Hyper-V에 호스트를 하나 이상 추가해야 합니다.
+
+.단계
+. 메뉴에서 보호 [데이터 세트 관리]를 선택하고 * 스토리지 연결 관리 * 설정을 선택합니다.
+. 스토리지 접속을 추가합니다.
++
+모든 스토리지 연결은 SnapDrive for Windows TPS에서 볼 수 있습니다.
+
+

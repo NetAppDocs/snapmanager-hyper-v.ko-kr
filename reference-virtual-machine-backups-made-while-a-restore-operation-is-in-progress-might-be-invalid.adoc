@@ -1,0 +1,25 @@
+---
+permalink: reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html 
+sidebar: sidebar 
+keywords: virtual, machine, backup, restore, operation, progress, invalid 
+summary: 복구 작업이 진행 중인 동안 생성된 가상 머신 백업이 잘못되었을 수 있습니다. 
+---
+= 복구 작업이 진행 중인 동안 생성된 가상 머신 백업이 잘못되었을 수 있습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 문제 *
++
+복원 작업이 진행되는 동안 생성된 애플리케이션 정합성 보장 백업이 잘못되었을 수 있습니다. 이 불완전한 백업에서 가상 머신을 복구하면 데이터가 손실되고 가상 머신이 삭제됩니다.
+
+* * 원인 *
++
+SnapManager for Hyper-V 구성 정보가 백업 복사본에 없습니다. 백업 작업이 성공했지만 가상 머신 구성 정보가 포함되어 있지 않아 백업 복사본이 유효하지 않습니다. SnapManager for Hyper-V 복구 작업은 복구 작업을 수행하기 전에 Hyper-V 호스트에서 가상 머신 구성 정보를 삭제합니다. 이 동작은 Microsoft Hyper-V Writer에서 디자인하는 것입니다.
+
+* * 시정 조치 *
++
+백업 스케줄이 복구 작업과 일치하지 않거나, 수행하려는 필요 시 백업이 동일한 데이터에 대한 복구 작업과 겹치지 않도록 해야 합니다.
+
+

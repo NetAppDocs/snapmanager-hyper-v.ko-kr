@@ -1,0 +1,38 @@
+---
+permalink: reference-hotfix-requirements-for-windows-server-environments.html 
+sidebar: sidebar 
+keywords: manual, install, hotfixes, microsoft, windows, server, operate, operating, system, environment 
+summary: Microsoft Windows Server 운영 체제 환경에 핫픽스를 수동으로 설치해야 합니다. 
+---
+= Windows Server 환경에 대한 핫픽스 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft Windows Server 운영 체제 환경에 핫픽스를 수동으로 설치해야 합니다.
+
+
+NOTE: Windows Server 2016 및 Windows Server 2019 요구 사항은 을 참조하십시오 https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-on-windows-server["Windows Server의 Hyper-V입니다"^]
+
+Windows Server 2012의 경우 다음 핫픽스가 필요합니다.
+
+* http://support.microsoft.com/kb/2770917["KB2770917"]
+* http://support.microsoft.com/kb/2779768["KB2779768"]
+
+
+Windows Server 2008 R2의 경우 다음 핫픽스가 필요합니다.
+
+* http://support.microsoft.com/kb/974909["KB974909"]
+* http://support.microsoft.com/kb/975354["KB975354"]
+* http://support.microsoft.com/kb/2637197["KB2637197"]
+
+
+Windows Server 2008 R2 SP1의 경우 다음 핫픽스가 필요합니다.
+
+* http://support.microsoft.com/kb/2263829["KB2263829"]
+* http://support.microsoft.com/kb/2637197["KB2637197"]
+
+
+최소 패치 수준입니다.

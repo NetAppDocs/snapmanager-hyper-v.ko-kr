@@ -1,0 +1,35 @@
+---
+permalink: task-verify-that-the-vss-hardware-provider-was-used-successfully.html 
+sidebar: sidebar 
+keywords: verify, data, ontap, vss, hardware, provider, successful, snapshot, copy 
+summary: 스냅샷 복사본이 생성된 후 Data ONTAP VSS 하드웨어 공급자가 성공적으로 사용되었는지 확인할 수 있습니다. 
+---
+= VSS Hardware Provider가 성공적으로 사용되었는지 확인합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+스냅샷 복사본이 생성된 후 Data ONTAP VSS 하드웨어 공급자가 성공적으로 사용되었는지 확인할 수 있습니다.
+
+.단계
+. MMC에서 시스템 도구 [이벤트 뷰어 > 응용 프로그램] 메뉴로 이동하여 다음 값이 있는 이벤트를 찾습니다.
++
+|===
+| 출처 | 이벤트 ID입니다 | 설명 
+
+
+ a| 
+Navsssprv
+ a| 
+4089
+ a| 
+VSS 공급자가 SnapshotSetId에 대한 CommitSnapshots을 n ms 단위로 성공적으로 완료했습니다.
+
+|===
+
+
+
+NOTE: VSS를 사용하려면 공급업체가 10초 내에 스냅샷 복사본을 커밋해야 합니다. 이 시간 제한을 초과하면 Data ONTAP VSS 하드웨어 공급자가 이벤트 ID 4364를 기록합니다. 이 제한은 일시적인 문제로 인해 초과될 수 있습니다. 실패한 백업에 대해 이 이벤트가 기록된 경우 백업을 다시 시도하십시오.

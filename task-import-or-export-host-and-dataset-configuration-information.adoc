@@ -1,0 +1,33 @@
+---
+permalink: task-import-or-export-host-and-dataset-configuration-information.html 
+sidebar: sidebar 
+keywords: manage, host, management, console, multiple, import, export, information, dataset, consistency 
+summary: 하나의 관리 콘솔에서만 호스트를 관리해야 하지만 여러 콘솔에서 호스트를 관리해야 하는 경우에는 데이터 정합성을 보장하기 위해 한 원격 관리 콘솔에서 다른 원격 관리 콘솔로 호스트 및 데이터 세트 구성 정보를 가져오고 내보낼 수 있습니다. 
+---
+= 호스트 및 데이터 세트 구성 정보를 가져오거나 내보냅니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+하나의 관리 콘솔에서만 호스트를 관리해야 하지만 여러 콘솔에서 호스트를 관리해야 하는 경우에는 데이터 정합성을 보장하기 위해 한 원격 관리 콘솔에서 다른 원격 관리 콘솔로 호스트 및 데이터 세트 구성 정보를 가져오고 내보낼 수 있습니다.
+
+SnapManager for Hyper-V가 설치된 디렉토리로 구성 정보를 가져오거나 내보내서는 안 됩니다. SnapManager for Hyper-V를 제거하면 이 파일이 손실됩니다.
+
+
+NOTE: 가져오기 및 내보내기 마법사를 사용하여 호스트 및 데이터 세트 구성 설정을 이전에 내보낸 설정으로 변경할 수 있습니다. 클러스터 환경에서 이 작업을 수행하는 경우 모든 호스트 및 데이터 세트 구성이 동일하도록 클러스터의 모든 노드에서 설정을 가져와야 합니다.
+
+.단계
+. 탐색 창에서 * 보호 * 를 클릭합니다.
+. Actions * 창에서 * Import and export * 를 클릭합니다.
++
+가져오기 및 내보내기 마법사가 나타납니다.
+
+. 마법사의 단계를 완료하여 관리 콘솔 간에 호스트 및 데이터 세트 구성 정보를 내보냅니다.
++
+
+NOTE: 내보내기 파일은 정적 파일이며 내보내기 파일이 실행된 시점에만 현재 파일입니다.
+
+. 마법사의 단계를 완료하여 호스트 및 데이터 세트 구성 정보를 대상 관리 콘솔로 가져옵니다.
+

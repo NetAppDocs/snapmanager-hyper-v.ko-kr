@@ -1,0 +1,40 @@
+---
+permalink: task-set-up-a-snapinfo-lun.html 
+sidebar: sidebar 
+keywords: add, snapinfo, lun, snapmanager, hyper-v, store, dataset, backup, metadata, reside, ontap, setting, up 
+summary: 데이터 세트 백업 메타데이터를 저장하려면 SnapManager for Hyper-V에 SnapInfo LUN을 추가해야 합니다. SnapManager for Hyper-V는 일반 백업이 발생한 후 SnapInfo 복제본을 백업하기 때문에 SnapInfo 경로는 ONTAP LUN에 상주해야 합니다. 
+---
+= SnapInfo LUN을 설정합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+데이터 세트 백업 메타데이터를 저장하려면 SnapManager for Hyper-V에 SnapInfo LUN을 추가해야 합니다. SnapManager for Hyper-V는 일반 백업이 발생한 후 SnapInfo 복제본을 백업하기 때문에 SnapInfo 경로는 ONTAP LUN에 상주해야 합니다.
+
+SnapInfo 경로는 Windows Server 2012 클러스터를 실행 중인 경우 CSV(Cluster Shared Volume)에 상주할 수 있습니다. 전용 가상 머신을 관리하는 경우 SnapInfo 위치는 전용 ONTAP LUN이어야 합니다. 공유 가상 머신을 관리하는 경우 SnapInfo 위치는 공유 ONTAP LUN이어야 합니다.
+
+.단계
+. Windows용 SnapDrive를 사용하여 새 공유 디스크를 만듭니다.
++
+.. Microsoft 클러스터 서비스 그룹을 선택하는 옵션이 주어지면 * 새 클러스터 그룹 생성 * 옵션을 선택합니다
+.. 그룹 이름을 mhv_snapinfo 로 지정하고 프로세스를 완료합니다.
+
+
+. WFC(Windows Failover Clustering)를 열고 새 그룹이 온라인 상태인지 확인합니다.
+. 클러스터의 각 노드에 SnapManager for Hyper-V를 설치합니다.
+. 구성 * 마법사를 실행하고 클러스터의 모든 노드에 SnapInfo 구성 설정을 적용합니다.
++
+.. 호스트 중 하나를 선택합니다.
+.. Navigation * 창에서 Protection [Hosts] 메뉴를 클릭합니다.
+.. 작업 창에서 * 구성 * 마법사를 실행합니다.
+.. 새로 생성한 LUN에 SnapInfo 설정을 적용합니다.
+
+
+
+
+구성 마법사를 실행하면 SnapInfo 구성 설정이 클러스터의 모든 노드에 복제됩니다. * 관련 정보 *
+
+xref:reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.adoc[오류: SnapDrive SDDiscoveryFileSystemListInfo 응답이 null입니다]

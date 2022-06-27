@@ -1,0 +1,26 @@
+---
+permalink: task-update-the-dataset-and-snapinfo-across-all-nodes.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, dataset, snapinfo, node, updating, update 
+summary: 클러스터 OS 롤링 업그레이드를 수행한 후에는 모든 노드에서 데이터 세트와 SnapInfo를 업데이트해야 합니다. 
+---
+= 모든 노드에서 데이터 세트 및 SnapInfo를 업데이트합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+클러스터 OS 롤링 업그레이드를 수행한 후에는 모든 노드에서 데이터 세트와 SnapInfo를 업데이트해야 합니다.
+
+++++
+
+
+NOTE: 클러스터 롤링 업그레이드는 Windows Server 2016에서 Windows Server 2019로 지원됩니다. 혼합 모드 운영 체제에서는 공유 디스크 백업이 지원되지 않습니다.
+
+.단계
+. Windows 2012 R2 노드의 모든 데이터 세트를 편집합니다.
+. 사용 가능한 모든 데이터 세트가 Windows 2016 노드에 표시되는지 확인합니다.
+. Windows 2012 R2 노드에서 SnapInfo 경로를 설정합니다.
+. Windows 2016 노드에 올바른 SnapInfo 경로가 표시되는지 확인합니다.
+
