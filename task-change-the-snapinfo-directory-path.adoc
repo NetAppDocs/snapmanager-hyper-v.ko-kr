@@ -14,6 +14,7 @@ summary: 구성 마법사 또는 SnapInfo 설정 작업을 사용하여 SnapInfo
 [role="lead"]
 구성 마법사 또는 * SnapInfo settings * 작업을 사용하여 SnapInfo 디렉토리 경로 설정을 제어할 수 있습니다.
 
+.이 작업에 대해
 SnapInfo 디렉토리 설정은 SnapManager for Hyper-V의 호스트 레벨에서 지정됩니다 SnapManager for Hyper-V는 NAS(SMB) 호스트 및 SAN 호스트를 지원합니다. SAN 호스트의 경우 SnapInfo 설정이 볼륨 레벨에 적용되고, NAS 호스트의 경우 SnapInfo 설정이 SMB 공유 레벨에 적용됩니다.
 
 스토리지 시스템의 IP 주소를 SnapDrive for Windows TPS에 추가한 경우, SnapManager for Hyper-V에서 구성 마법사를 실행하면 SnapDrive for Windows의 스토리지 설정이 자동으로 채워집니다 Windows TPS용 SnapDrive가 구성되어 있지 않은 경우, Hyper-V용 SnapManager의 스토리지 연결 관리 탭에서 스토리지 시스템의 IP 주소를 지정해야 합니다

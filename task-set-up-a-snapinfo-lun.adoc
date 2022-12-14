@@ -14,6 +14,7 @@ summary: 데이터 세트 백업 메타데이터를 저장하려면 SnapManager 
 [role="lead"]
 데이터 세트 백업 메타데이터를 저장하려면 SnapManager for Hyper-V에 SnapInfo LUN을 추가해야 합니다. SnapManager for Hyper-V는 일반 백업이 발생한 후 SnapInfo 복제본을 백업하기 때문에 SnapInfo 경로는 ONTAP LUN에 상주해야 합니다.
 
+.필요한 것
 SnapInfo 경로는 Windows Server 2012 클러스터를 실행 중인 경우 CSV(Cluster Shared Volume)에 상주할 수 있습니다. 전용 가상 머신을 관리하는 경우 SnapInfo 위치는 전용 ONTAP LUN이어야 합니다. 공유 가상 머신을 관리하는 경우 SnapInfo 위치는 공유 ONTAP LUN이어야 합니다.
 
 .단계
@@ -35,6 +36,7 @@ SnapInfo 경로는 Windows Server 2012 클러스터를 실행 중인 경우 CSV(
 
 
 
+.결과
 구성 마법사를 실행하면 SnapInfo 구성 설정이 클러스터의 모든 노드에 복제됩니다. * 관련 정보 *
 
 xref:reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.adoc[오류: SnapDrive SDDiscoveryFileSystemListInfo 응답이 null입니다]

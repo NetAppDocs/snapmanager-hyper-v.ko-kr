@@ -13,6 +13,7 @@ summary: 재해를 복구하려면 Hyper-V용 SnapManager를 먼저 2차 스토�
 [role="lead"]
 재해를 복구하려면 Hyper-V용 SnapManager를 먼저 2차 스토리지 시스템으로 페일오버해야 합니다. 페일오버에는 PowerShell의 일련의 수동 단계가 포함됩니다.
 
+.이 작업에 대해
 대부분의 백업은 NAS와 SAN 모두에 대해 대체 호스트로 복원할 수 있지만 Windows Server 2008 R2 장애 발생 시 정합성이 보장되는 백업은 대체 호스트로 복원할 수 없습니다.
 
 .단계

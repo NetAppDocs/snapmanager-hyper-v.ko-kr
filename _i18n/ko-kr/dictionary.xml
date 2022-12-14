@@ -1182,4 +1182,9 @@
   <block id="f9056390f6d1e42e5fc2d4cf56553523" category="sidebar">Hyper-V 작업을 위한 SnapManager용 Hyper-V 가상 머신 마이그레이션</block>
   <block id="ac4361253d885faaf895a0d0cd05c3d8" category="sidebar">정책을 구성합니다</block>
   <block id="9d7345ae7324f5991caf56c819eb5f09" category="sidebar">재해 복구 페일오버에서 복구 및 복원</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">필요한 것</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
+  <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">결과</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
 </blocks>

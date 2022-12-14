@@ -14,6 +14,7 @@ summary: '호스트를 추가한 후에는 보호\>데이터 세트 관리에서
 [role="lead"]
 호스트를 추가한 후에는 보호 [데이터 세트 관리] 메뉴에서 스토리지 접속 설정 관리를 사용하기 위한 모든 스토리지 접속(Windows용 SnapDrive 및 Hyper-V용 SnapManager)을 입력해야 합니다.
 
+.필요한 것
 스토리지 접속 설정을 관리하려면 SnapManager for Hyper-V에 호스트를 하나 이상 추가해야 합니다.
 
 .단계

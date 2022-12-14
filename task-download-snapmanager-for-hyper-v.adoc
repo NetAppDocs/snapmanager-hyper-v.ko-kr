@@ -13,6 +13,7 @@ summary: SnapManager for Hyper-V를 설치하기 전에 NetApp Support 사이트
 [role="lead"]
 SnapManager for Hyper-V를 설치하기 전에 에서 소프트웨어 패키지를 다운로드해야 합니다 link:http://mysupport.netapp.com["NetApp Support 사이트"^].
 
+.필요한 것
 NetApp Support 사이트에 대한 로그인 자격 증명이 있어야 합니다.
 
 .단계
